@@ -1,0 +1,13 @@
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mWARNING][0m  [33mMPI.Query_thread returns 3[0m
+[34m[torcpy.runtime[0m [1;30mWARNING][0m  [33mInfo: MPI.Query_thread returns MPI.THREAD_MULTIPLE[0m
+[32mTORCPY: main starts[0m
+Final solution: [0.98857648 0.97643708]
+Objective value: 0.00020213369419134247
+============================================================
+Framework: torcpy (CMA-ES Optimization)
+Population size: 8
+Max function evaluations: 320
+Elapsed time: 0.5206 seconds
+============================================================
+[32mTORCPY: node[0]: created=328, executed=328[0m

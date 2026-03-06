@@ -1,0 +1,19 @@
+{
+	"folders": [
+		{
+			"name": "examples",
+			"path": "../torc_py/examples"
+		},
+		{
+			"name": "python",
+			"path": "../../../../../../usr/local/lib/starpu/python"
+		},
+		{
+			"name": "MyExamples",
+			"path": "."
+		}
+	],
+	"settings": {
+		"python.defaultInterpreterPath": "/home/george-tsavos/CEID/HPC_Lab/Thesis/myEnv/bin/python3.11"
+	}
+}
