@@ -1,0 +1,8 @@
+Final solution: [0.98857648 0.97643708]
+Objective value: 0.00020213369419134247
+============================================================
+Framework: StarPU Python (CMA-ES Optimization)
+Population size: 8
+Max function evaluations: 320
+Elapsed time: 0.4268 seconds
+============================================================
