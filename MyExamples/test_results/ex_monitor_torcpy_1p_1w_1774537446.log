@@ -1,0 +1,13 @@
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mWARNING][0m  [33mMPI.Query_thread returns 3[0m
+[34m[torcpy.runtime[0m [1;30mWARNING][0m  [33mInfo: MPI.Query_thread returns MPI.THREAD_MULTIPLE[0m
+[32mTORCPY: main starts[0m
+PID: 18259, ntasks=8, sec=8.0
+Start submitting tasks...
+============================================================
+Framework: torcpy (Monitor dummy workload)
+Submitted tasks: 8
+Work per task (s): 8.0
+Elapsed time: 64.0114 seconds
+============================================================
+[32mTORCPY: node[0]: created=8, executed=8[0m

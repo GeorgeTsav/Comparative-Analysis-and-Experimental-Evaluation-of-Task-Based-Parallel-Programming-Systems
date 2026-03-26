@@ -1,0 +1,11 @@
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mWARNING][0m  [33mMPI.Query_thread returns 3[0m
+[34m[torcpy.runtime[0m [1;30mWARNING][0m  [33mInfo: MPI.Query_thread returns MPI.THREAD_MULTIPLE[0m
+[32mTORCPY: main starts[0m
+fib(35) = 9227465
+============================================================
+Framework: torcpy (Recursive Fibonacci)
+Fibonacci input: 35
+Elapsed time: 2.1198 seconds
+============================================================
+[32mTORCPY: node[0]: created=40, executed=40[0m

@@ -1,0 +1,5 @@
+MC StarPU: paths=200000 batch=50000 tasks=4 steps=128 assets=16
+============================================================
+Framework: StarPU Python (app02_mc_parfor)
+Payoff mean=5.38787  stdErr=0.00111  elapsed=11.224s  throughput=1.78e+04 paths/s
+============================================================

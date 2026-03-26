@@ -1,0 +1,23 @@
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mWARNING][0m  [33mMPI.Query_thread returns 3[0m
+[34m[torcpy.runtime[0m [1;30mWARNING][0m  [33mInfo: MPI.Query_thread returns MPI.THREAD_MULTIPLE[0m
+[32mTORCPY: main starts[0m
+Found 99 images
+cfg: resize=256, bank=5x8, reps=2, bins=64
+============================================================
+Framework: torcpy (app01_improc_parfor)
+Elapsed time: 62.696408 s
+Reduction: sum(out)=2.721397e+08  mean(out)=2.748885e+06
+First 10 outputs:
+  idx=  1, task_out=2.668950e+06
+  idx=  2, task_out=2.865433e+06
+  idx=  3, task_out=2.793955e+06
+  idx=  4, task_out=2.316106e+06
+  idx=  5, task_out=2.855182e+06
+  idx=  6, task_out=3.182274e+06
+  idx=  7, task_out=2.889362e+06
+  idx=  8, task_out=2.999578e+06
+  idx=  9, task_out=2.844413e+06
+  idx= 10, task_out=2.807996e+06
+============================================================
+[32mTORCPY: node[0]: created=99, executed=99[0m
