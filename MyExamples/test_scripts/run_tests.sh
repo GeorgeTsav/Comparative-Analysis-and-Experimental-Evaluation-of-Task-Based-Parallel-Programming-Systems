@@ -237,13 +237,13 @@ main() {
         test-all)
             print_header "Running All Examples"
             
-            # Test all torcpy examples
-            for f in "$TORCPY_DIR"/ex*.py; do
+            # Test all torcpy examples and apps
+            for f in "$TORCPY_DIR"/{ex,app}*.py; do
                 run_full_test "$(basename "$f")"
             done
             
-            # Test all starpupy examples
-            for f in "$STARPUPY_DIR"/ex*.py; do
+            # Test all starpupy examples and apps
+            for f in "$STARPUPY_DIR"/{ex,app}*.py; do
                 run_full_test "$(basename "$f")"
             done
             
