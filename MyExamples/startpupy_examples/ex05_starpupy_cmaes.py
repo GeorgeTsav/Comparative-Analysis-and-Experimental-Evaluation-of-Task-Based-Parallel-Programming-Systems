@@ -4,6 +4,16 @@ Ported from torcpy example
 With execution time measurement for framework comparison
 """
 # pip install cma
+import os
+
+# Restrict native math libraries to one thread per process/task.
+os.environ.setdefault("OMP_NUM_THREADS", "1")
+os.environ.setdefault("MKL_NUM_THREADS", "1")
+os.environ.setdefault("OPENBLAS_NUM_THREADS", "1")
+os.environ.setdefault("BLIS_NUM_THREADS", "1")
+os.environ.setdefault("VECLIB_MAXIMUM_THREADS", "1")
+os.environ.setdefault("NUMEXPR_NUM_THREADS", "1")
+
 import cma
 import time
 import asyncio
