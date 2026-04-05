@@ -180,7 +180,7 @@ def main():
     ybest = sample_sensors(ubest, pde)
 
     print("=" * 60)
-    print("Framework: torcpy (app00_cmaes_parfor)")
+    print("Framework: torcpy (app00_cmaes)")
     print(f"Best f: {best_f:.6e}")
     print(f"Best theta: {best_x}")
     print(f"PDE iters (best): {iters}")

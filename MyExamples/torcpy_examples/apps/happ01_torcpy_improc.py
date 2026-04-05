@@ -96,8 +96,7 @@ def energy_hist(e, n_bins):
     return h.astype(np.float64)
 
 
-def process_image(payload):
-    file_path, cfg = payload
+def process_image_task(file_path, cfg):
 
     with Image.open(file_path) as im:
         if im.mode != "L":
@@ -111,6 +110,26 @@ def process_image(payload):
     return float(np.sum(h * np.arange(1, cfg["n_bins"] + 1, dtype=np.float64)))
 
 
+def main_kernel_task(kernel_id, file_paths, cfg):
+    # Second level parallelism: each top-level kernel spawns image tasks.
+    t0 = time.time()
+    child_tasks = [torc.submit(process_image_task, f, cfg) for f in file_paths]
+    torc.wait()
+    out = [task.result() for task in child_tasks]
+    dt = time.time() - t0
+
+    out = np.asarray(out, dtype=np.float64)
+    sum_out = float(np.sum(out))
+
+    return {
+        "kernel_id": kernel_id,
+        "n_files": len(file_paths),
+        "elapsed": dt,
+        "sum_out": sum_out,
+        "out": out,
+    }
+
+
 def main():
     parser = argparse.ArgumentParser(description="Heavy image pipeline torcpy")
     parser.add_argument("--images", default=os.path.join(os.path.dirname(__file__), "..", "images"))
@@ -119,6 +138,7 @@ def main():
     parser.add_argument("--orients", type=int, default=8)
     parser.add_argument("--reps", type=int, default=2)
     parser.add_argument("--bins", type=int, default=64)
+    parser.add_argument("--outer-kernels", type=int, default=2)
     args = parser.parse_args()
 
     cfg = {
@@ -134,22 +154,35 @@ def main():
         print(f"No images found in: {args.images}")
         return
 
+    n_outer = max(1, args.outer_kernels)
+    chunks = [list(c) for c in np.array_split(files, n_outer) if len(c) > 0]
+
     print(f"Found {len(files)} images")
     print(
         f"cfg: resize={cfg['resize_n']}, bank={cfg['n_scales']}x{cfg['n_orients']}, "
         f"reps={cfg['reps']}, bins={cfg['n_bins']}"
     )
+    print(f"Two-level parallelism: {len(chunks)} top-level kernels x image-level child tasks")
 
     t0 = time.time()
-    payloads = [(f, cfg) for f in files]
-    out = torc.map(process_image, payloads)
+    parent_tasks = [
+        torc.submit(main_kernel_task, i + 1, chunk, cfg) for i, chunk in enumerate(chunks)
+    ]
+    torc.wait()
+    parent_results = [task.result() for task in parent_tasks]
     dt = time.time() - t0
 
-    out = np.asarray(out, dtype=np.float64)
+    for res in parent_results:
+        print(
+            f"Top kernel {res['kernel_id']}: files={res['n_files']}, "
+            f"elapsed={res['elapsed']:.6f}s, sum(out)={res['sum_out']:.6e}"
+        )
+
+    out = np.concatenate([res["out"] for res in parent_results]) if parent_results else np.array([])
     sum_out = float(np.sum(out))
 
     print("=" * 60)
-    print("Framework: torcpy (app01_improc)")
+    print("Framework: torcpy (happ01_improc)")
     print(f"Elapsed time: {dt:.6f} s")
     print(f"Reduction: sum(out)={sum_out:.6e}  mean(out)={sum_out / max(1, len(out)):.6e}")
     print("First 10 outputs:")
@@ -157,7 +190,6 @@ def main():
     for i in range(m):
         print(f"  idx={i + 1:3d}, task_out={out[i]:.6e}")
     print("=" * 60)
-
 
 if __name__ == "__main__":
     torc.start(main)

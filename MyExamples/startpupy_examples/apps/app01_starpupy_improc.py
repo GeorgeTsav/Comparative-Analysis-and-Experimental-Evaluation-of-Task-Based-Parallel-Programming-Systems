@@ -155,7 +155,7 @@ async def main():
     sum_out = float(np.sum(out))
 
     print("=" * 60)
-    print("Framework: StarPU Python (app01_improc_parfor)")
+    print("Framework: StarPU Python (app01_improc)")
     print(f"Elapsed time: {dt:.6f} s")
     print(f"Reduction: sum(out)={sum_out:.6e}  mean(out)={sum_out / max(1, len(out)):.6e}")
     print("First 10 outputs:")

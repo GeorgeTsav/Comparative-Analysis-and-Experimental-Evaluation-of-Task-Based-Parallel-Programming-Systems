@@ -1,14 +1,15 @@
 """
-Expensive image processing pipeline (torcpy version)
+Expensive image processing pipeline (StarPU Python version)
 
 Requires:
 - numpy
 - pillow
-- torcpy
+- starpu python bindings
 """
 
 import os
 import time
+import asyncio
 import argparse
 
 # Restrict native math libraries to one thread per process/task.
@@ -21,7 +22,7 @@ os.environ.setdefault("NUMEXPR_NUM_THREADS", "1")
 
 import numpy as np
 from PIL import Image
-import torcpy as torc
+from starpu import starpu
 
 
 def get_files(path):
@@ -96,9 +97,7 @@ def energy_hist(e, n_bins):
     return h.astype(np.float64)
 
 
-def process_image(payload):
-    file_path, cfg = payload
-
+def process_image_task(file_path, cfg):
     with Image.open(file_path) as im:
         if im.mode != "L":
             im = im.convert("L")
@@ -111,15 +110,41 @@ def process_image(payload):
     return float(np.sum(h * np.arange(1, cfg["n_bins"] + 1, dtype=np.float64)))
 
 
-def main():
-    parser = argparse.ArgumentParser(description="Heavy image pipeline torcpy")
+def main_kernel_task(kernel_id, file_paths, cfg):
+    # Second level parallelism: each top-level kernel spawns image tasks.
+    t0 = time.time()
+    child_futures = [starpu.task_submit()(process_image_task, f, cfg) for f in file_paths]
+    out = [f.result() for f in child_futures]
+    dt = time.time() - t0
+
+    out = np.asarray(out, dtype=np.float64)
+    sum_out = float(np.sum(out))
+
+    return {
+        "kernel_id": kernel_id,
+        "n_files": len(file_paths),
+        "elapsed": dt,
+        "sum_out": sum_out,
+        "out": out,
+    }
+
+
+async def main():
+    parser = argparse.ArgumentParser(description="Heavy image pipeline StarPU")
     parser.add_argument("--images", default=os.path.join(os.path.dirname(__file__), "..", "images"))
     parser.add_argument("--resize", type=int, default=256)
     parser.add_argument("--scales", type=int, default=5)
     parser.add_argument("--orients", type=int, default=8)
     parser.add_argument("--reps", type=int, default=2)
     parser.add_argument("--bins", type=int, default=64)
+    parser.add_argument("--outer-kernels", type=int, default=2)
     args = parser.parse_args()
+
+    try:
+        starpu.init()
+    except Exception as e:
+        print(f"StarPU initialization error: {e}")
+        return
 
     cfg = {
         "resize_n": args.resize,
@@ -132,24 +157,40 @@ def main():
     files = get_files(args.images)
     if not files:
         print(f"No images found in: {args.images}")
+        starpu.shutdown()
         return
+
+    n_outer = max(1, args.outer_kernels)
+    chunks = [list(c) for c in np.array_split(files, n_outer) if len(c) > 0]
 
     print(f"Found {len(files)} images")
     print(
         f"cfg: resize={cfg['resize_n']}, bank={cfg['n_scales']}x{cfg['n_orients']}, "
         f"reps={cfg['reps']}, bins={cfg['n_bins']}"
     )
+    print(f"Two-level parallelism: {len(chunks)} top-level kernels x image-level child tasks")
 
     t0 = time.time()
-    payloads = [(f, cfg) for f in files]
-    out = torc.map(process_image, payloads)
+    parent_futures = [
+        starpu.task_submit()(main_kernel_task, i + 1, chunk, cfg)
+        for i, chunk in enumerate(chunks)
+    ]
+    parent_results = [await fut for fut in parent_futures]
     dt = time.time() - t0
+
+    for res in parent_results:
+        print(
+            f"Top kernel {res['kernel_id']}: files={res['n_files']}, "
+            f"elapsed={res['elapsed']:.6f}s, sum(out)={res['sum_out']:.6e}"
+        )
+
+    out = np.concatenate([res["out"] for res in parent_results]) if parent_results else np.array([])
 
     out = np.asarray(out, dtype=np.float64)
     sum_out = float(np.sum(out))
 
     print("=" * 60)
-    print("Framework: torcpy (app01_improc)")
+    print("Framework: StarPU Python (happ01_improc)")
     print(f"Elapsed time: {dt:.6f} s")
     print(f"Reduction: sum(out)={sum_out:.6e}  mean(out)={sum_out / max(1, len(out)):.6e}")
     print("First 10 outputs:")
@@ -158,6 +199,8 @@ def main():
         print(f"  idx={i + 1:3d}, task_out={out[i]:.6e}")
     print("=" * 60)
 
+    starpu.shutdown()
+
 
 if __name__ == "__main__":
-    torc.start(main)
+    asyncio.run(main())

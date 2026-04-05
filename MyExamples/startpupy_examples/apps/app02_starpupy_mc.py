@@ -132,7 +132,7 @@ async def main():
     elapsed = time.time() - t0
 
     print("=" * 60)
-    print("Framework: StarPU Python (app02_mc_parfor)")
+    print("Framework: StarPU Python (app02_mc)")
     print(
         f"Payoff mean={mean_payoff:.6g}  stdErr={stderr:.3g}  "
         f"elapsed={elapsed:.3f}s  throughput={n / elapsed:.3g} paths/s"

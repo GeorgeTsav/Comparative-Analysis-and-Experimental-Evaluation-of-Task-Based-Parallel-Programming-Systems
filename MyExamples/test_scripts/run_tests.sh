@@ -43,6 +43,31 @@ print_warning() {
     echo -e "${YELLOW}⚠ $1${NC}"
 }
 
+# Resolve an example file from the new folder layout.
+resolve_example_path() {
+    local root=$1
+    local example=$2
+    local example_name
+
+    example_name=$(basename "$example")
+
+    local candidates=(
+        "$example"
+        "$root/$example"
+        "$root/apps/$example_name"
+        "$root/examples/$example_name"
+    )
+
+    for candidate in "${candidates[@]}"; do
+        if [ -f "$candidate" ]; then
+            echo "$candidate"
+            return 0
+        fi
+    done
+
+    return 1
+}
+
 # Function to run torcpy example
 run_torcpy_test() {
     local example=$1
@@ -52,6 +77,12 @@ run_torcpy_test() {
     
     print_header "Running: $description"
     
+    local example_path
+    if ! example_path=$(resolve_example_path "$TORCPY_DIR" "$example"); then
+        print_error "Could not find torcpy example: $example"
+        return 1
+    fi
+
     cd "$TORCPY_DIR"
     
     # Build command
@@ -59,7 +90,7 @@ run_torcpy_test() {
     if [ "$workers" -gt 1 ]; then
         cmd="$cmd -x TORCPY_WORKERS=$workers"
     fi
-    cmd="$cmd python3 $example"
+    cmd="$cmd python3 $example_path"
     
     echo "Command: $cmd"
     echo "Started: $(date '+%Y-%m-%d %H:%M:%S')"
@@ -93,10 +124,16 @@ run_starpupy_test() {
     
     print_header "Running: $description"
     
+    local example_path
+    if ! example_path=$(resolve_example_path "$STARPUPY_DIR" "$example"); then
+        print_error "Could not find starpupy example: $example"
+        return 1
+    fi
+
     cd "$STARPUPY_DIR"
     
     # Build command
-    local cmd="python3 $example"
+    local cmd="python3 $example_path"
     if [ "$workers" -eq 0 ]; then
         cmd="STARPU_NWORKERS=0 $cmd"
     elif [ "$workers" -gt 1 ]; then
@@ -150,15 +187,9 @@ run_full_test() {
         
     elif [[ $example == *"starpupy"* ]]; then
         print_header "Testing starpupy example: $example"
-        
-        # Sequential (GIL measurement)
-        run_starpupy_test "$example" 0 "Sequential (STARPU_NWORKERS=0)"
-        
-        # Single worker
-        run_starpupy_test "$example" 1 "Single worker (STARPU_NWORKERS=1)"
-        
-        # Multi-worker
-        run_starpupy_test "$example" 2 "Multi-worker (STARPU_NWORKERS=2)"
+
+        # Single execution only (it handles its own parallelism internally)
+        run_starpupy_test "$example" 1 "Single execution"
     fi
 }
 
@@ -216,9 +247,9 @@ main() {
         echo ""
         echo "Examples:"
         echo "  $0 system"
-        echo "  $0 test ex00_torcpy_masterworker.py"
-        echo "  $0 torcpy ex00_torcpy_masterworker.py"
-        echo "  $0 starpupy ex00_starpupy_masterworker.py"
+        echo "  $0 test examples/ex00_torcpy_masterworker.py"
+        echo "  $0 torcpy examples/ex00_torcpy_masterworker.py"
+        echo "  $0 starpupy examples/ex00_starpupy_masterworker.py"
         echo "  $0 test-all"
         exit 0
     fi
@@ -238,12 +269,12 @@ main() {
             print_header "Running All Examples"
             
             # Test all torcpy examples and apps
-            for f in "$TORCPY_DIR"/{ex,app}*.py; do
+            for f in "$TORCPY_DIR"/apps/*.py "$TORCPY_DIR"/examples/*.py; do
                 run_full_test "$(basename "$f")"
             done
             
             # Test all starpupy examples and apps
-            for f in "$STARPUPY_DIR"/{ex,app}*.py; do
+            for f in "$STARPUPY_DIR"/apps/*.py "$STARPUPY_DIR"/examples/*.py; do
                 run_full_test "$(basename "$f")"
             done
             
