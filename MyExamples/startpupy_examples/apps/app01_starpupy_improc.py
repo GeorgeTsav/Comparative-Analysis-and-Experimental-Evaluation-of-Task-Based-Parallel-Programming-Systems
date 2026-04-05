@@ -112,7 +112,7 @@ def process_image(file_path, cfg):
 
 async def main():
     parser = argparse.ArgumentParser(description="Heavy image pipeline StarPU")
-    parser.add_argument("--images", default=os.path.join(os.path.dirname(__file__), "..", "images"))
+    parser.add_argument("--images", default=os.path.join(os.path.dirname(__file__), "..", "..", "images"))
     parser.add_argument("--resize", type=int, default=256)
     parser.add_argument("--scales", type=int, default=5)
     parser.add_argument("--orients", type=int, default=8)

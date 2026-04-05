@@ -132,7 +132,7 @@ def main_kernel_task(kernel_id, file_paths, cfg):
 
 def main():
     parser = argparse.ArgumentParser(description="Heavy image pipeline torcpy")
-    parser.add_argument("--images", default=os.path.join(os.path.dirname(__file__), "..", "images"))
+    parser.add_argument("--images", default=os.path.join(os.path.dirname(__file__), "..", "..", "images"))
     parser.add_argument("--resize", type=int, default=256)
     parser.add_argument("--scales", type=int, default=5)
     parser.add_argument("--orients", type=int, default=8)
