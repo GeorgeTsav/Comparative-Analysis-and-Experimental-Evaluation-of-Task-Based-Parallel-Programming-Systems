@@ -169,7 +169,7 @@ def main():
         payloads = [(np.asarray(s, dtype=np.float64), pde, target_y) for s in solutions]
         fitness = torc.map(eval_candidate, payloads)
         es.tell(solutions, fitness)
-        es.logger.add(es)
+        # es.logger.add(es)
 
     elapsed = time.time() - t0
 

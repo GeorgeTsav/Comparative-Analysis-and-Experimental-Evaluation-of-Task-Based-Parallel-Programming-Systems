@@ -46,7 +46,7 @@ def main():
         solutions = es.ask()
         # Use torc.map for parallel evaluation
         es.tell(solutions, torc.map(rosenbrock, solutions))
-        es.logger.add(es)  # write data to disc to be plotted
+        # es.logger.add(es)  # write data to disc to be plotted
         es.disp()
 
     # Record end time

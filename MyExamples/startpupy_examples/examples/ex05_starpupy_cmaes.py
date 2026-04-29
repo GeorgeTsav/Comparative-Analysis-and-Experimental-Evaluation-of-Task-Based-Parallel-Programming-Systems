@@ -55,7 +55,7 @@ async def main():
             results.append(result)
             
         es.tell(solutions, results)
-        es.logger.add(es)  # write data to disc to be plotted
+        # es.logger.add(es)  # write data to disc to be plotted
         es.disp()
 
     # Record end time

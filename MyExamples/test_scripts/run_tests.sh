@@ -13,10 +13,21 @@ YELLOW='\033[1;33m'
 BLUE='\033[0;34m'
 NC='\033[0m' # No Color
 
+# Get the absolute path of the directory where this script is located
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
 # Directories
 TORCPY_DIR="/home/george-tsavos/CEID/HPC_Lab/Thesis/MyExamples/torcpy_examples"
 STARPUPY_DIR="/home/george-tsavos/CEID/HPC_Lab/Thesis/MyExamples/startpupy_examples"
 RESULTS_DIR="/home/george-tsavos/CEID/HPC_Lab/Thesis/MyExamples/test_results"
+
+# Runtime resource detection
+AVAILABLE_CORES=1
+LOGICAL_CORES=1
+PHYSICAL_CORES=1
+NUMA_NODES=0
+NUMA_ENABLED=0
+MPI_PROCESS_LIMIT=1
 
 # Create results directory if it doesn't exist
 mkdir -p "$RESULTS_DIR"
@@ -41,6 +52,89 @@ print_error() {
 # Function to print warning
 print_warning() {
     echo -e "${YELLOW}⚠ $1${NC}"
+}
+
+# Detect the usable physical CPU cores and whether the machine exposes NUMA.
+initialize_resources() {
+    LOGICAL_CORES=$(nproc 2>/dev/null)
+    if [ -z "$LOGICAL_CORES" ]; then
+        LOGICAL_CORES=$(getconf _NPROCESSORS_ONLN 2>/dev/null)
+    fi
+    if [ -z "$LOGICAL_CORES" ] || [ "$LOGICAL_CORES" -lt 1 ] 2>/dev/null; then
+        LOGICAL_CORES=1
+    fi
+
+    PHYSICAL_CORES=$LOGICAL_CORES
+    if command -v lscpu >/dev/null 2>&1; then
+        local physical_cores
+        physical_cores=$(lscpu 2>/dev/null | awk -F: '
+            /^Core\(s\) per socket:/ {gsub(/^[ \t]+/, "", $2); cores_per_socket=$2}
+            /^Socket\(s\):/ {gsub(/^[ \t]+/, "", $2); sockets=$2}
+            END {
+                if (cores_per_socket > 0 && sockets > 0) {
+                    print cores_per_socket * sockets
+                }
+            }')
+        if [ -n "$physical_cores" ] && [ "$physical_cores" -gt 0 ] 2>/dev/null; then
+            PHYSICAL_CORES=$physical_cores
+        fi
+    fi
+
+    if [ -z "$PHYSICAL_CORES" ] || [ "$PHYSICAL_CORES" -lt 1 ] 2>/dev/null; then
+        PHYSICAL_CORES=1
+    fi
+
+    AVAILABLE_CORES=$PHYSICAL_CORES
+
+    NUMA_NODES=0
+    if command -v lscpu >/dev/null 2>&1; then
+        local lscpu_nodes
+        lscpu_nodes=$(lscpu 2>/dev/null | awk -F: '/^NUMA node\(s\):/ {gsub(/^[ \t]+/, "", $2); print $2; exit}')
+        if [ -n "$lscpu_nodes" ] && [ "$lscpu_nodes" -gt 0 ] 2>/dev/null; then
+            NUMA_NODES=$lscpu_nodes
+        fi
+    fi
+
+    if [ "$NUMA_NODES" -le 1 ] 2>/dev/null && command -v numactl >/dev/null 2>&1; then
+        local numactl_nodes
+        numactl_nodes=$(numactl --hardware 2>/dev/null | awk '/available:/ {print $2; exit}')
+        if [ -n "$numactl_nodes" ] && [ "$numactl_nodes" -gt 0 ] 2>/dev/null; then
+            NUMA_NODES=$numactl_nodes
+        fi
+    fi
+
+    if [ "$NUMA_NODES" -gt 1 ] 2>/dev/null && command -v numactl >/dev/null 2>&1; then
+        NUMA_ENABLED=1
+    else
+        NUMA_ENABLED=0
+    fi
+}
+
+# Detect how many MPI ranks can be launched without oversubscription.
+detect_mpi_process_limit() {
+    MPI_PROCESS_LIMIT=$PHYSICAL_CORES
+
+    if ! command -v mpirun >/dev/null 2>&1; then
+        return
+    fi
+
+    local p=1
+    local last_ok=0
+
+    while [ "$p" -le "$PHYSICAL_CORES" ]; do
+        if mpirun -n "$p" /bin/true >/dev/null 2>&1; then
+            last_ok=$p
+            p=$((p * 2))
+        else
+            break
+        fi
+    done
+
+    if [ "$last_ok" -ge 1 ] 2>/dev/null; then
+        MPI_PROCESS_LIMIT=$last_ok
+    else
+        MPI_PROCESS_LIMIT=1
+    fi
 }
 
 # Resolve an example file from the new folder layout.
@@ -87,8 +181,11 @@ run_torcpy_test() {
     
     # Build command
     local cmd="mpirun -n $processes"
+    if [ "$NUMA_ENABLED" -eq 1 ]; then
+        cmd="$cmd --bind-to numa"
+    fi
     if [ "$workers" -gt 1 ]; then
-        cmd="$cmd -x TORCPY_WORKERS=$workers"
+        cmd="TORCPY_WORKERS=$workers $cmd"
     fi
     cmd="$cmd python3 $example_path"
     
@@ -134,11 +231,8 @@ run_starpupy_test() {
     
     # Build command
     local cmd="python3 $example_path"
-    if [ "$workers" -eq 0 ]; then
-        cmd="STARPU_NWORKERS=0 $cmd"
-    elif [ "$workers" -gt 1 ]; then
-        cmd="STARPU_NWORKERS=$workers $cmd"
-    fi
+    local starpu_env="STARPU_NCPU=$workers STARPU_NCUDA=0 STARPU_NOPENCL=0"
+    cmd="$starpu_env $cmd"
     
     echo "Command: $cmd"
     echo "Started: $(date '+%Y-%m-%d %H:%M:%S')"
@@ -167,29 +261,36 @@ run_starpupy_test() {
 # Function to run a complete test suite
 run_full_test() {
     local example=$1
+    local max_cores=$PHYSICAL_CORES
     
     print_header "Full Test Suite for $example"
     
     if [[ $example == *"torcpy"* ]]; then
         print_header "Testing torcpy example: $example"
-        
-        # Baseline
-        run_torcpy_test "$example" 1 1 "Baseline (1 process, 1 worker)"
-        
-        # Distributed
-        run_torcpy_test "$example" 2 1 "Distributed (2 processes, 1 worker each)"
-        
-        # Multi-threaded
-        run_torcpy_test "$example" 1 2 "Multi-threaded (1 process, 2 workers)"
-        
-        # Hybrid
-        run_torcpy_test "$example" 2 2 "Hybrid (2 processes, 2 workers each)"
+
+        local max_processes=$max_cores
+        if [ "$MPI_PROCESS_LIMIT" -lt "$max_processes" ]; then
+            max_processes=$MPI_PROCESS_LIMIT
+        fi
+
+        local processes=1
+        while [ "$processes" -le "$max_processes" ]; do
+            local workers=1
+            while [ "$workers" -le $((max_cores / processes)) ]; do
+                run_torcpy_test "$example" "$processes" "$workers" "${processes} process(es), ${workers} worker(s)"
+                workers=$((workers * 2))
+            done
+            processes=$((processes * 2))
+        done
         
     elif [[ $example == *"starpupy"* ]]; then
         print_header "Testing starpupy example: $example"
 
-        # Single execution only (it handles its own parallelism internally)
-        run_starpupy_test "$example" 1 "Single execution"
+        local workers=1
+        while [ "$workers" -le "$max_cores" ]; do
+            run_starpupy_test "$example" "$workers" "${workers} worker(s)"
+            workers=$((workers * 2))
+        done
     fi
 }
 
@@ -216,11 +317,18 @@ show_system_info() {
     echo ""
     
     echo "CPU Information:"
-    echo "Cores: $(nproc)"
+    echo "Physical cores: $PHYSICAL_CORES"
+    echo "Logical cores: $LOGICAL_CORES"
+    if [ "$NUMA_ENABLED" -eq 1 ]; then
+        echo "NUMA: enabled (${NUMA_NODES} nodes)"
+    else
+        echo "NUMA: not detected"
+    fi
     echo ""
     
     echo "MPI Information:"
     mpirun --version 2>/dev/null || echo "MPI not found"
+    echo "MPI process limit (detected): $MPI_PROCESS_LIMIT"
     echo ""
     
     echo "torcpy Installation:"
@@ -233,6 +341,9 @@ show_system_info() {
 
 # Main script logic
 main() {
+    initialize_resources
+    detect_mpi_process_limit
+
     if [ $# -eq 0 ]; then
         # Show help if no arguments
         echo "Usage: $0 [command] [arguments]"

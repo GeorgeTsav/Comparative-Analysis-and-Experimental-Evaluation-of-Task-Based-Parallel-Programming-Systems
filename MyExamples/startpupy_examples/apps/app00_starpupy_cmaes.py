@@ -177,7 +177,7 @@ async def main():
         ]
         fitness = [await fut for fut in futures]
         es.tell(solutions, fitness)
-        es.logger.add(es)
+        # es.logger.add(es)
 
     elapsed = time.time() - t0
 
