@@ -294,6 +294,24 @@ run_full_test() {
     fi
 }
 
+# Function to run all torcpy examples and apps
+run_all_torcpy_tests() {
+    print_header "Running All torcpy Examples"
+
+    for f in "$TORCPY_DIR"/apps/*.py "$TORCPY_DIR"/examples/*.py; do
+        run_full_test "$(basename "$f")"
+    done
+}
+
+# Function to run all starpupy examples and apps
+run_all_starpupy_tests() {
+    print_header "Running All starpupy Examples"
+
+    for f in "$STARPUPY_DIR"/apps/*.py "$STARPUPY_DIR"/examples/*.py; do
+        run_full_test "$(basename "$f")"
+    done
+}
+
 # Function to compare results
 compare_results() {
     print_header "Comparison Results"
@@ -352,6 +370,8 @@ main() {
         echo "  system              - Show system information"
         echo "  test <example>      - Run full test suite for example"
         echo "  test-all            - Run all examples"
+        echo "  test-all-torcpy     - Run all torcpy examples and apps"
+        echo "  test-all-starpupy   - Run all starpupy examples and apps"
         echo "  torcpy <example>    - Test specific torcpy example"
         echo "  starpupy <example>  - Test specific starpupy example"
         echo "  compare             - Show comparison results"
@@ -362,6 +382,8 @@ main() {
         echo "  $0 torcpy examples/ex00_torcpy_masterworker.py"
         echo "  $0 starpupy examples/ex00_starpupy_masterworker.py"
         echo "  $0 test-all"
+        echo "  $0 test-all-torcpy"
+        echo "  $0 test-all-starpupy"
         exit 0
     fi
     
@@ -378,16 +400,18 @@ main() {
             ;;
         test-all)
             print_header "Running All Examples"
-            
-            # Test all torcpy examples and apps
-            for f in "$TORCPY_DIR"/apps/*.py "$TORCPY_DIR"/examples/*.py; do
-                run_full_test "$(basename "$f")"
-            done
-            
-            # Test all starpupy examples and apps
-            for f in "$STARPUPY_DIR"/apps/*.py "$STARPUPY_DIR"/examples/*.py; do
-                run_full_test "$(basename "$f")"
-            done
+
+            run_all_torcpy_tests
+            run_all_starpupy_tests
+
+            compare_results
+            ;;
+        test-all-torcpy)
+            run_all_torcpy_tests
+            compare_results
+            ;;
+        test-all-starpupy)
+            run_all_starpupy_tests
             
             compare_results
             ;;
