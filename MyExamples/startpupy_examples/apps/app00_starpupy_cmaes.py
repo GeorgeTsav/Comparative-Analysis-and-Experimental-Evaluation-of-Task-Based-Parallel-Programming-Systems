@@ -24,6 +24,18 @@ import numpy as np
 import cma
 from starpu import starpu
 
+try:
+    from numba import njit
+except ImportError:
+    def njit(*args, **kwargs):
+        if args and callable(args[0]) and len(args) == 1 and not kwargs:
+            return args[0]
+
+        def decorator(func):
+            return func
+
+        return decorator
+
 
 def source_locations(k):
     pts = np.array([
@@ -43,79 +55,157 @@ def sensor_locations(m, rng):
     return rng.uniform(0.05, 0.95, size=(m, 2))
 
 
-def build_rhs(theta, pde):
-    nx, ny = pde["nx"], pde["ny"]
-    x = np.linspace(0.0, 1.0, nx)
-    y = np.linspace(0.0, 1.0, ny)
-    xx, yy = np.meshgrid(x, y)
-
-    src_xy = pde["src_xy"]
-    sig2 = pde["src_sig"] ** 2
-
+@njit(nogil=True)
+def build_rhs_numba(theta, src_xy, src_sig, nx, ny):
     f = np.zeros((ny, nx), dtype=np.float64)
-    for k in range(pde["k"]):
-        cx, cy = src_xy[k]
-        g = np.exp(-((xx - cx) ** 2 + (yy - cy) ** 2) / (2.0 * sig2))
-        f += theta[k] * g
+    sig2 = src_sig * src_sig
+    inv_x = 1.0 / (nx - 1)
+    inv_y = 1.0 / (ny - 1)
+
+    for k in range(theta.shape[0]):
+        cx = src_xy[k, 0]
+        cy = src_xy[k, 1]
+        theta_k = theta[k]
+
+        for j in range(ny):
+            y = j * inv_y
+            dy = y - cy
+            for i in range(nx):
+                x = i * inv_x
+                dx = x - cx
+                g = np.exp(-((dx * dx + dy * dy) / (2.0 * sig2)))
+                f[j, i] += theta_k * g
+
     return f
 
 
-def solve_poisson_from_theta(theta, pde):
-    nx, ny = pde["nx"], pde["ny"]
-    max_iter = pde["max_iter"]
-    tol = pde["tol"]
-    use_tol = pde["use_tol"]
-
+@njit(nogil=True)
+def solve_poisson_numba(theta, src_xy, src_sig, nx, ny, max_iter, tol, use_tol):
     hx = 1.0 / (nx - 1)
     hy = 1.0 / (ny - 1)
     hx2 = hx * hx
     hy2 = hy * hy
     den = 2.0 * (1.0 / hx2 + 1.0 / hy2)
 
-    f = build_rhs(theta, pde)
+    f = build_rhs_numba(theta, src_xy, src_sig, nx, ny)
     u = np.zeros((ny, nx), dtype=np.float64)
     unew = np.zeros_like(u)
 
-    iters = 0
     for k in range(max_iter):
-        unew[1:-1, 1:-1] = (
-            (u[1:-1, 2:] + u[1:-1, :-2]) / hx2
-            + (u[2:, 1:-1] + u[:-2, 1:-1]) / hy2
-            + f[1:-1, 1:-1]
-        ) / den
-        iters = k + 1
+        for j in range(1, ny - 1):
+            for i in range(1, nx - 1):
+                unew[j, i] = (
+                    (u[j, i + 1] + u[j, i - 1]) / hx2
+                    + (u[j + 1, i] + u[j - 1, i]) / hy2
+                    + f[j, i]
+                ) / den
 
         if use_tol:
-            diff = np.linalg.norm(unew - u) / max(1e-12, np.linalg.norm(unew))
+            diff_num = 0.0
+            diff_den = 0.0
+            for j in range(ny):
+                for i in range(nx):
+                    d = unew[j, i] - u[j, i]
+                    diff_num += d * d
+                    diff_den += unew[j, i] * unew[j, i]
+
+            diff = np.sqrt(diff_num) / max(1e-12, np.sqrt(diff_den))
             u, unew = unew, u
             if diff < tol:
-                break
+                return u, k + 1
         else:
             u, unew = unew, u
 
-    return u, iters
+    return u, max_iter
 
 
-def sample_sensors(u, pde):
-    nx, ny = pde["nx"], pde["ny"]
-    x = np.linspace(0.0, 1.0, nx)
-    y = np.linspace(0.0, 1.0, ny)
+@njit(nogil=True)
+def sample_sensors_numba(u, sens_xy, nx, ny):
+    vals = np.zeros((sens_xy.shape[0],), dtype=np.float64)
+    x_scale = nx - 1
+    y_scale = ny - 1
 
-    vals = np.zeros((pde["m"],), dtype=np.float64)
-    for i, (sx, sy) in enumerate(pde["sens_xy"]):
-        ix = np.argmin(np.abs(x - sx))
-        iy = np.argmin(np.abs(y - sy))
+    for i in range(sens_xy.shape[0]):
+        sx = sens_xy[i, 0]
+        sy = sens_xy[i, 1]
+
+        ix = int(sx * x_scale + 0.5)
+        iy = int(sy * y_scale + 0.5)
+
+        if ix < 0:
+            ix = 0
+        elif ix > nx - 1:
+            ix = nx - 1
+
+        if iy < 0:
+            iy = 0
+        elif iy > ny - 1:
+            iy = ny - 1
+
         vals[i] = u[iy, ix]
+
     return vals
 
 
-def eval_candidate(theta, pde, target_y):
-    u, _ = solve_poisson_from_theta(theta, pde)
-    y = sample_sensors(u, pde)
+@njit(nogil=True)
+def eval_candidate_numba(theta, src_xy, src_sig, sens_xy, nx, ny, max_iter, tol, use_tol, target_y):
+    u, _ = solve_poisson_numba(theta, src_xy, src_sig, nx, ny, max_iter, tol, use_tol)
+    y = sample_sensors_numba(u, sens_xy, nx, ny)
 
-    mse = np.mean((y - target_y) ** 2)
-    reg = 1e-4 * np.mean(theta ** 2)
-    return float(mse + reg)
+    mse = 0.0
+    for i in range(target_y.shape[0]):
+        d = y[i] - target_y[i]
+        mse += d * d
+    mse /= target_y.shape[0]
+
+    reg = 0.0
+    for i in range(theta.shape[0]):
+        reg += theta[i] * theta[i]
+    reg = 1e-4 * (reg / theta.shape[0])
+
+    return mse + reg
+
+
+def build_rhs(theta, pde):
+    theta = np.ascontiguousarray(theta, dtype=np.float64)
+    return build_rhs_numba(theta, pde["src_xy"], pde["src_sig"], pde["nx"], pde["ny"])
+
+
+def solve_poisson_from_theta(theta, pde):
+    theta = np.ascontiguousarray(theta, dtype=np.float64)
+    return solve_poisson_numba(
+        theta,
+        pde["src_xy"],
+        pde["src_sig"],
+        pde["nx"],
+        pde["ny"],
+        pde["max_iter"],
+        pde["tol"],
+        pde["use_tol"],
+    )
+
+
+def sample_sensors(u, pde):
+    return sample_sensors_numba(u, pde["sens_xy"], pde["nx"], pde["ny"])
+
+
+def eval_candidate(theta, pde, target_y):
+    theta = np.ascontiguousarray(theta, dtype=np.float64)
+    target_y = np.ascontiguousarray(target_y, dtype=np.float64)
+    return float(
+        eval_candidate_numba(
+            theta,
+            pde["src_xy"],
+            pde["src_sig"],
+            pde["sens_xy"],
+            pde["nx"],
+            pde["ny"],
+            pde["max_iter"],
+            pde["tol"],
+            pde["use_tol"],
+            target_y,
+        )
+    )
 
 
 def rmse(a, b):
@@ -147,10 +237,10 @@ async def main():
         "tol": 1e-6,
         "use_tol": False,
         "k": 8,
-        "src_xy": source_locations(8),
+        "src_xy": np.ascontiguousarray(source_locations(8), dtype=np.float64),
         "src_sig": 0.06,
         "m": 40,
-        "sens_xy": sensor_locations(40, rng),
+        "sens_xy": np.ascontiguousarray(sensor_locations(40, rng), dtype=np.float64),
     }
 
     theta_true = np.array([1.2, -0.8, 0.5, 0.0, 1.6, -1.1, 0.7, -0.3], dtype=np.float64)
