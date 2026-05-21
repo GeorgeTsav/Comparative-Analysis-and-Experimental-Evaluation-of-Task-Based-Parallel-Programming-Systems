@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.24.0 (TeX Live 2026)  (format=lualatex 2026.5.18)  21 MAY 2026 13:05
+This is LuaHBTeX, Version 1.24.0 (TeX Live 2026)  (format=lualatex 2026.5.18)  21 MAY 2026 18:35
  restricted system commands enabled.
 **"c:/Users/georg/Desktop/CEID/My Thesis/Thesis/main"
 ("c:/Users/georg/Desktop/CEID/My Thesis/Thesis/main.tex"
@@ -964,7 +964,24 @@ Package fontspec Info:
 (fontspec)             <->"name:Times New
 (fontspec)             Roman/BI:mode=harf;script=latn;language=dflt;+smcp;"
 
-Package hyperref Info: Option `colorlinks' set `true' on input line 60.
+
+Package fontspec Info: 
+(fontspec)             Font family 'DejaVuSansMono(0)' created for font
+(fontspec)             'DejaVu Sans Mono' with options [Renderer=Harfbuzz].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.: <->"name:DejaVu Sans
+(fontspec)             Mono:mode=harf;script=latn;language=dflt;"
+(fontspec)             - 'bold' (b/n) with NFSS spec.: <->"name:DejaVu Sans
+(fontspec)             Mono/B:mode=harf;script=latn;language=dflt;"
+(fontspec)             - 'italic' (m/it) with NFSS spec.: <->"name:DejaVu Sans
+(fontspec)             Mono/I:mode=harf;script=latn;language=dflt;"
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.: <->"name:DejaVu
+(fontspec)             Sans Mono/BI:mode=harf;script=latn;language=dflt;"
+
+Package hyperref Info: Option `colorlinks' set `true' on input line 62.
 \c@theorem=\count538
 ) (c:/texlive/2026/texmf-dist/tex/latex/graphics/color.sty
 Package: color 2025/01/14 v1.3e Standard LaTeX Color (DPC)
@@ -1047,8 +1064,8 @@ Package translations Info: loading dictionary `translations-basic-dictionary' fo
 * \textheight=674.33032pt
 * \oddsidemargin=13.08827pt
 * \evensidemargin=13.08827pt
-* \topmargin=-18.78552pt
-* \headheight=12.0pt
+* \topmargin=-21.78552pt
+* \headheight=15.0pt
 * \headsep=19.8738pt
 * \topskip=12.0pt
 * \footskip=30.0pt
@@ -1155,7 +1172,7 @@ Package biblatex Info: Reference segment=0 on input line 53.
 
 \openout2 = intro/titlepage.aux
  (./intro/titlepage.tex
-<images/up_stamp.jpg, id=24, 147.6717pt x 148.1535pt>
+<images/up_stamp.jpg, id=32, 147.6717pt x 148.1535pt>
 File: images/up_stamp.jpg Graphic file (type jpg)
 <use images/up_stamp.jpg>
 Package luatex.def Info: images/up_stamp.jpg  used on input line 10.
@@ -1219,38 +1236,22 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 ] (./chapters/ch01_introduction.tex
 Κεφάλαιο 1.
-) [1
+[1
 
 
 
-] (./chapters/ch02_chapter_2.tex
+]
 LaTeX Font Info:    Font shape `TU/TimesNewRoman(1)/m/sl' in size <12> not available
-(Font)              Font shape `TU/TimesNewRoman(1)/m/it' tried instead on input line 3.
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[2
+(Font)              Font shape `TU/TimesNewRoman(1)/m/it' tried instead on input line 29.
+ [2]) [3] (./chapters/ch02_chapter_2.tex [4
 
 
 ]
 Κεφάλαιο 2.
-) [3]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[4
+) [5] [6
 
 
-] [5] (./intro/lastpage.tex) [6
+] [7] (./intro/lastpage.tex) [8
 
 ] (./main.aux (./intro/titlepage.aux) (./intro/certification.aux) (./intro/about.aux) (./intro/summary.aux) (./intro/acknowledgements.aux))
  ***********
@@ -1258,26 +1259,26 @@ LaTeX2e <2025-11-01>
 L3 programming layer <2026-04-28>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 2AC3EBEA026434909B98606C6134F900;802.
+(rerunfilecheck)             Checksum: A8B82FB3B58EAA786EC0FDA7D99F228B;1326.
 Package logreq Info: Writing requests to 'main.run.xml'.
 
 \openout1 = main.run.xml
 )
 
 Here is how much of LuaTeX's memory you used:
- 35696 strings out of 475892
+ 35731 strings out of 475892
  125165,1977958 words of node,token memory allocated
  779 words of node memory still in use:
    6 hlist, 2 vlist, 2 rule, 2 glue, 4 kern, 1 glyph, 6 attribute, 111 glue_spec, 6 attribute_list, 1 write nodes
-   avail lists: 1:1,2:256,3:98,4:30,5:135,6:45,7:2202,8:1,9:192,10:8,11:306
- 57620 multiletter control sequences out of 65536+600000
- 61 fonts using 37563887 bytes
+   avail lists: 1:2,2:263,3:105,4:38,5:188,6:45,7:5530,8:1,9:204,10:8,11:685
+ 57651 multiletter control sequences out of 65536+600000
+ 72 fonts using 48091143 bytes
  90i,11n,128p,2591b,2455s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<c:/Windows/Fonts/timesi.ttf><c:/Windows/Fonts/times.ttf><c:/Windows/Fonts/timesbd.ttf>
-Output written on main.pdf (15 pages, 265271 bytes).
+<c:/texlive/2026/texmf-dist/fonts/truetype/public/dejavu/DejaVuSansMono.ttf><c:/Windows/Fonts/timesi.ttf><c:/Windows/Fonts/times.ttf><c:/Windows/Fonts/timesbd.ttf>
+Output written on main.pdf (17 pages, 293744 bytes).
 
-PDF statistics: 122 PDF objects out of 1000 (max. 8388607)
- 93 compressed objects within 1 object stream
- 22 named destinations out of 1000 (max. 1048576)
- 41 words of extra memory for PDF output out of 10000 (max. 100000000)
+PDF statistics: 151 PDF objects out of 1000 (max. 8388607)
+ 113 compressed objects within 2 object streams
+ 26 named destinations out of 1000 (max. 1048576)
+ 57 words of extra memory for PDF output out of 10000 (max. 100000000)
 

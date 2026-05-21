@@ -41,7 +41,8 @@
 	left=30mm,
 	right=30mm,
 	top=30mm,
-	bottom=30mm
+	bottom=30mm,
+  headheight=15pt
 }
 
 % PDF language settings
@@ -49,14 +50,15 @@
 \setotherlanguage[variant=british]{english}
 \setmainfont{Times New Roman}
 \newfontfamily\greekfont{Times New Roman}
+\newfontfamily\greekfonttt{DejaVu Sans Mono}
 \newfontfamily\englishfont{Times New Roman}
 
 \hypersetup{
-    colorlinks=true,
-    linkcolor=black,
-    filecolor=black,
-    urlcolor=blue,
-	citecolor=black,
+  colorlinks=true,
+  linkcolor=black,
+  filecolor=black,
+  urlcolor=blue,
+  citecolor=black,
 }
 
 %*******************************%
@@ -94,7 +96,7 @@
 %					CHAPTER FORMAT				%
 %*******************************%
 \makeatletter
-% Adjusted to perfectly match the large multi-line Chapter headings style of the PDF
+
 \def\@makechapterhead#1{%
   \vspace*{20\p@}%
   {\parindent \z@ \raggedright \normalfont
