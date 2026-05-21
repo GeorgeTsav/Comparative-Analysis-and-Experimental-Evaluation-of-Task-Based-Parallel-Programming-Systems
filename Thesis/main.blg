@@ -1,9 +1,15 @@
 [0] Config.pm:328> INFO - This is Biber 2.21
 [0] Config.pm:331> INFO - Logfile is 'main.blg'
-[124] biber-MSWIN64:342> INFO - === 
-[163] Biber.pm:421> INFO - Reading 'main.bcf'
-[294] Biber.pm:1002> INFO - Found 0 citekeys in bib section 0
-[310] bbl.pm:676> INFO - Writing 'main.bbl' with encoding 'UTF-8'
-[310] bbl.pm:779> INFO - Output to main.bbl
-[311] Biber.pm:132> WARN - The file 'main.bcf' does not contain any citations!
-[311] Biber.pm:134> INFO - WARNINGS: 1
+[144] biber-MSWIN64:342> INFO - === 
+[189] Biber.pm:421> INFO - Reading 'main.bcf'
+[330] Biber.pm:999> INFO - Using all citekeys in bib section 0
+[347] Biber.pm:4487> INFO - Processing section 0
+[360] Biber.pm:4678> INFO - Looking for bibtex file 'library/bibliography.bib' for section 0
+[409] bibtex.pm:1713> INFO - LaTeX decoding ...
+[415] bibtex.pm:1519> INFO - Found BibTeX data source 'library/bibliography.bib'
+[467] UCollate.pm:68> INFO - Overriding locale 'el-GR' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[467] UCollate.pm:68> INFO - Overriding locale 'el-GR' defaults 'variable = shifted' with 'variable = non-ignorable'
+[467] Biber.pm:4307> INFO - Sorting list 'nty/global//global/global/global' of type 'entry' with template 'nty' and locale 'el-GR'
+[467] Biber.pm:4313> INFO - No sort tailoring available for locale 'el-GR'
+[470] bbl.pm:676> INFO - Writing 'main.bbl' with encoding 'UTF-8'
+[472] bbl.pm:779> INFO - Output to main.bbl

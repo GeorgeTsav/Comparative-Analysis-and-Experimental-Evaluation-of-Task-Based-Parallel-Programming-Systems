@@ -46,8 +46,8 @@
 }
 
 % GLOSSARY
-\makeglossaries
-\input{library/glossary}
+% \makeglossaries
+% \input{library/glossary}
 
 % BEGIN DOCUMENT
 \begin{document}
@@ -80,7 +80,6 @@
 %*************************%
 %    Table of Contents    %
 %*************************%     
-\renewcommand*\contentsname{Περιεχόμενα}
 {\hypersetup{linkcolor=black}
 \tableofcontents
 }
@@ -92,13 +91,12 @@
 %    3. Glossary          %
 %*************************%
 \listoffigures
+\clearpage
 \listoftables
-\printglossaries
-\clearemptydoublepage
+%\printglossaries
+\clearpage
 
-\mainmatter % book mode only
-\clearemptydoublepage
-
+\clearpage
 
 \pagestyle{fancy}
 \pagenumbering{arabic}
@@ -109,12 +107,12 @@
 %*************************%
 
 % Introduction
-\input{chapters/introduction}
-\clearemptydoublepage
+\input{chapters/ch01_introduction.tex}
+\clearpage
 
 % Theoretical Background
-\input{chapters/chapter_2}
-\clearemptydoublepage
+\input{chapters/ch02_chapter_2.tex}
+\clearpage
 
 % Next Chapters
 % .............
@@ -125,6 +123,8 @@
 %**************************%
 
 % Bibliography
+% Include all .bib entries even if not explicitly cited
+\nocite{*}
 \printbibliography[heading=bibintoc]
 \clearemptydoublepage
 

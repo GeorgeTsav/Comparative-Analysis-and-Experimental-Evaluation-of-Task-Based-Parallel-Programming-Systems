@@ -16,5 +16,66 @@
   {}
 \endgroup
 
+
+\refsection{0}
+  \datalist[entry]{nty/global//global/global/global}
+    \entry{hadjidoukas2020torcpy}{article}{}{}
+      \name{author}{6}{}{%
+        {{hash=378305958400259996bd2e0c16eec508}{%
+           family={Hadjidoukas},
+           familyi={H\bibinitperiod},
+           given={Panagiotis\bibnamedelima E},
+           giveni={P\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=c6a2d3a76fc75f71dece07391679046d}{%
+           family={Bartezzaghi},
+           familyi={B\bibinitperiod},
+           given={Andrea},
+           giveni={A\bibinitperiod}}}%
+        {{hash=e605ef30b60434817635c4cdf7a776f2}{%
+           family={Scheidegger},
+           familyi={S\bibinitperiod},
+           given={Florian},
+           giveni={F\bibinitperiod}}}%
+        {{hash=c94476ca1544696242f8ab1b843dff1c}{%
+           family={Istrate},
+           familyi={I\bibinitperiod},
+           given={Roxana},
+           giveni={R\bibinitperiod}}}%
+        {{hash=ed5f598d8cc43f361f31d4e4ae3839df}{%
+           family={Bekas},
+           familyi={B\bibinitperiod},
+           given={Costas},
+           giveni={C\bibinitperiod}}}%
+        {{hash=a336126c47549622257f94ac2e08b769}{%
+           family={Malossi},
+           familyi={M\bibinitperiod},
+           given={A\bibnamedelima Cristiano\bibnamedelima I},
+           giveni={A\bibinitperiod\bibinitdelim C\bibinitperiod\bibinitdelim I\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{6c176e0d4167fa5cf25d9e4d98b7ff12}
+      \strng{fullhash}{6164f9dd975a765d5b3675ab45aa71ad}
+      \strng{fullhashraw}{6164f9dd975a765d5b3675ab45aa71ad}
+      \strng{bibnamehash}{6c176e0d4167fa5cf25d9e4d98b7ff12}
+      \strng{authorbibnamehash}{6c176e0d4167fa5cf25d9e4d98b7ff12}
+      \strng{authornamehash}{6c176e0d4167fa5cf25d9e4d98b7ff12}
+      \strng{authorfullhash}{6164f9dd975a765d5b3675ab45aa71ad}
+      \strng{authorfullhashraw}{6164f9dd975a765d5b3675ab45aa71ad}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{SoftwareX}
+      \field{title}{torcpy: Supporting task parallelism in Python}
+      \field{volume}{12}
+      \field{year}{2020}
+      \true{nocite}
+      \field{pages}{100517}
+      \range{pages}{1}
+    \endentry
+  \enddatalist
+\endrefsection
 \endinput
 
