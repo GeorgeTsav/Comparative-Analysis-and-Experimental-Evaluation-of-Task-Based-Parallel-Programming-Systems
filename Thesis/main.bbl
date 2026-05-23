@@ -18,7 +18,43 @@
 
 
 \refsection{0}
-  \datalist[entry]{nty/global//global/global/global}
+  \datalist[entry]{none/global//global/global/global}
+    \entry{papadakis2012}{book}{}{}
+      \name{author}{2}{}{%
+        {{hash=7e03da661e27c44c762c57e892313131}{%
+           family={Στυλιανός},
+           familyi={Σ\bibinitperiod},
+           given={Παπαδάκης},
+           giveni={Π\bibinitperiod}}}%
+        {{hash=9a0ecb06b2c1b19450d4a5527f838fa2}{%
+           family={Κωνσταντίνος},
+           familyi={Κ\bibinitperiod},
+           given={Διαμαντάρας},
+           giveni={Δ\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Αθήνα}%
+      }
+      \list{publisher}{1}{%
+        {Εκδόσεις Κλειδάριθμος}%
+      }
+      \strng{namehash}{f66eea1329f78c5c3342ffd336200f91}
+      \strng{fullhash}{f66eea1329f78c5c3342ffd336200f91}
+      \strng{fullhashraw}{f66eea1329f78c5c3342ffd336200f91}
+      \strng{bibnamehash}{f66eea1329f78c5c3342ffd336200f91}
+      \strng{authorbibnamehash}{f66eea1329f78c5c3342ffd336200f91}
+      \strng{authornamehash}{f66eea1329f78c5c3342ffd336200f91}
+      \strng{authorfullhash}{f66eea1329f78c5c3342ffd336200f91}
+      \strng{authorfullhashraw}{f66eea1329f78c5c3342ffd336200f91}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{1}
+      \field{isbn}{978-960-461-446-2}
+      \field{title}{{Προγραμματισμός και Αρχιτεκτονική Συστημάτων Παράλληλης Επεξεργασίας}}
+      \field{year}{2012}
+    \endentry
     \entry{hadjidoukas2020torcpy}{article}{}{}
       \name{author}{6}{}{%
         {{hash=378305958400259996bd2e0c16eec508}{%
@@ -63,17 +99,60 @@
       \strng{authornamehash}{6c176e0d4167fa5cf25d9e4d98b7ff12}
       \strng{authorfullhash}{6164f9dd975a765d5b3675ab45aa71ad}
       \strng{authorfullhashraw}{6164f9dd975a765d5b3675ab45aa71ad}
-      \field{sortinit}{H}
-      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{SoftwareX}
       \field{title}{torcpy: Supporting task parallelism in Python}
       \field{volume}{12}
       \field{year}{2020}
-      \true{nocite}
       \field{pages}{100517}
       \range{pages}{1}
+    \endentry
+    \entry{augonnet2009starpu}{inproceedings}{}{}
+      \name{author}{4}{}{%
+        {{hash=736f79b70cf6488db7dfa8e71456f718}{%
+           family={Augonnet},
+           familyi={A\bibinitperiod},
+           given={Cédric},
+           giveni={C\bibinitperiod}}}%
+        {{hash=2a6cddc12d90996f2d082705aab80d36}{%
+           family={Thibault},
+           familyi={T\bibinitperiod},
+           given={Samuel},
+           giveni={S\bibinitperiod}}}%
+        {{hash=4acb86ced09c0de0a698930a3ac8ed1a}{%
+           family={Namyst},
+           familyi={N\bibinitperiod},
+           given={Raymond},
+           giveni={R\bibinitperiod}}}%
+        {{hash=8ba8cc921b7f67cebb81bb14543c2bd2}{%
+           family={Wacrenier},
+           familyi={W\bibinitperiod},
+           given={Pierre-André},
+           giveni={P\bibinithyphendelim A\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{b8f74ceca10299b898b8f8bc125acf89}
+      \strng{fullhash}{8632844a4577bc666687a3056a23320e}
+      \strng{fullhashraw}{8632844a4577bc666687a3056a23320e}
+      \strng{bibnamehash}{b8f74ceca10299b898b8f8bc125acf89}
+      \strng{authorbibnamehash}{b8f74ceca10299b898b8f8bc125acf89}
+      \strng{authornamehash}{b8f74ceca10299b898b8f8bc125acf89}
+      \strng{authorfullhash}{8632844a4577bc666687a3056a23320e}
+      \strng{authorfullhashraw}{8632844a4577bc666687a3056a23320e}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{European Conference on Parallel Processing}
+      \field{title}{StarPU: a unified platform for task scheduling on heterogeneous multicore architectures}
+      \field{year}{2009}
+      \field{pages}{863\bibrangedash 874}
+      \range{pages}{12}
     \endentry
   \enddatalist
 \endrefsection

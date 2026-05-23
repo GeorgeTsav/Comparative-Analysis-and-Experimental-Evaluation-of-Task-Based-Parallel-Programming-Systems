@@ -8,6 +8,7 @@
 \usepackage{float}
 \usepackage{graphicx}
 \usepackage{caption}
+\captionsetup{labelfont=bf}
 \usepackage[acronym]{glossaries}
 \usepackage{glossaries-polyglossia}
 \usepackage[nottoc]{tocbibind}
@@ -29,8 +30,11 @@
 \usepackage{hyperref}
 \usepackage[
     backend=biber,
-    style=numeric
+    style=numeric,
+    sorting=none,
 ]{biblatex}
+\appto{\bibsetup}{\sloppy}
+\usepackage{microtype}
 
 
 \setlength{\parindent}{2em}

@@ -45,9 +45,6 @@
     pdfcreator={\creator}
 }
 
-% GLOSSARY
-% \makeglossaries
-% \input{library/glossary}
 
 % BEGIN DOCUMENT
 \begin{document}
@@ -86,14 +83,15 @@
 \clearemptydoublepage
 
 %*************************%
-%    1. Lists of figures  %
-%    2. List of Tables    %
-%    3. Glossary          %
+%    1. Abbreviations     %
+%    2. Lists of figures  %
+%    3. Lists of tables   %
 %*************************%
+\include{library/abbreviations}
+\clearpage
 \listoffigures
 \clearpage
 \listoftables
-%\printglossaries
 \clearpage
 
 \clearpage
@@ -124,7 +122,7 @@
 
 % Bibliography
 % Include all .bib entries even if not explicitly cited
-\nocite{*}
+% \nocite{*}
 \printbibliography[heading=bibintoc]
 \clearemptydoublepage
 
