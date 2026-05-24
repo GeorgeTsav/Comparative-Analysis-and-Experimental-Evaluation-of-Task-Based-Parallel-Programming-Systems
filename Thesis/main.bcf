@@ -2388,6 +2388,9 @@
     <bcf:citekey order="14" intorder="1">denneman2016numa</bcf:citekey>
     <bcf:citekey order="15" intorder="1">denneman2016numa</bcf:citekey>
     <bcf:citekey order="16" intorder="1">Deters_2018</bcf:citekey>
+    <bcf:citekey order="17" intorder="1">Deters_2018</bcf:citekey>
+    <bcf:citekey order="18" intorder="1">augonnet2009starpu</bcf:citekey>
+    <bcf:citekey order="19" intorder="1">hadjidoukas2020torcpy</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">

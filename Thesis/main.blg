@@ -2,16 +2,16 @@
 [0] Config.pm:331> INFO - Logfile is 'main.blg'
 [124] biber-MSWIN64:342> INFO - === 
 [163] Biber.pm:421> INFO - Reading 'main.bcf'
-[293] Biber.pm:1002> INFO - Found 7 citekeys in bib section 0
-[311] Biber.pm:4487> INFO - Processing section 0
-[324] Biber.pm:4678> INFO - Looking for bibtex file 'library/bibliography.bib' for section 0
-[372] bibtex.pm:1713> INFO - LaTeX decoding ...
-[384] bibtex.pm:1519> INFO - Found BibTeX data source 'library/bibliography.bib'
+[297] Biber.pm:1002> INFO - Found 7 citekeys in bib section 0
+[313] Biber.pm:4487> INFO - Processing section 0
+[326] Biber.pm:4678> INFO - Looking for bibtex file 'library/bibliography.bib' for section 0
+[376] bibtex.pm:1713> INFO - LaTeX decoding ...
+[389] bibtex.pm:1519> INFO - Found BibTeX data source 'library/bibliography.bib'
+[491] UCollate.pm:68> INFO - Overriding locale 'el-GR' defaults 'variable = shifted' with 'variable = non-ignorable'
 [492] UCollate.pm:68> INFO - Overriding locale 'el-GR' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[492] UCollate.pm:68> INFO - Overriding locale 'el-GR' defaults 'variable = shifted' with 'variable = non-ignorable'
 [492] Biber.pm:4307> INFO - Sorting list 'none/global//global/global/global' of type 'entry' with template 'none' and locale 'el-GR'
 [492] Biber.pm:4313> INFO - No sort tailoring available for locale 'el-GR'
-[503] bbl.pm:676> INFO - Writing 'main.bbl' with encoding 'UTF-8'
+[502] bbl.pm:676> INFO - Writing 'main.bbl' with encoding 'UTF-8'
 [508] bbl.pm:779> INFO - Output to main.bbl
-[509] Biber.pm:132> WARN - BibTeX subsystem: C:\Users\georg\AppData\Local\Temp\biber_tmp_8V5S\f4d088b3f9f145b5c3058da33afd57d4_8952.utf8, line 64, warning: undefined macro "Sept"
-[509] Biber.pm:134> INFO - WARNINGS: 1
+[508] Biber.pm:132> WARN - BibTeX subsystem: C:\Users\georg\AppData\Local\Temp\biber_tmp_wqu8\f4d088b3f9f145b5c3058da33afd57d4_14116.utf8, line 64, warning: undefined macro "Sept"
+[508] Biber.pm:134> INFO - WARNINGS: 1

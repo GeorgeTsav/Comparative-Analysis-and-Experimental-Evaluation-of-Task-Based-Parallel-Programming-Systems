@@ -10,4 +10,5 @@
 \contentsline {section}{\numberline {2.2}Χρονοδρομολόγηση Εργασιών}{6}{section.2.2}%
 \contentsline {section}{\numberline {2.3}Αρχιτεκτονική NUMA}{7}{section.2.3}%
 \contentsline {section}{\numberline {2.4}Προκλήσεις της Αρχικτεκτονικής NUMA στην παραλληλοποίηση με Εργασίες}{9}{section.2.4}%
+\contentsline {section}{\numberline {2.5}Παραλληλοποίηση στην Python}{10}{section.2.5}%
 \contentsline {chapter}{Βιβλιογραφία}{11}{chapter*.7}%
