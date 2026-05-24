@@ -46,8 +46,8 @@
       \strng{authornamehash}{f66eea1329f78c5c3342ffd336200f91}
       \strng{authorfullhash}{f66eea1329f78c5c3342ffd336200f91}
       \strng{authorfullhashraw}{f66eea1329f78c5c3342ffd336200f91}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{edition}{1}
@@ -99,8 +99,8 @@
       \strng{authornamehash}{6c176e0d4167fa5cf25d9e4d98b7ff12}
       \strng{authorfullhash}{6164f9dd975a765d5b3675ab45aa71ad}
       \strng{authorfullhashraw}{6164f9dd975a765d5b3675ab45aa71ad}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{SoftwareX}
@@ -144,8 +144,8 @@
       \strng{authornamehash}{b8f74ceca10299b898b8f8bc125acf89}
       \strng{authorfullhash}{8632844a4577bc666687a3056a23320e}
       \strng{authorfullhashraw}{8632844a4577bc666687a3056a23320e}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{European Conference on Parallel Processing}
@@ -153,6 +153,150 @@
       \field{year}{2009}
       \field{pages}{863\bibrangedash 874}
       \range{pages}{12}
+    \endentry
+    \entry{numa}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=9c677286866aad38f8e9b660f5411814}{%
+           family={Wikipedia},
+           familyi={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{fullhash}{9c677286866aad38f8e9b660f5411814}
+      \strng{fullhashraw}{9c677286866aad38f8e9b660f5411814}
+      \strng{bibnamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authorbibnamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authornamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authorfullhash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authorfullhashraw}{9c677286866aad38f8e9b660f5411814}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{NUMA (Non-Uniform Memory Access)}
+      \field{year}{2024}
+      \verb{urlraw}
+      \verb https://en.wikipedia.org/wiki/Non-uniform_memory_access
+      \endverb
+      \verb{url}
+      \verb https://en.wikipedia.org/wiki/Non-uniform_memory_access
+      \endverb
+    \endentry
+    \entry{denneman2016numa}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=36eabb5c035231b7c5b083af4fde21ca}{%
+           family={Denneman},
+           familyi={D\bibinitperiod},
+           given={Frank},
+           giveni={F\bibinitperiod}}}%
+      }
+      \strng{namehash}{36eabb5c035231b7c5b083af4fde21ca}
+      \strng{fullhash}{36eabb5c035231b7c5b083af4fde21ca}
+      \strng{fullhashraw}{36eabb5c035231b7c5b083af4fde21ca}
+      \strng{bibnamehash}{36eabb5c035231b7c5b083af4fde21ca}
+      \strng{authorbibnamehash}{36eabb5c035231b7c5b083af4fde21ca}
+      \strng{authornamehash}{36eabb5c035231b7c5b083af4fde21ca}
+      \strng{authorfullhash}{36eabb5c035231b7c5b083af4fde21ca}
+      \strng{authorfullhashraw}{36eabb5c035231b7c5b083af4fde21ca}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{NUMA Deep Dive Part 1: From UMA to NUMA}}
+      \field{urlday}{24}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{year}{2016}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://frankdenneman.ai/2016-07-07-numa-deep-dive-part-1-uma-numa/
+      \endverb
+      \verb{url}
+      \verb https://frankdenneman.ai/2016-07-07-numa-deep-dive-part-1-uma-numa/
+      \endverb
+    \endentry
+    \entry{supermicro_numa}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=d82c4715e10ce521355045df07cce492}{%
+           family={{Super Micro Computer, Inc.}},
+           familyi={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{d82c4715e10ce521355045df07cce492}
+      \strng{fullhash}{d82c4715e10ce521355045df07cce492}
+      \strng{fullhashraw}{d82c4715e10ce521355045df07cce492}
+      \strng{bibnamehash}{d82c4715e10ce521355045df07cce492}
+      \strng{authorbibnamehash}{d82c4715e10ce521355045df07cce492}
+      \strng{authornamehash}{d82c4715e10ce521355045df07cce492}
+      \strng{authorfullhash}{d82c4715e10ce521355045df07cce492}
+      \strng{authorfullhashraw}{d82c4715e10ce521355045df07cce492}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{What Is Non-Uniform Memory Access (NUMA)?}}
+      \field{urlday}{24}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{year}{2025}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.supermicro.com/en/glossary/numa
+      \endverb
+      \verb{url}
+      \verb https://www.supermicro.com/en/glossary/numa
+      \endverb
+    \endentry
+    \entry{Deters_2018}{inproceedings}{}{}
+      \name{author}{4}{}{%
+        {{hash=e05163d01e7a4c956fb7ecd63979fa93}{%
+           family={Deters},
+           familyi={D\bibinitperiod},
+           given={Justin},
+           giveni={J\bibinitperiod}}}%
+        {{hash=2d3f7a945938f7f039468b3411e614e9}{%
+           family={Wu},
+           familyi={W\bibinitperiod},
+           given={Jiaye},
+           giveni={J\bibinitperiod}}}%
+        {{hash=bb7f398dd3bbc927839cf1b066831cc3}{%
+           family={Xu},
+           familyi={X\bibinitperiod},
+           given={Yifan},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=13664e2675ff0d148f5087e20cb9a226}{%
+           family={Lee},
+           familyi={L\bibinitperiod},
+           given={I-Ting\bibnamedelima Angelina},
+           giveni={I\bibinithyphendelim T\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{706572463e358e3ba5cbdb3336aba9d8}
+      \strng{fullhash}{fd5f2cf170fbbc6869443ab1f6105f27}
+      \strng{fullhashraw}{fd5f2cf170fbbc6869443ab1f6105f27}
+      \strng{bibnamehash}{706572463e358e3ba5cbdb3336aba9d8}
+      \strng{authorbibnamehash}{706572463e358e3ba5cbdb3336aba9d8}
+      \strng{authornamehash}{706572463e358e3ba5cbdb3336aba9d8}
+      \strng{authorfullhash}{fd5f2cf170fbbc6869443ab1f6105f27}
+      \strng{authorfullhashraw}{fd5f2cf170fbbc6869443ab1f6105f27}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2018 IEEE International Symposium on Workload Characterization (IISWC)}
+      \field{title}{A NUMA-Aware Provably-Efficient Task-Parallel Platform Based on the Work-First Principle}
+      \field{year}{2018}
+      \field{pages}{59\bibrangedash 70}
+      \range{pages}{12}
+      \verb{doi}
+      \verb 10.1109/iiswc.2018.8573486
+      \endverb
+      \verb{urlraw}
+      \verb http://dx.doi.org/10.1109/IISWC.2018.8573486
+      \endverb
+      \verb{url}
+      \verb http://dx.doi.org/10.1109/IISWC.2018.8573486
+      \endverb
     \endentry
   \enddatalist
 \endrefsection

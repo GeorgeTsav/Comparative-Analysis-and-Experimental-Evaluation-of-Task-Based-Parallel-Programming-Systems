@@ -46,7 +46,7 @@
 	right=30mm,
 	top=30mm,
 	bottom=30mm,
-  headheight=15pt
+  headheight=30pt
 }
 
 % PDF language settings
@@ -74,8 +74,8 @@
 \renewcommand{\sectionmark}[1]{\markright{\thesection.\ #1}{}}
 
 \fancyhf{}
-\fancyhead[L]{\slshape \leftmark}
-\fancyhead[R]{\slshape \rightmark}
+\fancyhead[L]{\slshape\parbox[t]{0.45\textwidth}{\leftmark}}
+\fancyhead[R]{\slshape\parbox[t]{0.45\textwidth}{\raggedleft\rightmark}}
 \fancyfoot[C]{\thepage} % Clean bottom-center page numbering matching the PDF
 
 \newtheorem{theorem}{Θεώρημα}[section]
