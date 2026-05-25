@@ -2391,6 +2391,10 @@
     <bcf:citekey order="17" intorder="1">Deters_2018</bcf:citekey>
     <bcf:citekey order="18" intorder="1">augonnet2009starpu</bcf:citekey>
     <bcf:citekey order="19" intorder="1">hadjidoukas2020torcpy</bcf:citekey>
+    <bcf:citekey order="20" intorder="1">rapidfork2023gil</bcf:citekey>
+    <bcf:citekey order="20" intorder="2">gross2023pep703</bcf:citekey>
+    <bcf:citekey order="20" intorder="3">ruys2024deep</bcf:citekey>
+    <bcf:citekey order="21" intorder="1">adewole2026concurrency</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">

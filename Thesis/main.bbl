@@ -298,6 +298,208 @@
       \verb http://dx.doi.org/10.1109/IISWC.2018.8573486
       \endverb
     \endentry
+    \entry{rapidfork2023gil}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=b310f0e1884abadf6b04639753d16c79}{%
+           family={{RapidFork Technology}},
+           familyi={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{b310f0e1884abadf6b04639753d16c79}
+      \strng{fullhash}{b310f0e1884abadf6b04639753d16c79}
+      \strng{fullhashraw}{b310f0e1884abadf6b04639753d16c79}
+      \strng{bibnamehash}{b310f0e1884abadf6b04639753d16c79}
+      \strng{authorbibnamehash}{b310f0e1884abadf6b04639753d16c79}
+      \strng{authornamehash}{b310f0e1884abadf6b04639753d16c79}
+      \strng{authorfullhash}{b310f0e1884abadf6b04639753d16c79}
+      \strng{authorfullhashraw}{b310f0e1884abadf6b04639753d16c79}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{Breaking Down Python Concurrency: The Global Interpreter Lock (GIL) and Its Effect on Multi-threading}}
+      \field{urlday}{24}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{year}{2023}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://rapidfork.medium.com/breaking-down-python-concurrency-the-gil-and-its-effect-on-multi-threading-b5ab99083cb2
+      \endverb
+      \verb{url}
+      \verb https://rapidfork.medium.com/breaking-down-python-concurrency-the-gil-and-its-effect-on-multi-threading-b5ab99083cb2
+      \endverb
+    \endentry
+    \entry{gross2023pep703}{report}{}{}
+      \name{author}{1}{}{%
+        {{hash=4ba5062e5919c814aceec188d54c01f2}{%
+           family={Gross},
+           familyi={G\bibinitperiod},
+           given={Sam},
+           giveni={S\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Python Software Foundation}%
+      }
+      \strng{namehash}{4ba5062e5919c814aceec188d54c01f2}
+      \strng{fullhash}{4ba5062e5919c814aceec188d54c01f2}
+      \strng{fullhashraw}{4ba5062e5919c814aceec188d54c01f2}
+      \strng{bibnamehash}{4ba5062e5919c814aceec188d54c01f2}
+      \strng{authorbibnamehash}{4ba5062e5919c814aceec188d54c01f2}
+      \strng{authornamehash}{4ba5062e5919c814aceec188d54c01f2}
+      \strng{authorfullhash}{4ba5062e5919c814aceec188d54c01f2}
+      \strng{authorfullhashraw}{4ba5062e5919c814aceec188d54c01f2}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{number}{703}
+      \field{title}{{PEP 703 -- Making the Global Interpreter Lock Optional in CPython}}
+      \field{type}{Python Enhancement Proposal}
+      \field{urlday}{25}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{year}{2023}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://peps.python.org/pep-0703/
+      \endverb
+      \verb{url}
+      \verb https://peps.python.org/pep-0703/
+      \endverb
+    \endentry
+    \entry{ruys2024deep}{inproceedings}{}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{10}{}{%
+        {{hash=4d547ebc74e994539739739996e76e3c}{%
+           family={Ruys},
+           familyi={R\bibinitperiod},
+           given={William},
+           giveni={W\bibinitperiod}}}%
+        {{hash=a097b3f7288b95ebe1aa9dc7235c1bb8}{%
+           family={Lee},
+           familyi={L\bibinitperiod},
+           given={Hochan},
+           giveni={H\bibinitperiod}}}%
+        {{hash=fe4661deebdf75df830a6d0994863a78}{%
+           family={You},
+           familyi={Y\bibinitperiod},
+           given={Bozhi},
+           giveni={B\bibinitperiod}}}%
+        {{hash=f1c96a75e7d83d0accb24554b482237b}{%
+           family={Talati},
+           familyi={T\bibinitperiod},
+           given={Shreya},
+           giveni={S\bibinitperiod}}}%
+        {{hash=f74ec735fa387b0c2ebe223f24079ea3}{%
+           family={Park},
+           familyi={P\bibinitperiod},
+           given={Jaeyoung},
+           giveni={J\bibinitperiod}}}%
+        {{hash=6fe8e810b43ed89417c6e85ce7088d45}{%
+           family={Almgren-Bell},
+           familyi={A\bibinithyphendelim B\bibinitperiod},
+           given={James},
+           giveni={J\bibinitperiod}}}%
+        {{hash=58d399d13a5705c29d631c1c7fda8407}{%
+           family={Yan},
+           familyi={Y\bibinitperiod},
+           given={Yineng},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=06e7dbb2442db4ddaf981b0af6e0b78e}{%
+           family={Fernando},
+           familyi={F\bibinitperiod},
+           given={Milinda},
+           giveni={M\bibinitperiod}}}%
+        {{hash=c666809dd286126d267d3807218186db}{%
+           family={Biros},
+           familyi={B\bibinitperiod},
+           given={George},
+           giveni={G\bibinitperiod}}}%
+        {{hash=a986b0ee2e2c72da3be0fe0690ea2db8}{%
+           family={Erez},
+           familyi={E\bibinitperiod},
+           given={Mattan},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{c945e9b09a236663b2ee717c362c4a24}
+      \strng{fullhash}{4737a5f3786c1ebf7edc89c346c64ed5}
+      \strng{fullhashraw}{4737a5f3786c1ebf7edc89c346c64ed5}
+      \strng{bibnamehash}{c945e9b09a236663b2ee717c362c4a24}
+      \strng{authorbibnamehash}{c945e9b09a236663b2ee717c362c4a24}
+      \strng{authornamehash}{c945e9b09a236663b2ee717c362c4a24}
+      \strng{authorfullhash}{4737a5f3786c1ebf7edc89c346c64ed5}
+      \strng{authorfullhashraw}{4737a5f3786c1ebf7edc89c346c64ed5}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2024 IEEE International Parallel and Distributed Processing Symposium Workshops (IPDPSW)}
+      \field{title}{A deep dive into task-based parallelism in Python}
+      \field{year}{2024}
+      \field{pages}{1147\bibrangedash 1149}
+      \range{pages}{3}
+    \endentry
+    \entry{adewole2026concurrency}{article}{}{}
+      \name{author}{5}{}{%
+        {{hash=cc6ea87a3dd8fc675962f8b05af44ae4}{%
+           family={Adewole},
+           familyi={A\bibinitperiod},
+           given={A.P.},
+           giveni={A\bibinitperiod}}}%
+        {{hash=512352ac1fe32267a602275987b2a782}{%
+           family={Ezikeakukwu},
+           familyi={E\bibinitperiod},
+           given={Adaeze\bibnamedelima Modesta},
+           giveni={A\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=caaeaf2f75f8c576a9ba59cd7c684954}{%
+           family={Fadupin},
+           familyi={F\bibinitperiod},
+           given={Isaac\bibnamedelima Abayomi},
+           giveni={I\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=d41c4ea1fa642dfb6d374a370dd61cd7}{%
+           family={Amokomowo},
+           familyi={A\bibinitperiod},
+           given={Bashir\bibnamedelima Adeyemi},
+           giveni={B\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=0634c1f3259c56a05a86d4af8fec0a04}{%
+           family={Ameh},
+           familyi={A\bibinitperiod},
+           given={Frank\bibnamedelima Adakole},
+           giveni={F\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \strng{namehash}{56cbbe964d26c18a2a60a229f410dda9}
+      \strng{fullhash}{c5ab054e84fd41853f37c3691a79f5af}
+      \strng{fullhashraw}{c5ab054e84fd41853f37c3691a79f5af}
+      \strng{bibnamehash}{56cbbe964d26c18a2a60a229f410dda9}
+      \strng{authorbibnamehash}{56cbbe964d26c18a2a60a229f410dda9}
+      \strng{authornamehash}{56cbbe964d26c18a2a60a229f410dda9}
+      \strng{authorfullhash}{c5ab054e84fd41853f37c3691a79f5af}
+      \strng{authorfullhashraw}{c5ab054e84fd41853f37c3691a79f5af}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{2278-0181}
+      \field{journaltitle}{International Journal of Engineering Research \& Technology (IJERT)}
+      \field{number}{03}
+      \field{title}{{Understanding and Implementing Concurrency in Python-based Systems}}
+      \field{urlday}{25}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{volume}{15}
+      \field{year}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.ijert.org/understanding-and-implementing-concurrency-in-python-based-systems-ijertv15is031148
+      \endverb
+      \verb{url}
+      \verb https://www.ijert.org/understanding-and-implementing-concurrency-in-python-based-systems-ijertv15is031148
+      \endverb
+    \endentry
   \enddatalist
 \endrefsection
 \endinput
