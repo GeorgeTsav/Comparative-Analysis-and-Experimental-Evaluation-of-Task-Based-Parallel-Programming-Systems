@@ -144,6 +144,7 @@
       \strng{authornamehash}{b8f74ceca10299b898b8f8bc125acf89}
       \strng{authorfullhash}{8632844a4577bc666687a3056a23320e}
       \strng{authorfullhashraw}{8632844a4577bc666687a3056a23320e}
+      \field{extraname}{1}
       \field{sortinit}{8}
       \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
       \field{labelnamesource}{author}
@@ -202,11 +203,7 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{{NUMA Deep Dive Part 1: From UMA to NUMA}}
-      \field{urlday}{24}
-      \field{urlmonth}{5}
-      \field{urlyear}{2026}
       \field{year}{2016}
-      \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://frankdenneman.ai/2016-07-07-numa-deep-dive-part-1-uma-numa/
       \endverb
@@ -233,11 +230,7 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{{What Is Non-Uniform Memory Access (NUMA)?}}
-      \field{urlday}{24}
-      \field{urlmonth}{5}
-      \field{urlyear}{2026}
       \field{year}{2025}
-      \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://www.supermicro.com/en/glossary/numa
       \endverb
@@ -317,11 +310,7 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{{Breaking Down Python Concurrency: The Global Interpreter Lock (GIL) and Its Effect on Multi-threading}}
-      \field{urlday}{24}
-      \field{urlmonth}{5}
-      \field{urlyear}{2026}
       \field{year}{2023}
-      \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://rapidfork.medium.com/breaking-down-python-concurrency-the-gil-and-its-effect-on-multi-threading-b5ab99083cb2
       \endverb
@@ -355,11 +344,7 @@
       \field{number}{703}
       \field{title}{{PEP 703 -- Making the Global Interpreter Lock Optional in CPython}}
       \field{type}{Python Enhancement Proposal}
-      \field{urlday}{25}
-      \field{urlmonth}{5}
-      \field{urlyear}{2026}
       \field{year}{2023}
-      \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://peps.python.org/pep-0703/
       \endverb
@@ -487,17 +472,240 @@
       \field{journaltitle}{International Journal of Engineering Research \& Technology (IJERT)}
       \field{number}{03}
       \field{title}{{Understanding and Implementing Concurrency in Python-based Systems}}
-      \field{urlday}{25}
-      \field{urlmonth}{5}
-      \field{urlyear}{2026}
       \field{volume}{15}
       \field{year}{2026}
-      \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://www.ijert.org/understanding-and-implementing-concurrency-in-python-based-systems-ijertv15is031148
       \endverb
       \verb{url}
       \verb https://www.ijert.org/understanding-and-implementing-concurrency-in-python-based-systems-ijertv15is031148
+      \endverb
+    \endentry
+    \entry{starpu2025handbook}{manual}{}{}
+      \name{author}{1}{}{%
+        {{hash=cdcaa5e3d7d378b79dbfa572b2a9ad5b}{%
+           family={{StarPU Development Team}},
+           familyi={S\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {INRIA}%
+      }
+      \strng{namehash}{cdcaa5e3d7d378b79dbfa572b2a9ad5b}
+      \strng{fullhash}{cdcaa5e3d7d378b79dbfa572b2a9ad5b}
+      \strng{fullhashraw}{cdcaa5e3d7d378b79dbfa572b2a9ad5b}
+      \strng{bibnamehash}{cdcaa5e3d7d378b79dbfa572b2a9ad5b}
+      \strng{authorbibnamehash}{cdcaa5e3d7d378b79dbfa572b2a9ad5b}
+      \strng{authornamehash}{cdcaa5e3d7d378b79dbfa572b2a9ad5b}
+      \strng{authorfullhash}{cdcaa5e3d7d378b79dbfa572b2a9ad5b}
+      \strng{authorfullhashraw}{cdcaa5e3d7d378b79dbfa572b2a9ad5b}
+      \field{extraname}{1}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{StarPU Handbook for StarPU 1.4.12}}
+      \field{year}{2025}
+      \verb{urlraw}
+      \verb https://starpu.gitlabpages.inria.fr/doc.html
+      \endverb
+      \verb{url}
+      \verb https://starpu.gitlabpages.inria.fr/doc.html
+      \endverb
+    \endentry
+    \entry{augonnet2010starpu_gtc}{misc}{}{}
+      \name{author}{3}{}{%
+        {{hash=736f79b70cf6488db7dfa8e71456f718}{%
+           family={Augonnet},
+           familyi={A\bibinitperiod},
+           given={Cédric},
+           giveni={C\bibinitperiod}}}%
+        {{hash=2a6cddc12d90996f2d082705aab80d36}{%
+           family={Thibault},
+           familyi={T\bibinitperiod},
+           given={Samuel},
+           giveni={S\bibinitperiod}}}%
+        {{hash=4acb86ced09c0de0a698930a3ac8ed1a}{%
+           family={Namyst},
+           familyi={N\bibinitperiod},
+           given={Raymond},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{8120a2e1b6d377765d7999ff0e64b0c3}
+      \strng{fullhash}{8120a2e1b6d377765d7999ff0e64b0c3}
+      \strng{fullhashraw}{8120a2e1b6d377765d7999ff0e64b0c3}
+      \strng{bibnamehash}{8120a2e1b6d377765d7999ff0e64b0c3}
+      \strng{authorbibnamehash}{8120a2e1b6d377765d7999ff0e64b0c3}
+      \strng{authornamehash}{8120a2e1b6d377765d7999ff0e64b0c3}
+      \strng{authorfullhash}{8120a2e1b6d377765d7999ff0e64b0c3}
+      \strng{authorfullhashraw}{8120a2e1b6d377765d7999ff0e64b0c3}
+      \field{extraname}{1}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{Presentation at NVIDIA GPU Technology Conference (GTC 2010), San Jose, USA}
+      \field{title}{{StarPU: A Runtime System for Scheduling Tasks, or How to Get Portable Performance on Accelerator-Based Platforms Without the Agonizing Pain}}
+      \field{year}{2010}
+      \verb{urlraw}
+      \verb https://www.nvidia.com/content/GTC-2010/pdfs/2160_GTC2010.pdf
+      \endverb
+      \verb{url}
+      \verb https://www.nvidia.com/content/GTC-2010/pdfs/2160_GTC2010.pdf
+      \endverb
+    \endentry
+    \entry{augonnet:inria-00467677}{report}{}{}
+      \name{author}{3}{}{%
+        {{hash=736f79b70cf6488db7dfa8e71456f718}{%
+           family={Augonnet},
+           familyi={A\bibinitperiod},
+           given={Cédric},
+           giveni={C\bibinitperiod}}}%
+        {{hash=2a6cddc12d90996f2d082705aab80d36}{%
+           family={Thibault},
+           familyi={T\bibinitperiod},
+           given={Samuel},
+           giveni={S\bibinitperiod}}}%
+        {{hash=4acb86ced09c0de0a698930a3ac8ed1a}{%
+           family={Namyst},
+           familyi={N\bibinitperiod},
+           given={Raymond},
+           giveni={R\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {INRIA}%
+      }
+      \strng{namehash}{8120a2e1b6d377765d7999ff0e64b0c3}
+      \strng{fullhash}{8120a2e1b6d377765d7999ff0e64b0c3}
+      \strng{fullhashraw}{8120a2e1b6d377765d7999ff0e64b0c3}
+      \strng{bibnamehash}{8120a2e1b6d377765d7999ff0e64b0c3}
+      \strng{authorbibnamehash}{8120a2e1b6d377765d7999ff0e64b0c3}
+      \strng{authornamehash}{8120a2e1b6d377765d7999ff0e64b0c3}
+      \strng{authorfullhash}{8120a2e1b6d377765d7999ff0e64b0c3}
+      \strng{authorfullhashraw}{8120a2e1b6d377765d7999ff0e64b0c3}
+      \field{extraname}{2}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{3}
+      \field{number}{RR-7240}
+      \field{title}{{StarPU: a Runtime System for Scheduling Tasks over Accelerator-Based Multicore Machines}}
+      \field{type}{Research Report}
+      \field{year}{2010}
+      \field{pages}{33}
+      \range{pages}{1}
+      \verb{file}
+      \verb https://inria.hal.science/inria-00467677v1/file/RR-7240.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://inria.hal.science/inria-00467677
+      \endverb
+      \verb{url}
+      \verb https://inria.hal.science/inria-00467677
+      \endverb
+    \endentry
+    \entry{augonnet2010data}{inproceedings}{}{}
+      \name{author}{4}{}{%
+        {{hash=736f79b70cf6488db7dfa8e71456f718}{%
+           family={Augonnet},
+           familyi={A\bibinitperiod},
+           given={Cédric},
+           giveni={C\bibinitperiod}}}%
+        {{hash=deb5941c95301d51ad1d53f586ea2124}{%
+           family={Clet-Ortega},
+           familyi={C\bibinithyphendelim O\bibinitperiod},
+           given={Jérôme},
+           giveni={J\bibinitperiod}}}%
+        {{hash=2a6cddc12d90996f2d082705aab80d36}{%
+           family={Thibault},
+           familyi={T\bibinitperiod},
+           given={Samuel},
+           giveni={S\bibinitperiod}}}%
+        {{hash=4acb86ced09c0de0a698930a3ac8ed1a}{%
+           family={Namyst},
+           familyi={N\bibinitperiod},
+           given={Raymond},
+           giveni={R\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{b8f74ceca10299b898b8f8bc125acf89}
+      \strng{fullhash}{22463fc7af062c5ffda2da9f6a8cfdd6}
+      \strng{fullhashraw}{22463fc7af062c5ffda2da9f6a8cfdd6}
+      \strng{bibnamehash}{b8f74ceca10299b898b8f8bc125acf89}
+      \strng{authorbibnamehash}{b8f74ceca10299b898b8f8bc125acf89}
+      \strng{authornamehash}{b8f74ceca10299b898b8f8bc125acf89}
+      \strng{authorfullhash}{22463fc7af062c5ffda2da9f6a8cfdd6}
+      \strng{authorfullhashraw}{22463fc7af062c5ffda2da9f6a8cfdd6}
+      \field{extraname}{2}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2010 IEEE 16th international conference on parallel and distributed systems}
+      \field{title}{Data-aware task scheduling on multi-accelerator based platforms}
+      \field{year}{2010}
+      \field{pages}{291\bibrangedash 298}
+      \range{pages}{8}
+    \endentry
+    \entry{starpu_dev_manual}{manual}{}{}
+      \name{author}{1}{}{%
+        {{hash=cdcaa5e3d7d378b79dbfa572b2a9ad5b}{%
+           family={{StarPU Development Team}},
+           familyi={S\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {INRIA}%
+      }
+      \strng{namehash}{cdcaa5e3d7d378b79dbfa572b2a9ad5b}
+      \strng{fullhash}{cdcaa5e3d7d378b79dbfa572b2a9ad5b}
+      \strng{fullhashraw}{cdcaa5e3d7d378b79dbfa572b2a9ad5b}
+      \strng{bibnamehash}{cdcaa5e3d7d378b79dbfa572b2a9ad5b}
+      \strng{authorbibnamehash}{cdcaa5e3d7d378b79dbfa572b2a9ad5b}
+      \strng{authornamehash}{cdcaa5e3d7d378b79dbfa572b2a9ad5b}
+      \strng{authorfullhash}{cdcaa5e3d7d378b79dbfa572b2a9ad5b}
+      \strng{authorfullhashraw}{cdcaa5e3d7d378b79dbfa572b2a9ad5b}
+      \field{extraname}{2}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{StarPU Developer Documentation}
+      \field{year}{2026}
+      \verb{urlraw}
+      \verb https://files.inria.fr/starpu/doc/starpu_dev.pdf
+      \endverb
+      \verb{url}
+      \verb https://files.inria.fr/starpu/doc/starpu_dev.pdf
+      \endverb
+    \endentry
+    \entry{starpu_website}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=cdcaa5e3d7d378b79dbfa572b2a9ad5b}{%
+           family={{StarPU Development Team}},
+           familyi={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{cdcaa5e3d7d378b79dbfa572b2a9ad5b}
+      \strng{fullhash}{cdcaa5e3d7d378b79dbfa572b2a9ad5b}
+      \strng{fullhashraw}{cdcaa5e3d7d378b79dbfa572b2a9ad5b}
+      \strng{bibnamehash}{cdcaa5e3d7d378b79dbfa572b2a9ad5b}
+      \strng{authorbibnamehash}{cdcaa5e3d7d378b79dbfa572b2a9ad5b}
+      \strng{authornamehash}{cdcaa5e3d7d378b79dbfa572b2a9ad5b}
+      \strng{authorfullhash}{cdcaa5e3d7d378b79dbfa572b2a9ad5b}
+      \strng{authorfullhashraw}{cdcaa5e3d7d378b79dbfa572b2a9ad5b}
+      \field{extraname}{3}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{StarPU: A Unified Runtime System for Heterogeneous Multicore Architectures}
+      \field{year}{2026}
+      \verb{urlraw}
+      \verb https://starpu.gitlabpages.inria.fr/
+      \endverb
+      \verb{url}
+      \verb https://starpu.gitlabpages.inria.fr/
       \endverb
     \endentry
   \enddatalist

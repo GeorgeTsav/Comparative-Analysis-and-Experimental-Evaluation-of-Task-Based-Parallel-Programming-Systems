@@ -12,4 +12,8 @@
 \contentsline {section}{\numberline {2.4}Προκλήσεις της Αρχικτεκτονικής NUMA στην παραλληλοποίηση με Εργασίες}{9}{section.2.4}%
 \contentsline {section}{\numberline {2.5}Παραλληλοποίηση στην Python}{10}{section.2.5}%
 \contentsline {chapter}{\numberline {3}Το Σύστημα StarPU}{13}{chapter.3}%
-\contentsline {chapter}{Βιβλιογραφία}{15}{chapter*.7}%
+\contentsline {section}{\numberline {3.1}Τι είναι το StarPU}{13}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Η Αρχιτεκτονική του StarPU}{14}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Οντότητες Εργασίας}{14}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}Οντότητες Εκτέλεσης}{15}{subsection.3.2.2}%
+\contentsline {chapter}{Βιβλιογραφία}{17}{chapter*.7}%
