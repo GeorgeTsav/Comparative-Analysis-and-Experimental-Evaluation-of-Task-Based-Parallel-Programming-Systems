@@ -16,4 +16,8 @@
 \contentsline {section}{\numberline {3.2}Η Αρχιτεκτονική του StarPU}{14}{section.3.2}%
 \contentsline {subsection}{\numberline {3.2.1}Οντότητες Εργασίας}{14}{subsection.3.2.1}%
 \contentsline {subsection}{\numberline {3.2.2}Οντότητες Εκτέλεσης}{15}{subsection.3.2.2}%
-\contentsline {chapter}{Βιβλιογραφία}{17}{chapter*.7}%
+\contentsline {subsection}{\numberline {3.2.3}Οντότητες Δεδομένων}{16}{subsection.3.2.3}%
+\contentsline {section}{\numberline {3.3}Υποσύστημα Εικονικής Κοινής Μνήμης (VSM)}{16}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Δομές και Διεπαφές Δεδομένων}{16}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}Πρωτόκολλο Συνοχής MSI (Modified, Shared, Invalid)}{17}{subsection.3.3.2}%
+\contentsline {chapter}{Βιβλιογραφία}{19}{chapter*.7}%
