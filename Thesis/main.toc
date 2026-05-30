@@ -20,4 +20,9 @@
 \contentsline {section}{\numberline {3.3}Υποσύστημα Εικονικής Κοινής Μνήμης (VSM)}{16}{section.3.3}%
 \contentsline {subsection}{\numberline {3.3.1}Δομές και Διεπαφές Δεδομένων}{16}{subsection.3.3.1}%
 \contentsline {subsection}{\numberline {3.3.2}Πρωτόκολλο Συνοχής MSI (Modified, Shared, Invalid)}{17}{subsection.3.3.2}%
-\contentsline {chapter}{Βιβλιογραφία}{19}{chapter*.7}%
+\contentsline {subsection}{\numberline {3.3.3}Προηγμένες λειτουργίες πρόσβασης δεδομένων}{18}{subsection.3.3.3}%
+\contentsline {subsection}{\numberline {3.3.4}Κατάτμηση Δεδομένων και Ιεραρχικά Φίλτρα}{19}{subsection.3.3.4}%
+\contentsline {subsection}{\numberline {3.3.5}Ασύγχρονες Μεταφορές και Προανάγνωση (Prefetching)}{20}{subsection.3.3.5}%
+\contentsline {section}{\numberline {3.4}Αλγόριθμοι Χρονοπρογραμματισμού Εργασιών}{20}{section.3.4}%
+\contentsline {section}{\numberline {3.5}Κύκλος Εκτέλεσης Εσωτερικών Εργατών}{20}{section.3.5}%
+\contentsline {chapter}{Βιβλιογραφία}{21}{chapter*.8}%

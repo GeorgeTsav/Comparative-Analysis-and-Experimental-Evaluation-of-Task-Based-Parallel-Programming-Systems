@@ -708,6 +708,96 @@
       \verb https://starpu.gitlabpages.inria.fr/
       \endverb
     \endentry
+    \entry{aiken_cs315b_lec13}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=7b4be770da7d4fe41717b6d75f1fa596}{%
+           family={Aiken},
+           familyi={A\bibinitperiod},
+           given={Alex},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{7b4be770da7d4fe41717b6d75f1fa596}
+      \strng{fullhash}{7b4be770da7d4fe41717b6d75f1fa596}
+      \strng{fullhashraw}{7b4be770da7d4fe41717b6d75f1fa596}
+      \strng{bibnamehash}{7b4be770da7d4fe41717b6d75f1fa596}
+      \strng{authorbibnamehash}{7b4be770da7d4fe41717b6d75f1fa596}
+      \strng{authornamehash}{7b4be770da7d4fe41717b6d75f1fa596}
+      \strng{authorfullhash}{7b4be770da7d4fe41717b6d75f1fa596}
+      \strng{authorfullhashraw}{7b4be770da7d4fe41717b6d75f1fa596}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{Lecture slides, Stanford University, CS315B: Parallel Computing}
+      \field{title}{{StarPU -- CS315B Lecture 13}}
+      \verb{urlraw}
+      \verb https://web.stanford.edu/class/cs315b/lectures/lecture13.pdf
+      \endverb
+      \verb{url}
+      \verb https://web.stanford.edu/class/cs315b/lectures/lecture13.pdf
+      \endverb
+    \endentry
+    \entry{qin2012cachecoherence}{inproceedings}{}{}
+      \name{author}{2}{}{%
+        {{hash=dc8a3c0d5df83c67ca3a895f7a406378}{%
+           family={Qin},
+           familyi={Q\bibinitperiod},
+           given={Xiaoke},
+           giveni={X\bibinitperiod}}}%
+        {{hash=2d85f505261a3e6c8cbd4ce693142bf3}{%
+           family={Mishra},
+           familyi={M\bibinitperiod},
+           given={Prabhat},
+           giveni={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{f4e254443181ebf280c599aa498ed864}
+      \strng{fullhash}{f4e254443181ebf280c599aa498ed864}
+      \strng{fullhashraw}{f4e254443181ebf280c599aa498ed864}
+      \strng{bibnamehash}{f4e254443181ebf280c599aa498ed864}
+      \strng{authorbibnamehash}{f4e254443181ebf280c599aa498ed864}
+      \strng{authornamehash}{f4e254443181ebf280c599aa498ed864}
+      \strng{authorfullhash}{f4e254443181ebf280c599aa498ed864}
+      \strng{authorfullhashraw}{f4e254443181ebf280c599aa498ed864}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the Design, Automation and Test in Europe Conference (DATE)}
+      \field{title}{{Automated Generation of Directed Tests for Transition Coverage in Cache Coherence Protocols}}
+      \field{year}{2012}
+      \verb{urlraw}
+      \verb https://www.cise.ufl.edu/research/cad/Publications/date12.pdf
+      \endverb
+      \verb{url}
+      \verb https://www.cise.ufl.edu/research/cad/Publications/date12.pdf
+      \endverb
+    \endentry
+    \entry{redis_cachecoherence}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=e111446745a1825b862f8727ae63bce4}{%
+           family={{Redis}},
+           familyi={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{e111446745a1825b862f8727ae63bce4}
+      \strng{fullhash}{e111446745a1825b862f8727ae63bce4}
+      \strng{fullhashraw}{e111446745a1825b862f8727ae63bce4}
+      \strng{bibnamehash}{e111446745a1825b862f8727ae63bce4}
+      \strng{authorbibnamehash}{e111446745a1825b862f8727ae63bce4}
+      \strng{authornamehash}{e111446745a1825b862f8727ae63bce4}
+      \strng{authorfullhash}{e111446745a1825b862f8727ae63bce4}
+      \strng{authorfullhashraw}{e111446745a1825b862f8727ae63bce4}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{Understanding Cache Coherence in Systems}}
+      \verb{urlraw}
+      \verb https://redis.io/glossary/cache-coherence/
+      \endverb
+      \verb{url}
+      \verb https://redis.io/glossary/cache-coherence/
+      \endverb
+    \endentry
   \enddatalist
 \endrefsection
 \endinput

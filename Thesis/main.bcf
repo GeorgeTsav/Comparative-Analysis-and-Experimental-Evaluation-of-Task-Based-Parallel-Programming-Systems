@@ -2426,6 +2426,17 @@
     <bcf:citekey order="35" intorder="2">starpu_dev_manual</bcf:citekey>
     <bcf:citekey order="36" intorder="1">starpu2025handbook</bcf:citekey>
     <bcf:citekey order="36" intorder="2">starpu_dev_manual</bcf:citekey>
+    <bcf:citekey order="37" intorder="1">aiken_cs315b_lec13</bcf:citekey>
+    <bcf:citekey order="37" intorder="2">qin2012cachecoherence</bcf:citekey>
+    <bcf:citekey order="38" intorder="1">starpu_website</bcf:citekey>
+    <bcf:citekey order="38" intorder="2">aiken_cs315b_lec13</bcf:citekey>
+    <bcf:citekey order="38" intorder="3">redis_cachecoherence</bcf:citekey>
+    <bcf:citekey order="39" intorder="1">starpu2025handbook</bcf:citekey>
+    <bcf:citekey order="39" intorder="2">starpu_dev_manual</bcf:citekey>
+    <bcf:citekey order="40" intorder="1">starpu2025handbook</bcf:citekey>
+    <bcf:citekey order="40" intorder="2">starpu_dev_manual</bcf:citekey>
+    <bcf:citekey order="41" intorder="1">starpu2025handbook</bcf:citekey>
+    <bcf:citekey order="41" intorder="2">starpu_dev_manual</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">
