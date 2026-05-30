@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.24.0 (TeX Live 2026)  (format=lualatex 2026.5.18)  30 MAY 2026 12:16
+This is LuaHBTeX, Version 1.24.0 (TeX Live 2026)  (format=lualatex 2026.5.18)  30 MAY 2026 18:32
  restricted system commands enabled.
 **"c:/Users/georg/Desktop/CEID/My Thesis/Thesis/main"
 ("c:/Users/georg/Desktop/CEID/My Thesis/Thesis/main.tex"
@@ -898,7 +898,11 @@ Package: perpage 2014/10/25 2.0 Reset/sort counters per page
 Package: xurl 2022/01/09 v 0.10 modify URL breaks
 
 xurl: Set penalties for biblatex
-) (c:/texlive/2026/texmf-dist/tex/latex/polyglossia/gloss-greek.ldf
+) (c:/texlive/2026/texmf-dist/tex/latex/xltabular/xltabular.sty
+Package: xltabular 2025/02/28 v0.2i `xltabular' package (hv,RN)
+ (c:/texlive/2026/texmf-dist/tex/latex/ltablex/ltablex.sty
+Package: ltablex 2014/08/13 v1.1 Modified tabularx
+)) (c:/texlive/2026/texmf-dist/tex/latex/polyglossia/gloss-greek.ldf
 File: gloss-greek.ldf polyglossia: module for Greek
 Module polyglossia Info: Language data for greek
 (polyglossia)            hyphenation	
@@ -1010,7 +1014,7 @@ Package fontspec Info:
 (fontspec)             - 'bold italic' (b/it) with NFSS spec.: <->"name:DejaVu
 (fontspec)             Sans Mono/BI:mode=harf;script=latn;language=dflt;"
 
-Package hyperref Info: Option `colorlinks' set `true' on input line 68.
+Package hyperref Info: Option `colorlinks' set `true' on input line 70.
 \c@theorem=\count539
 ) (c:/texlive/2026/texmf-dist/tex/latex/graphics/color.sty
 Package: color 2025/01/14 v1.3e Standard LaTeX Color (DPC)
@@ -1222,7 +1226,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 
 \openout2 = intro/titlepage.aux
  (./intro/titlepage.tex
-<images/university_logo/up_stamp.jpg, id=112, 147.6717pt x 148.1535pt>
+<images/university_logo/up_stamp.jpg, id=120, 147.6717pt x 148.1535pt>
 File: images/university_logo/up_stamp.jpg Graphic file (type jpg)
 <use images/university_logo/up_stamp.jpg>
 Package luatex.def Info: images/university_logo/up_stamp.jpg  used on input line 9.
@@ -1313,13 +1317,13 @@ LaTeX Font Info:    Font shape `TU/TimesNewRoman(1)/m/sl' in size <12> not avail
 ]
 Κεφάλαιο 2.
 [5]
-<images/figures/Parallelization-with-tasks-papadakis2012.jpg, id=239, 1003.75pt x 414.54875pt>
+<images/figures/Parallelization-with-tasks-papadakis2012.jpg, id=251, 1003.75pt x 414.54875pt>
 File: images/figures/Parallelization-with-tasks-papadakis2012.jpg Graphic file (type jpg)
 <use images/figures/Parallelization-with-tasks-papadakis2012.jpg>
 Package luatex.def Info: images/figures/Parallelization-with-tasks-papadakis2012.jpg  used on input line 26.
 (luatex.def)             Requested size: 341.43437pt x 141.01428pt.
  [6<./images/figures/Parallelization-with-tasks-papadakis2012.jpg>]
-<images/figures/uma-smp.jpg, id=253, 608.2725pt x 418.56375pt>
+<images/figures/uma-smp.jpg, id=265, 608.2725pt x 418.56375pt>
 File: images/figures/uma-smp.jpg Graphic file (type jpg)
 <use images/figures/uma-smp.jpg>
 Package luatex.def Info: images/figures/uma-smp.jpg  used on input line 49.
@@ -1328,7 +1332,7 @@ Package luatex.def Info: images/figures/uma-smp.jpg  used on input line 49.
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [7]
-<images/figures/numa.jpg, id=267, 574.39594pt x 243.91125pt>
+<images/figures/numa.jpg, id=279, 574.39594pt x 243.91125pt>
 File: images/figures/numa.jpg Graphic file (type jpg)
 <use images/figures/numa.jpg>
 Package luatex.def Info: images/figures/numa.jpg  used on input line 58.
@@ -1351,15 +1355,50 @@ Overfull \hbox (6.8769pt too wide) in paragraph at lines 93--94
 []\TU/TimesNewRoman(1)/b/n/12 STARPU_REDUX: \TU/TimesNewRoman(1)/m/n/12 Λει-τουρ-γώ-ντας πα-ρό-μοια με τις reduction με-θό-δους του OpenMP,
  []
 
-[18] [19]) [20]
+[18] [19]
+Underfull \hbox (badness 4303) in paragraph at lines 142--142
+\TU/TimesNewRoman(1)/m/n/12 εκτέ-λε-σης σε βελ-τι-στο-ποι-η-
+ []
+
+
+Underfull \hbox (badness 1194) in paragraph at lines 142--142
+[]|\TU/TimesNewRoman(1)/m/n/12 Προηγ-μένη προ-σαρ-μογή πο-
+ []
+
+
+Underfull \hbox (badness 1009) in paragraph at lines 142--142
+\TU/TimesNewRoman(1)/m/n/12 νται από πολ-λα-πλές δια-στά-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 142--142
+[]|\TU/TimesNewRoman(1)/m/n/12 Πα-ρα-κο-λου-θεί κα-τα-νά-λωση
+ []
+
+
+Underfull \hbox (badness 3930) in paragraph at lines 142--142
+\TU/TimesNewRoman(1)/m/n/12 ισχύος (σε Joule) αντί για
+ []
+
+
+Underfull \hbox (badness 7397) in paragraph at lines 142--142
+[]|\TU/TimesNewRoman(1)/m/n/12 Σε-νά-ρια που απαι-τούν αυ-
+ []
+
+ignored: Infinite glue shrinkage found in box being split [20] [21]) [22]
 Underfull \hbox (badness 1546) in paragraph at lines 130--130
 []\TU/TimesNewRoman(1)/m/n/12 Cédric Augonnet κ.ά. ``StarPU: a unified platform for task scheduling on
  []
 
-[21
+[23
 
 
-] [22] [23] (./intro/lastpage.tex) [24
+] [24]
+Underfull \hbox (badness 1072) in paragraph at lines 130--130
+[]\TU/TimesNewRoman(1)/m/n/12 Cédric Augonnet κ.ά. \TU/TimesNewRoman(1)/m/it/12 Getting Started with StarPU\TU/TimesNewRoman(1)/m/n/12 . Tutorial at Symposium
+ []
+
+[25] (./intro/lastpage.tex) [26
 
 ] (./main.aux (./intro/titlepage.aux) (./intro/certification.aux) (./intro/about.aux) (./intro/summary.aux) (./intro/acknowledgements.aux) (./library/abbreviations.aux))
  ***********
@@ -1367,26 +1406,26 @@ LaTeX2e <2025-11-01>
 L3 programming layer <2026-04-28>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 74D084303250C1F27022467167DC83D0;7211.
+(rerunfilecheck)             Checksum: 253926021DA2A6FBB13B7EB9A2F8B3BD;7831.
 Package logreq Info: Writing requests to 'main.run.xml'.
 
 \openout1 = main.run.xml
 )
 
 Here is how much of LuaTeX's memory you used:
- 37627 strings out of 475892
- 125165,1977958 words of node,token memory allocated
- 1066 words of node memory still in use:
-   7 hlist, 2 vlist, 2 rule, 1 local_par, 9 glue, 5 kern, 1 penalty, 1 margin_kern, 4 glyph, 31 attribute, 111 glue_spec, 31 attribute_list, 1 write, 15 pdf_action nodes
-   avail lists: 1:4,2:754,3:1179,4:137,5:261,6:107,7:7462,8:116,9:453,10:17,11:886,12:1
- 59425 multiletter control sequences out of 65536+600000
+ 37716 strings out of 475892
+ 125342,1977958 words of node,token memory allocated
+ 1061 words of node memory still in use:
+   7 hlist, 2 vlist, 2 rule, 1 local_par, 9 glue, 5 kern, 1 penalty, 3 glyph, 31 attribute, 111 glue_spec, 31 attribute_list, 1 write, 16 pdf_action nodes
+   avail lists: 1:2,2:755,3:1179,4:137,5:266,6:115,7:7464,8:116,9:586,10:29,11:886,12:1
+ 59498 multiletter control sequences out of 65536+600000
  92 fonts using 59602927 bytes
  102i,13n,128p,3271b,2786s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2026/texmf-dist/fonts/truetype/public/dejavu/DejaVuSansMono.ttf><c:/Windows/Fonts/timesi.ttf><c:/Windows/Fonts/times.ttf><c:/Windows/Fonts/timesbd.ttf>
-Output written on main.pdf (35 pages, 571333 bytes).
+Output written on main.pdf (37 pages, 581794 bytes).
 
-PDF statistics: 501 PDF objects out of 1000 (max. 8388607)
- 436 compressed objects within 5 object streams
- 97 named destinations out of 1000 (max. 1048576)
- 217 words of extra memory for PDF output out of 10000 (max. 100000000)
+PDF statistics: 541 PDF objects out of 1000 (max. 8388607)
+ 474 compressed objects within 5 object streams
+ 103 named destinations out of 1000 (max. 1048576)
+ 233 words of extra memory for PDF output out of 10000 (max. 100000000)
 

@@ -2,16 +2,16 @@
 [0] Config.pm:331> INFO - Logfile is 'main.blg'
 [123] biber-MSWIN64:342> INFO - === 
 [163] Biber.pm:421> INFO - Reading 'main.bcf'
-[301] Biber.pm:1002> INFO - Found 20 citekeys in bib section 0
-[318] Biber.pm:4487> INFO - Processing section 0
-[330] Biber.pm:4678> INFO - Looking for bibtex file 'library/bibliography.bib' for section 0
-[377] bibtex.pm:1713> INFO - LaTeX decoding ...
-[402] bibtex.pm:1519> INFO - Found BibTeX data source 'library/bibliography.bib'
-[577] UCollate.pm:68> INFO - Overriding locale 'el-GR' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[577] UCollate.pm:68> INFO - Overriding locale 'el-GR' defaults 'variable = shifted' with 'variable = non-ignorable'
-[577] Biber.pm:4307> INFO - Sorting list 'none/global//global/global/global' of type 'entry' with template 'none' and locale 'el-GR'
-[577] Biber.pm:4313> INFO - No sort tailoring available for locale 'el-GR'
-[597] bbl.pm:676> INFO - Writing 'main.bbl' with encoding 'UTF-8'
-[610] bbl.pm:779> INFO - Output to main.bbl
-[611] Biber.pm:132> WARN - BibTeX subsystem: C:\Users\georg\AppData\Local\Temp\biber_tmp_a09R\f4d088b3f9f145b5c3058da33afd57d4_2380.utf8, line 147, warning: undefined macro "Sept"
-[611] Biber.pm:134> INFO - WARNINGS: 1
+[302] Biber.pm:1002> INFO - Found 21 citekeys in bib section 0
+[319] Biber.pm:4487> INFO - Processing section 0
+[331] Biber.pm:4678> INFO - Looking for bibtex file 'library/bibliography.bib' for section 0
+[378] bibtex.pm:1713> INFO - LaTeX decoding ...
+[404] bibtex.pm:1519> INFO - Found BibTeX data source 'library/bibliography.bib'
+[592] UCollate.pm:68> INFO - Overriding locale 'el-GR' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[592] UCollate.pm:68> INFO - Overriding locale 'el-GR' defaults 'variable = shifted' with 'variable = non-ignorable'
+[592] Biber.pm:4307> INFO - Sorting list 'none/global//global/global/global' of type 'entry' with template 'none' and locale 'el-GR'
+[592] Biber.pm:4313> INFO - No sort tailoring available for locale 'el-GR'
+[614] bbl.pm:676> INFO - Writing 'main.bbl' with encoding 'UTF-8'
+[628] bbl.pm:779> INFO - Output to main.bbl
+[628] Biber.pm:132> WARN - BibTeX subsystem: C:\Users\georg\AppData\Local\Temp\biber_tmp_pXIg\f4d088b3f9f145b5c3058da33afd57d4_1236.utf8, line 146, warning: undefined macro "Sept"
+[628] Biber.pm:134> INFO - WARNINGS: 1

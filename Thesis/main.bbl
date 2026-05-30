@@ -798,6 +798,52 @@
       \verb https://redis.io/glossary/cache-coherence/
       \endverb
     \endentry
+    \entry{augonnet2010starpu_saahpc}{misc}{}{}
+      \name{author}{4}{}{%
+        {{hash=736f79b70cf6488db7dfa8e71456f718}{%
+           family={Augonnet},
+           familyi={A\bibinitperiod},
+           given={Cédric},
+           giveni={C\bibinitperiod}}}%
+        {{hash=301412a2bd543a51857df803efd6d225}{%
+           family={Furmento},
+           familyi={F\bibinitperiod},
+           given={Nathalie},
+           giveni={N\bibinitperiod}}}%
+        {{hash=2a6cddc12d90996f2d082705aab80d36}{%
+           family={Thibault},
+           familyi={T\bibinitperiod},
+           given={Samuel},
+           giveni={S\bibinitperiod}}}%
+        {{hash=4acb86ced09c0de0a698930a3ac8ed1a}{%
+           family={Namyst},
+           familyi={N\bibinitperiod},
+           given={Raymond},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{b8f74ceca10299b898b8f8bc125acf89}
+      \strng{fullhash}{3e48ca3931d78225b06d853cd6967471}
+      \strng{fullhashraw}{3e48ca3931d78225b06d853cd6967471}
+      \strng{bibnamehash}{b8f74ceca10299b898b8f8bc125acf89}
+      \strng{authorbibnamehash}{b8f74ceca10299b898b8f8bc125acf89}
+      \strng{authornamehash}{b8f74ceca10299b898b8f8bc125acf89}
+      \strng{authorfullhash}{3e48ca3931d78225b06d853cd6967471}
+      \strng{authorfullhashraw}{3e48ca3931d78225b06d853cd6967471}
+      \field{extraname}{3}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{Tutorial at Symposium on Application Accelerators in High-Performance Computing (SAAHPC 2010), Knoxville, USA}
+      \field{title}{{Getting Started with StarPU}}
+      \field{year}{2010}
+      \verb{urlraw}
+      \verb https://starpu.gitlabpages.inria.fr/tutorials/2010-07-SAAHPC/saahpc.pdf
+      \endverb
+      \verb{url}
+      \verb https://starpu.gitlabpages.inria.fr/tutorials/2010-07-SAAHPC/saahpc.pdf
+      \endverb
+    \endentry
   \enddatalist
 \endrefsection
 \endinput

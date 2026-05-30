@@ -2437,6 +2437,20 @@
     <bcf:citekey order="40" intorder="2">starpu_dev_manual</bcf:citekey>
     <bcf:citekey order="41" intorder="1">starpu2025handbook</bcf:citekey>
     <bcf:citekey order="41" intorder="2">starpu_dev_manual</bcf:citekey>
+    <bcf:citekey order="42" intorder="1">starpu2025handbook</bcf:citekey>
+    <bcf:citekey order="42" intorder="2">starpu_dev_manual</bcf:citekey>
+    <bcf:citekey order="43" intorder="1">starpu2025handbook</bcf:citekey>
+    <bcf:citekey order="43" intorder="2">starpu_dev_manual</bcf:citekey>
+    <bcf:citekey order="43" intorder="3">augonnet2010starpu_saahpc</bcf:citekey>
+    <bcf:citekey order="44" intorder="1">starpu2025handbook</bcf:citekey>
+    <bcf:citekey order="44" intorder="2">augonnet2010data</bcf:citekey>
+    <bcf:citekey order="45" intorder="1">augonnet2009starpu</bcf:citekey>
+    <bcf:citekey order="45" intorder="2">starpu2025handbook</bcf:citekey>
+    <bcf:citekey order="45" intorder="3">starpu_website</bcf:citekey>
+    <bcf:citekey order="46" intorder="1">starpu2025handbook</bcf:citekey>
+    <bcf:citekey order="46" intorder="2">augonnet:inria-00467677</bcf:citekey>
+    <bcf:citekey order="46" intorder="3">starpu_website</bcf:citekey>
+    <bcf:citekey order="47" intorder="1">starpu2025handbook</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">
