@@ -506,10 +506,10 @@
       \field{title}{{StarPU Handbook for StarPU 1.4.12}}
       \field{year}{2025}
       \verb{urlraw}
-      \verb https://starpu.gitlabpages.inria.fr/doc.html
+      \verb https://files.inria.fr/starpu/doc/starpu.pdf
       \endverb
       \verb{url}
-      \verb https://starpu.gitlabpages.inria.fr/doc.html
+      \verb https://files.inria.fr/starpu/doc/starpu.pdf
       \endverb
     \endentry
     \entry{augonnet2010starpu_gtc}{misc}{}{}

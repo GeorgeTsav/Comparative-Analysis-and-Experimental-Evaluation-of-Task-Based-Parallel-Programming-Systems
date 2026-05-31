@@ -29,4 +29,11 @@
 \contentsline {section}{\numberline {3.5}Κύκλος Εκτέλεσης Εσωτερικών Εργατών}{23}{section.3.5}%
 \contentsline {subsection}{\numberline {3.5.1}Ανάκτηση Εργασιών και Διαχείριση Καταστάσεων}{23}{subsection.3.5.1}%
 \contentsline {subsection}{\numberline {3.5.2}Χαλαρός Συγχρονισμός και Αποφυγή Αδιεξόδων}{23}{subsection.3.5.2}%
-\contentsline {chapter}{Βιβλιογραφία}{25}{chapter*.8}%
+\contentsline {section}{\numberline {3.6}Κατανεμημένη Εκτέλεση: MPI}{24}{section.3.6}%
+\contentsline {subsection}{\numberline {3.6.1}Υποβολή Εργασιών σε Κατανεμημένο Περιβάλλον}{24}{subsection.3.6.1}%
+\contentsline {subsection}{\numberline {3.6.2}Βελτιστοποιήσεις Επικοινωνίας MPI}{25}{subsection.3.6.2}%
+\contentsline {section}{\numberline {3.7}Σημαντικά Υποσυστήματα του StarPU}{25}{section.3.7}%
+\contentsline {subsection}{\numberline {3.7.1}Out-of-Core Εκτέλεση}{25}{subsection.3.7.1}%
+\contentsline {subsection}{\numberline {3.7.2}Context Hypervisors και Παράλληλες Εργασίες}{26}{subsection.3.7.2}%
+\contentsline {subsection}{\numberline {3.7.3}Ανοχή Σφαλμάτων (Fault Tolerance)}{26}{subsection.3.7.3}%
+\contentsline {chapter}{Βιβλιογραφία}{27}{chapter*.8}%
