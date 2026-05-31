@@ -26,5 +26,7 @@
 \contentsline {section}{\numberline {3.4}Χρονοπρογραμματισμός Εργασιών}{20}{section.3.4}%
 \contentsline {subsection}{\numberline {3.4.1}Μοντέλα Απόδοσης Πραγματικού Χρόνου}{20}{subsection.3.4.1}%
 \contentsline {subsection}{\numberline {3.4.2}Πολτικές Χρονοπρογραμματισμού Εργασιών}{21}{subsection.3.4.2}%
-\contentsline {section}{\numberline {3.5}Κύκλος Εκτέλεσης Εσωτερικών Εργατών}{22}{section.3.5}%
-\contentsline {chapter}{Βιβλιογραφία}{23}{chapter*.8}%
+\contentsline {section}{\numberline {3.5}Κύκλος Εκτέλεσης Εσωτερικών Εργατών}{23}{section.3.5}%
+\contentsline {subsection}{\numberline {3.5.1}Ανάκτηση Εργασιών και Διαχείριση Καταστάσεων}{23}{subsection.3.5.1}%
+\contentsline {subsection}{\numberline {3.5.2}Χαλαρός Συγχρονισμός και Αποφυγή Αδιεξόδων}{23}{subsection.3.5.2}%
+\contentsline {chapter}{Βιβλιογραφία}{25}{chapter*.8}%

@@ -2451,6 +2451,11 @@
     <bcf:citekey order="46" intorder="2">augonnet:inria-00467677</bcf:citekey>
     <bcf:citekey order="46" intorder="3">starpu_website</bcf:citekey>
     <bcf:citekey order="47" intorder="1">starpu2025handbook</bcf:citekey>
+    <bcf:citekey order="48" intorder="1">starpu_dev_manual</bcf:citekey>
+    <bcf:citekey order="49" intorder="1">starpu_dev_manual</bcf:citekey>
+    <bcf:citekey order="50" intorder="1">starpu_dev_manual</bcf:citekey>
+    <bcf:citekey order="51" intorder="1">starpu_dev_manual</bcf:citekey>
+    <bcf:citekey order="52" intorder="1">starpu_dev_manual</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">
