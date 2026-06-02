@@ -36,4 +36,11 @@
 \contentsline {subsection}{\numberline {3.7.1}Out-of-Core Εκτέλεση}{25}{subsection.3.7.1}%
 \contentsline {subsection}{\numberline {3.7.2}Context Hypervisors και Παράλληλες Εργασίες}{26}{subsection.3.7.2}%
 \contentsline {subsection}{\numberline {3.7.3}Ανοχή Σφαλμάτων (Fault Tolerance)}{26}{subsection.3.7.3}%
-\contentsline {chapter}{Βιβλιογραφία}{27}{chapter*.8}%
+\contentsline {chapter}{\numberline {4}Η Διεπαφή StarPUPy}{27}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Τι είναι το StarPUPy}{27}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Ασύγχρονη Υποβολή Εργασιών και Διαχείριση Αντικειμένων Future}{27}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Διαχείριση Μνήμης και Πρωτόκολλο Buffer}{28}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Παραλληλία και Αντιμετώπιση του GIL}{29}{section.4.4}%
+\contentsline {chapter}{\numberline {5}Το Σύστημα torcpy}{31}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Τι είναι το torcpy}{31}{section.5.1}%
+\contentsline {chapter}{Βιβλιογραφία}{33}{chapter*.9}%
