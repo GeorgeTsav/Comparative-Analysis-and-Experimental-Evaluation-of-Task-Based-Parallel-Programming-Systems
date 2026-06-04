@@ -43,4 +43,8 @@
 \contentsline {section}{\numberline {4.4}Παραλληλία και Αντιμετώπιση του GIL}{29}{section.4.4}%
 \contentsline {chapter}{\numberline {5}Το Σύστημα torcpy}{31}{chapter.5}%
 \contentsline {section}{\numberline {5.1}Τι είναι το torcpy}{31}{section.5.1}%
-\contentsline {chapter}{Βιβλιογραφία}{33}{chapter*.9}%
+\contentsline {section}{\numberline {5.2}Αρχιτεκτονική του torcpy}{32}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Δομή Εργασιών και Διαχείριση Αποτελεσμάτων}{33}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.2} Ο Ρόλος και η Λειτουργία του Νήματος Εξυπηρετητή (Server Thread)}{33}{subsection.5.2.2}%
+\contentsline {section}{\numberline {5.3}Μηχανισμός Εξισορρόπησης Φόρτου}{34}{section.5.3}%
+\contentsline {chapter}{Βιβλιογραφία}{35}{chapter*.9}%
