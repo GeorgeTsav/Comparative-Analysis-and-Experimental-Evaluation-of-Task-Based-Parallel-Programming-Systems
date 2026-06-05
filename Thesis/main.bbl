@@ -844,6 +844,33 @@
       \verb https://starpu.gitlabpages.inria.fr/tutorials/2010-07-SAAHPC/saahpc.pdf
       \endverb
     \endentry
+    \entry{ibm_torcpy}{software}{}{}
+      \name{author}{1}{}{%
+        {{hash=cbf44511d041dc6d1dd73cc0c033122c}{%
+           family={{IBM}},
+           familyi={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{cbf44511d041dc6d1dd73cc0c033122c}
+      \strng{fullhash}{cbf44511d041dc6d1dd73cc0c033122c}
+      \strng{fullhashraw}{cbf44511d041dc6d1dd73cc0c033122c}
+      \strng{bibnamehash}{cbf44511d041dc6d1dd73cc0c033122c}
+      \strng{authorbibnamehash}{cbf44511d041dc6d1dd73cc0c033122c}
+      \strng{authornamehash}{cbf44511d041dc6d1dd73cc0c033122c}
+      \strng{authorfullhash}{cbf44511d041dc6d1dd73cc0c033122c}
+      \strng{authorfullhashraw}{cbf44511d041dc6d1dd73cc0c033122c}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{GitHub Repository}
+      \field{title}{{torc\_py: A Platform-Agnostic Adaptive Load Balancing Library for Task Parallelism}}
+      \verb{urlraw}
+      \verb https://github.com/ibm/torc_py
+      \endverb
+      \verb{url}
+      \verb https://github.com/ibm/torc_py
+      \endverb
+    \endentry
   \enddatalist
 \endrefsection
 \endinput
