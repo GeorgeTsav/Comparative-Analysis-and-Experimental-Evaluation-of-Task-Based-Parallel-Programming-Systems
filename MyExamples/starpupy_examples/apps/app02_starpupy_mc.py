@@ -24,6 +24,8 @@ from starpu import starpu
 
 
 def make_spd_corr(n, alpha, rng):
+    """Creates random symmetric positive definite correlation matrix.
+    Blends identity (uncorrelated) with random correlation."""
     a = rng.standard_normal((n, n))
     g = a @ a.T
     d = np.sqrt(np.diag(g))
@@ -34,6 +36,8 @@ def make_spd_corr(n, alpha, rng):
 
 
 def mc_batch(n_paths, seed, cfg, lmat):
+    """Monte Carlo simulation of correlated asset basket with barrier option.
+    Returns: (sum of payoffs, sum of squared payoffs, path count) for statistics aggregation."""
     rng = np.random.default_rng(seed)
 
     n_assets = cfg["n_assets"]
@@ -73,6 +77,7 @@ def mc_batch(n_paths, seed, cfg, lmat):
 
 
 async def main():
+    """Main async driver: distributes Monte Carlo batches to StarPU for parallel option pricing."""
     parser = argparse.ArgumentParser(description="Heavy Monte Carlo StarPU")
     parser.add_argument("--paths", type=int, default=200000)
     parser.add_argument("--batch", type=int, default=50000)
