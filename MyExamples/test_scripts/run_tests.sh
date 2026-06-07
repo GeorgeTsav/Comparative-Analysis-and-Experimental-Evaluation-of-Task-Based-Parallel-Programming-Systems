@@ -18,7 +18,7 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 # Directories
 TORCPY_DIR="/home/george-tsavos/CEID/HPC_Lab/Thesis/MyExamples/torcpy_examples"
-STARPUPY_DIR="/home/george-tsavos/CEID/HPC_Lab/Thesis/MyExamples/startpupy_examples"
+STARPUPY_DIR="/home/george-tsavos/CEID/HPC_Lab/Thesis/MyExamples/starpupy_examples"
 RESULTS_DIR="/home/george-tsavos/CEID/HPC_Lab/Thesis/MyExamples/test_results"
 
 # Runtime resource detection
