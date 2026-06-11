@@ -260,12 +260,9 @@ run_torcpy_single() {
     #                     owns an isolated NUMA memory domain (Rank 0 = Socket 0, etc.).
     # --bind-to core   -> pins every worker thread to a unique physical core, preventing
     #                     OS migration and guaranteeing L1/L2 cache and local NUMA RAM affinity.
-    # --mca btl self,tcp -> restricts the Byte Transfer Layer to intra-node and TCP,
-    #                       preventing OpenMPI from wasting CPU cycles polling unconfigured
-    #                       fabrics (e.g. InfiniBand/RoCE) that are not in use.
     mpirun_cmd="mpirun -n $processes"
     if [ "$NUMA_ENABLED" -eq 1 ]; then
-        mpirun_cmd="$mpirun_cmd --map-by socket --bind-to core --mca btl self,tcp"
+        mpirun_cmd="$mpirun_cmd --map-by socket --bind-to core"
     fi
 
     # Execute with environment variables (torcpy+MPI handles NUMA-aware distribution)
@@ -402,7 +399,7 @@ benchmark_starpupy_apps() {
     } > "$results_file"
     
     local app_path
-    for app_path in "$STARPUPY_APPS_DIR"/*.py; do
+    for app_path in "$STARPUPY_APPS_DIR"/app*.py; do
         local app_name=$(basename "$app_path" .py)
         
         print_info "Benchmarking: $app_name"
@@ -466,7 +463,7 @@ benchmark_torcpy_apps() {
     } > "$results_file"
     
     local app_path
-    for app_path in "$TORCPY_APPS_DIR"/*.py; do
+    for app_path in "$TORCPY_APPS_DIR"/app*.py; do
         local app_name=$(basename "$app_path" .py)
         
         print_info "Benchmarking: $app_name"
@@ -554,7 +551,7 @@ main() {
     # Show NUMA execution mode
     if [ "$NUMA_ENABLED" -eq 1 ]; then
         print_success "NUMA-aware execution: ENABLED"
-        print_info "  torcpy  → mpirun --map-by socket --bind-to core --mca btl self,tcp"
+        print_info "  torcpy  → mpirun --map-by socket --bind-to core"
         print_info "  StarPU  → STARPU_USE_NUMA=1 STARPU_SCHED=dmda STARPU_WORKERS_GETBIND=1"
         print_info "  Canonical config: $NUMA_NODES MPI rank(s) x $CORES_PER_SOCKET worker(s)/rank"
     else
@@ -574,8 +571,8 @@ main() {
     fi
     
     # Count apps
-    local starpupy_count=$(find "$STARPUPY_APPS_DIR" -maxdepth 1 -name "*.py" -type f | wc -l)
-    local torcpy_count=$(find "$TORCPY_APPS_DIR" -maxdepth 1 -name "*.py" -type f | wc -l)
+    local starpupy_count=$(find "$STARPUPY_APPS_DIR" -maxdepth 1 -name "*app.py" -type f | wc -l)
+    local torcpy_count=$(find "$TORCPY_APPS_DIR" -maxdepth 1 -name "*app.py" -type f | wc -l)
     
     print_info "Found $starpupy_count StarPU apps and $torcpy_count torcpy apps"
     echo ""

@@ -1,6 +1,0 @@
-fib(35) = 9227465
-============================================================
-Framework: StarPU Python (Recursive Fibonacci)
-Fibonacci input: 35
-Elapsed time: 3.6653 seconds
-============================================================
