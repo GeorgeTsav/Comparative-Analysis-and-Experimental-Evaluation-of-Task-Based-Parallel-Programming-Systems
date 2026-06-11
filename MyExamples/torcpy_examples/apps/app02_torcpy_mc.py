@@ -80,7 +80,7 @@ def mc_batch(payload):
 def main():
     """Main driver: distributes Monte Carlo batches via torcpy.map() for parallel pricing."""
     parser = argparse.ArgumentParser(description="Heavy Monte Carlo torcpy")
-    parser.add_argument("--paths", type=int, default=200000)
+    parser.add_argument("--paths", type=int, default=3200000)
     parser.add_argument("--batch", type=int, default=50000)
     parser.add_argument("--steps", type=int, default=128)
     parser.add_argument("--assets", type=int, default=16)
