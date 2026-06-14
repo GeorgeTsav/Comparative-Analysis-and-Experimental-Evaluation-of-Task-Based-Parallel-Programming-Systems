@@ -30,7 +30,8 @@ LOGICAL_CORES=1
 PHYSICAL_CORES=1
 CORES_PER_SOCKET=1
 NUMA_NODES=0
-NUMA_ENABLED=0
+NUMA_AVAILABLE=0   # hardware capability (set by initialize_resources)
+NUMA_ENABLED=0     # actual execution mode (set by user prompt)
 MPI_PROCESS_LIMIT=1
 
 # Benchmark parameters
@@ -128,10 +129,11 @@ initialize_resources() {
     fi
 
     if [ "$NUMA_NODES" -gt 1 ] 2>/dev/null && command -v numactl >/dev/null 2>&1; then
-        NUMA_ENABLED=1
+        NUMA_AVAILABLE=1
     else
-        NUMA_ENABLED=0
+        NUMA_AVAILABLE=0
     fi
+    NUMA_ENABLED=0  # will be set by prompt_numa_choice after this function
 
     # Detect MPI process limit
     detect_mpi_process_limit
@@ -140,12 +142,57 @@ initialize_resources() {
     print_success "Logical cores: $LOGICAL_CORES"
     print_success "Physical cores: $PHYSICAL_CORES"
     print_success "Cores per socket: $CORES_PER_SOCKET"
-    if [ "$NUMA_ENABLED" -eq 1 ]; then
-        print_success "NUMA: enabled ($NUMA_NODES nodes)"
+    if [ "$NUMA_AVAILABLE" -eq 1 ]; then
+        print_success "NUMA: detected ($NUMA_NODES nodes) — will prompt for execution mode"
     else
         print_success "NUMA: not detected"
     fi
     print_success "MPI process limit: $MPI_PROCESS_LIMIT"
+    echo ""
+}
+
+# Ask the user whether to run in NUMA-aware or standard mode.
+# Called only when NUMA hardware is detected (NUMA_AVAILABLE=1).
+# Sets NUMA_ENABLED=1 for NUMA-aware, NUMA_ENABLED=0 for standard.
+prompt_numa_choice() {
+    if [ "$NUMA_AVAILABLE" -eq 0 ]; then
+        NUMA_ENABLED=0
+        return
+    fi
+
+    echo ""
+    print_header "NUMA Execution Mode"
+    echo -e "${YELLOW}NUMA hardware detected: $NUMA_NODES nodes${NC}"
+    echo ""
+    echo -e "  ${GREEN}[1]${NC} NUMA-aware execution"
+    echo -e "      torcpy  → mpirun --map-by socket --bind-to core"
+    echo -e "      StarPU  → STARPU_USE_NUMA=1, STARPU_SCHED=dmda, STARPU_WORKERS_GETBIND=1"
+    echo -e "      Canonical config: $NUMA_NODES MPI rank(s) × $CORES_PER_SOCKET worker(s)/rank"
+    echo ""
+    echo -e "  ${BLUE}[2]${NC} Standard execution (non-NUMA)"
+    echo -e "      torcpy  → plain mpirun -n <procs>"
+    echo -e "      StarPU  → no NUMA env vars, default scheduler"
+    echo ""
+
+    local choice=""
+    while true; do
+        read -r -p "Select execution mode [1/2]: " choice
+        case "$choice" in
+            1)
+                NUMA_ENABLED=1
+                print_success "Running in NUMA-aware mode."
+                break
+                ;;
+            2)
+                NUMA_ENABLED=0
+                print_info "Running in standard (non-NUMA) mode."
+                break
+                ;;
+            *)
+                print_warning "Invalid choice. Please enter 1 or 2."
+                ;;
+        esac
+    done
     echo ""
 }
 
@@ -206,24 +253,33 @@ run_starpupy_single() {
     local output
     local exit_code
     
-    # Execute with NUMA-aware StarPU environment variables.
-    # STARPU_USE_NUMA=1           -> master switch: maps internal memory nodes to physical NUMA nodes via hwloc,
-    #                               enabling the DMDA scheduler to calculate cross-socket data transfer costs.
-    # STARPU_LIMIT_CPU_NUMA_MEM  -> caps memory per NUMA node (MB) to prevent OOM kills under heavy load.
-    # STARPU_WORKERS_GETBIND=1   -> instructs StarPU to respect CPU masks from the MPI launcher,
-    #                               preventing core oversubscription when run inside an mpirun environment.
-    # STARPU_SCHED=dmda           -> activates the Data-aware Multiple-implementation scheduler, which uses
-    #                               the NUMA topology created by STARPU_USE_NUMA to place tasks on the
-    #                               hardware unit with the earliest estimated completion time.
-    output=$(timeout "$timeout" env \
-        STARPU_NCPU="$workers" \
-        STARPU_NCUDA=0 \
-        STARPU_NOPENCL=0 \
-        STARPU_USE_NUMA=1 \
-        STARPU_LIMIT_CPU_NUMA_MEM=32000 \
-        STARPU_WORKERS_GETBIND=1 \
-        STARPU_SCHED=dmda \
-        python3 "$app_path" 2>&1)
+    # Build StarPU environment based on chosen execution mode.
+    # NUMA-aware mode adds:
+    #   STARPU_USE_NUMA=1          -> maps memory nodes to physical NUMA nodes via hwloc,
+    #                                 enabling DMDA to calculate cross-socket transfer costs.
+    #   STARPU_LIMIT_CPU_NUMA_MEM  -> caps memory per NUMA node (MB) to prevent OOM kills.
+    #   STARPU_WORKERS_GETBIND=1   -> respects CPU masks from the MPI launcher, preventing
+    #                                 core oversubscription inside an mpirun environment.
+    #   STARPU_SCHED=dmda          -> Data-aware Multiple-implementation scheduler; uses the
+    #                                 NUMA topology to place tasks on the earliest-completion unit.
+    if [ "$NUMA_ENABLED" -eq 1 ]; then
+        output=$(timeout "$timeout" env \
+            STARPU_NCPU="$workers" \
+            STARPU_NCUDA=0 \
+            STARPU_NOPENCL=0 \
+            STARPU_USE_NUMA=1 \
+            STARPU_LIMIT_CPU_NUMA_MEM=32000 \
+            STARPU_WORKERS_GETBIND=1 \
+            STARPU_SCHED=dmda \
+            python3 "$app_path" 2>&1)
+    else
+        # Standard mode: only worker-count variables, no NUMA topology or dmda scheduler.
+        output=$(timeout "$timeout" env \
+            STARPU_NCPU="$workers" \
+            STARPU_NCUDA=0 \
+            STARPU_NOPENCL=0 \
+            python3 "$app_path" 2>&1)
+    fi
     exit_code=$?
     
     if [ $exit_code -eq 124 ]; then
@@ -395,7 +451,7 @@ benchmark_starpupy_apps() {
     
     # CSV Header
     {
-        echo "timestamp,app_name,workers,success_runs,timeout_runs,failed_runs,min_time_seconds,status"
+        echo "timestamp,app_name,workers,success_runs,timeout_runs,failed_runs,min_time_seconds,status,numa_mode"
     } > "$results_file"
     
     local app_path
@@ -432,7 +488,9 @@ benchmark_starpupy_apps() {
             fi
             
             local timestamp=$(date '+%Y-%m-%d %H:%M:%S')
-            echo "$timestamp,$app_name,$workers,$success_count,$timeout_count,$fail_count,$min_time,$status" >> "$results_file"
+            local numa_mode_label="standard"
+            if [ "$NUMA_ENABLED" -eq 1 ]; then numa_mode_label="numa_aware"; fi
+            echo "$timestamp,$app_name,$workers,$success_count,$timeout_count,$fail_count,$min_time,$status,$numa_mode_label" >> "$results_file"
             
             workers=$((workers * 2))
         done
@@ -459,7 +517,7 @@ benchmark_torcpy_apps() {
     
     # CSV Header
     {
-        echo "timestamp,app_name,processes,workers,success_runs,timeout_runs,failed_runs,min_time_seconds,status"
+        echo "timestamp,app_name,processes,workers,success_runs,timeout_runs,failed_runs,min_time_seconds,status,numa_mode"
     } > "$results_file"
     
     local app_path
@@ -511,7 +569,9 @@ benchmark_torcpy_apps() {
                 fi
                 
                 local timestamp=$(date '+%Y-%m-%d %H:%M:%S')
-                echo "$timestamp,$app_name,$processes,$workers,$success_count,$timeout_count,$fail_count,$min_time,$status" >> "$results_file"
+                local numa_mode_label="standard"
+                if [ "$NUMA_ENABLED" -eq 1 ]; then numa_mode_label="numa_aware"; fi
+                echo "$timestamp,$app_name,$processes,$workers,$success_count,$timeout_count,$fail_count,$min_time,$status,$numa_mode_label" >> "$results_file"
                 
                 workers=$((workers * 2))
             done
@@ -548,7 +608,10 @@ main() {
     # System detection
     initialize_resources
     
-    # Show NUMA execution mode
+    # Prompt user for NUMA execution mode (only if NUMA hardware is available)
+    prompt_numa_choice
+    
+    # Show chosen NUMA execution mode
     if [ "$NUMA_ENABLED" -eq 1 ]; then
         print_success "NUMA-aware execution: ENABLED"
         print_info "  torcpy  → mpirun --map-by socket --bind-to core"
