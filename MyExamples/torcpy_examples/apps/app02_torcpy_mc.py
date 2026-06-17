@@ -135,8 +135,9 @@ def main():
     print("Framework: torcpy (app02_mc)")
     print(
         f"Payoff mean={mean_payoff:.6g}  stdErr={stderr:.3g}  "
-        f"Elapsed time={elapsed:.3f}s  throughput={n / elapsed:.3g} paths/s"
+        f"throughput={n / elapsed:.3g} paths/s"
     )
+    print(f"Elapsed time={elapsed:.3f}s")
     print("=" * 60)
 
 
