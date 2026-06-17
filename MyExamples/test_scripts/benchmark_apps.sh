@@ -634,8 +634,8 @@ main() {
     fi
     
     # Count apps
-    local starpupy_count=$(find "$STARPUPY_APPS_DIR" -maxdepth 1 -name "*app.py" -type f | wc -l)
-    local torcpy_count=$(find "$TORCPY_APPS_DIR" -maxdepth 1 -name "*app.py" -type f | wc -l)
+    local starpupy_count=$(find "$STARPUPY_APPS_DIR" -maxdepth 1 -name "app*.py" -type f | wc -l)
+    local torcpy_count=$(find "$TORCPY_APPS_DIR" -maxdepth 1 -name "app*.py" -type f | wc -l)
     
     print_info "Found $starpupy_count StarPU apps and $torcpy_count torcpy apps"
     echo ""
