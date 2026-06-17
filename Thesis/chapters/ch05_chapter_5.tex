@@ -105,3 +105,125 @@ MPI η οποία φιλοξενεί πολλαπλά νήματα εργατώ�
 
 Επιπρόσθετα, το σύστημα προσφέρει μια σειρά βοηθητικών συναρτήσεων (helper functions) για την παρακολούθηση της κατάστασης του υλικού: torcpy.node\_id() (για να εντοπίσει το rank του κόμβου), torcpy.worker\_id() (για το συγκεκριμένο νήμα), torcpy.num-\linebreak\_ local\_workers(), torcpy.gettime() (για χρονομέτρηση ακριβείας), και φυσικά τις ρουτίνες enable\_stealing() και disable\_stealing() για το δυναμικό άνοιγμα ή κλείσιμο του μηχανισμού κλοπής \cite{ibm_torcpy}.
 
+\section{Παράδειγμα Χρήσης του torcpy}
+
+Στην παρακάτω ενότητα παρουσιάζεται ένα απλό παράδειγμα χρήσης του torcpy, όπως και για το προηγούμενο παράδειγμα με το StarPU, με σκοπό να γίνει κατανοητή η βασική λογική λειτουργίας και χρήσης του συστήματος. 
+
+Στο παράδειγμα αυτό, δημιουργούνται 8 εργασίες που εκτελούν μια συνάρτηση \texttt{busy\_work()} η οποία περιέχει έναν βρόχο που καταναλώνει CPU για 8 δευτερόλεπτα. Οι εργασίες αυτές υποβάλλονται στο σύστημα torcpy και εκτελούνται παράλληλα σε διαφορετικές διεργασίες και νήματα-εργάτες. Η εκτέλεση των εργασιών μπορεί να παρακολουθηθεί σε πραγματικό χρόνο με την χρήση του εργαλείου \texttt{htop} σε linux σύστημα, το οποίο εμφανίζει τα νήματα/διεργασίες και τη χρήση της CPU.. Μετά την ολοκλήρωση των εργασιών, εμφανίζεται ο συνολικός χρόνος εκτέλεσης.
+
+Θεωρούμε ότι το σύστημα torcpy έχει εγκατασταθεί και είναι διαθέσιμο στο περιβάλλον Python. Οδηγίες για την εγκατάσταση του torcpy μπορούν να βρεθούν εδώ \cite{ibm_torcpy}.
+
+Αρχικά πρέπει να εισάγουμε το module \texttt{torcpy} μαζί με τις απαραίτητες βιβλιοθήκες και να ορίσουμε μια συνάρτηση που θα εκτελεί την CPU-bound εργασία. Παρακάτω φαίνεται το απόσπασμα κώδικα που περιγράφει την διαδικασία αυτή:
+
+\begin{minted}[fontsize=\small, frame=lines]{python}
+    import time
+    import os
+    import torcpy as torc
+
+    def busy_work(seconds):
+        # CPU-bound busy loop to generate measurable load
+        t0 = time.time()
+        x = 1
+        while time.time() - t0 < seconds:
+            # cheap integer ops to keep CPU busy
+            x = ((x << 1) ^ (x >> 3)) & 0xFFFFFFFF
+        return x
+\end{minted}
+
+Για την δημιουργία και υποβολή των εργασιών (tasks), που το καθένα θα εκτελεί την παραπάνω συνάρτηση busy\_work(), χρησιμοποιούμε μια συνάρτηση, ας την πούμε main(). Μέσα σε αυτήν, δημιουργούμε μια λίστα tasks για να αποθηκεύσουμε τα αντικείμενα των εργασιών που υποβάλλουμε. Στη συνέχεια, χρησιμοποιούμε έναν βρόχο for για να υποβάλουμε 8 εργασίες, καθεμία από τις οποίες καλεί τη συνάρτηση busy\_work() με όρισμα 8.0 δευτερόλεπτα. Μετά την υποβολή των εργασιών, καλούμε τη συνάρτηση \texttt{torc.wait()} για να περιμένουμε την ολοκλήρωση όλων των εργασιών. Τέλος, συλλέγουμε τα αποτελέσματα των εργασιών και εμφανίζουμε τον συνολικό χρόνο εκτέλεσης. Παρακάτω φαίνεται το απόσπασμα κώδικα που περιγράφει την διαδικασία αυτή:
+
+\begin{minted}[fontsize=\small, frame=lines]{python}
+    def main():
+        print(f"PID: {os.getpid()}, ntasks=8, sec=8.0")
+        print("Start submitting tasks...")
+
+        t0 = time.time()
+        tasks = []
+        for i in range(8):
+            tasks.append(torc.submit(busy_work, 8.0))
+
+        # Wait for completion
+        torc.wait()
+        t1 = time.time()
+
+        # Collect results (force materialization)
+        for i, t in enumerate(tasks):
+            try:
+                _ = t.result()
+            except Exception as e:
+                print(f"task {i} error: {e}")
+
+        elapsed = t1 - t0
+        print("=" * 60)
+        print("Framework: torcpy (Monitor dummy workload)")
+        print(f"Submitted tasks: 8")
+        print(f"Work per task (s): 8.0")
+        print(f"Elapsed time: {elapsed:.4f} seconds")
+        print("=" * 60)
+\end{minted}
+
+Τέλος, για την εκτέλεση της main() συνάρτησης χρησιμοποιούμε την εντολή \texttt{torc.st\linebreak art(main)}, η οποία εκκινεί το περιβάλλον του torcpy και περιμένει την ολοκλήρωση της main() συνάρτησης. Παρακάτω φαίνεται το απόσπασμα κώδικα που περιγράφει την διαδικασία αυτή:
+
+\begin{minted}[fontsize=\small, frame=lines]{python}
+    if __name__ == '__main__':
+        torc.start(main)
+\end{minted}
+
+\subsection{Ολοκληρωμένος Κώδικας Παραδείγματος}
+
+Παρακάτω παρουσιάζεται ο πλήρης κώδικας του παραδείγματος που περιγράφηκε παραπάνω, ο οποίος περιλαμβάνει όλα τα προηγούμενα αποσπάσματα κώδικα:
+
+\begin{minted}[fontsize=\footnotesize, frame=lines]{python}
+    """
+    Monitor example for torcpy
+    - Submits multiple CPU-bound dummy tasks (busy loop) to torcpy
+    - Use `htop` while it runs to observe processes/threads and CPU usage
+    """
+
+    import time
+    import os
+    import torcpy as torc
+
+
+    def busy_work(seconds):
+        # CPU-bound busy loop to generate measurable load
+        t0 = time.time()
+        x = 1
+        while time.time() - t0 < seconds:
+            # cheap integer ops to keep CPU busy
+            x = ((x << 1) ^ (x >> 3)) & 0xFFFFFFFF
+        return x
+
+
+    def main():
+        print(f"PID: {os.getpid()}, ntasks=8, sec=8.0")
+        print("Start submitting tasks...")
+
+        t0 = time.time()
+        tasks = []
+        for i in range(8):
+            tasks.append(torc.submit(busy_work, 8.0))
+
+        # Wait for completion
+        torc.wait()
+        t1 = time.time()
+
+        # Collect results (force materialization)
+        for i, t in enumerate(tasks):
+            try:
+                _ = t.result()
+            except Exception as e:
+                print(f"task {i} error: {e}")
+
+        elapsed = t1 - t0
+        print("=" * 60)
+        print("Framework: torcpy (Monitor dummy workload)")
+        print(f"Submitted tasks: 8")
+        print(f"Work per task (s): 8.0")
+        print(f"Elapsed time: {elapsed:.4f} seconds")
+        print("=" * 60)
+
+
+    if __name__ == '__main__':
+        torc.start(main)
+\end{minted}

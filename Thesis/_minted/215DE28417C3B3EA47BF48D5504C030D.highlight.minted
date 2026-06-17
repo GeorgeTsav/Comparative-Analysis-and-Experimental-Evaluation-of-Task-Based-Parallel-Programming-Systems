@@ -1,0 +1,54 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+\PYG{+w}{    }\PYG{l+s+sd}{\PYGZdq{}\PYGZdq{}\PYGZdq{}}
+\PYG{l+s+sd}{    Monitor example for torcpy}
+\PYG{l+s+sd}{    \PYGZhy{} Submits multiple CPU\PYGZhy{}bound dummy tasks (busy loop) to torcpy}
+\PYG{l+s+sd}{    \PYGZhy{} Use `htop` while it runs to observe processes/threads and CPU usage}
+\PYG{l+s+sd}{    \PYGZdq{}\PYGZdq{}\PYGZdq{}}
+
+    \PYG{k+kn}{import}\PYG{+w}{ }\PYG{n+nn}{time}
+    \PYG{k+kn}{import}\PYG{+w}{ }\PYG{n+nn}{os}
+    \PYG{k+kn}{import}\PYG{+w}{ }\PYG{n+nn}{torcpy}\PYG{+w}{ }\PYG{k}{as}\PYG{+w}{ }\PYG{n+nn}{torc}
+
+
+    \PYG{k}{def}\PYG{+w}{ }\PYG{n+nf}{busy\PYGZus{}work}\PYG{p}{(}\PYG{n}{seconds}\PYG{p}{):}
+        \PYG{c+c1}{\PYGZsh{} CPU\PYGZhy{}bound busy loop to generate measurable load}
+        \PYG{n}{t0} \PYG{o}{=} \PYG{n}{time}\PYG{o}{.}\PYG{n}{time}\PYG{p}{()}
+        \PYG{n}{x} \PYG{o}{=} \PYG{l+m+mi}{1}
+        \PYG{k}{while} \PYG{n}{time}\PYG{o}{.}\PYG{n}{time}\PYG{p}{()} \PYG{o}{\PYGZhy{}} \PYG{n}{t0} \PYG{o}{\PYGZlt{}} \PYG{n}{seconds}\PYG{p}{:}
+            \PYG{c+c1}{\PYGZsh{} cheap integer ops to keep CPU busy}
+            \PYG{n}{x} \PYG{o}{=} \PYG{p}{((}\PYG{n}{x} \PYG{o}{\PYGZlt{}\PYGZlt{}} \PYG{l+m+mi}{1}\PYG{p}{)} \PYG{o}{\PYGZca{}} \PYG{p}{(}\PYG{n}{x} \PYG{o}{\PYGZgt{}\PYGZgt{}} \PYG{l+m+mi}{3}\PYG{p}{))} \PYG{o}{\PYGZam{}} \PYG{l+m+mh}{0xFFFFFFFF}
+        \PYG{k}{return} \PYG{n}{x}
+
+
+    \PYG{k}{def}\PYG{+w}{ }\PYG{n+nf}{main}\PYG{p}{():}
+        \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+sa}{f}\PYG{l+s+s2}{\PYGZdq{}PID: }\PYG{l+s+si}{\PYGZob{}}\PYG{n}{os}\PYG{o}{.}\PYG{n}{getpid}\PYG{p}{()}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+s2}{, ntasks=8, sec=8.0\PYGZdq{}}\PYG{p}{)}
+        \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Start submitting tasks...\PYGZdq{}}\PYG{p}{)}
+
+        \PYG{n}{t0} \PYG{o}{=} \PYG{n}{time}\PYG{o}{.}\PYG{n}{time}\PYG{p}{()}
+        \PYG{n}{tasks} \PYG{o}{=} \PYG{p}{[]}
+        \PYG{k}{for} \PYG{n}{i} \PYG{o+ow}{in} \PYG{n+nb}{range}\PYG{p}{(}\PYG{l+m+mi}{8}\PYG{p}{):}
+            \PYG{n}{tasks}\PYG{o}{.}\PYG{n}{append}\PYG{p}{(}\PYG{n}{torc}\PYG{o}{.}\PYG{n}{submit}\PYG{p}{(}\PYG{n}{busy\PYGZus{}work}\PYG{p}{,} \PYG{l+m+mf}{8.0}\PYG{p}{))}
+
+        \PYG{c+c1}{\PYGZsh{} Wait for completion}
+        \PYG{n}{torc}\PYG{o}{.}\PYG{n}{wait}\PYG{p}{()}
+        \PYG{n}{t1} \PYG{o}{=} \PYG{n}{time}\PYG{o}{.}\PYG{n}{time}\PYG{p}{()}
+
+        \PYG{c+c1}{\PYGZsh{} Collect results (force materialization)}
+        \PYG{k}{for} \PYG{n}{i}\PYG{p}{,} \PYG{n}{t} \PYG{o+ow}{in} \PYG{n+nb}{enumerate}\PYG{p}{(}\PYG{n}{tasks}\PYG{p}{):}
+            \PYG{k}{try}\PYG{p}{:}
+                \PYG{n}{\PYGZus{}} \PYG{o}{=} \PYG{n}{t}\PYG{o}{.}\PYG{n}{result}\PYG{p}{()}
+            \PYG{k}{except} \PYG{n+ne}{Exception} \PYG{k}{as} \PYG{n}{e}\PYG{p}{:}
+                \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+sa}{f}\PYG{l+s+s2}{\PYGZdq{}task }\PYG{l+s+si}{\PYGZob{}}\PYG{n}{i}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+s2}{ error: }\PYG{l+s+si}{\PYGZob{}}\PYG{n}{e}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{)}
+
+        \PYG{n}{elapsed} \PYG{o}{=} \PYG{n}{t1} \PYG{o}{\PYGZhy{}} \PYG{n}{t0}
+        \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}=\PYGZdq{}} \PYG{o}{*} \PYG{l+m+mi}{60}\PYG{p}{)}
+        \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Framework: torcpy (Monitor dummy workload)\PYGZdq{}}\PYG{p}{)}
+        \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+sa}{f}\PYG{l+s+s2}{\PYGZdq{}Submitted tasks: 8\PYGZdq{}}\PYG{p}{)}
+        \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+sa}{f}\PYG{l+s+s2}{\PYGZdq{}Work per task (s): 8.0\PYGZdq{}}\PYG{p}{)}
+        \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+sa}{f}\PYG{l+s+s2}{\PYGZdq{}Elapsed time: }\PYG{l+s+si}{\PYGZob{}}\PYG{n}{elapsed}\PYG{l+s+si}{:}\PYG{l+s+s2}{.4f}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+s2}{ seconds\PYGZdq{}}\PYG{p}{)}
+        \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}=\PYGZdq{}} \PYG{o}{*} \PYG{l+m+mi}{60}\PYG{p}{)}
+
+
+    \PYG{k}{if} \PYG{n+nv+vm}{\PYGZus{}\PYGZus{}name\PYGZus{}\PYGZus{}} \PYG{o}{==} \PYG{l+s+s1}{\PYGZsq{}\PYGZus{}\PYGZus{}main\PYGZus{}\PYGZus{}\PYGZsq{}}\PYG{p}{:}
+        \PYG{n}{torc}\PYG{o}{.}\PYG{n}{start}\PYG{p}{(}\PYG{n}{main}\PYG{p}{)}
+\end{MintedVerbatim}

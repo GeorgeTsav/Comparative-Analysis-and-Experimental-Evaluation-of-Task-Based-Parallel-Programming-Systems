@@ -2472,7 +2472,7 @@
     <bcf:citekey order="65" intorder="1">starpu2025handbook</bcf:citekey>
     <bcf:citekey order="66" intorder="1">starpu2025handbook</bcf:citekey>
     <bcf:citekey order="67" intorder="1">starpu2025handbook</bcf:citekey>
-    <bcf:citekey order="68" intorder="1">hadjidoukas2020torcpy</bcf:citekey>
+    <bcf:citekey order="68" intorder="1">starpu2025handbook</bcf:citekey>
     <bcf:citekey order="69" intorder="1">hadjidoukas2020torcpy</bcf:citekey>
     <bcf:citekey order="70" intorder="1">hadjidoukas2020torcpy</bcf:citekey>
     <bcf:citekey order="71" intorder="1">hadjidoukas2020torcpy</bcf:citekey>
@@ -2490,7 +2490,9 @@
     <bcf:citekey order="83" intorder="1">hadjidoukas2020torcpy</bcf:citekey>
     <bcf:citekey order="84" intorder="1">hadjidoukas2020torcpy</bcf:citekey>
     <bcf:citekey order="85" intorder="1">hadjidoukas2020torcpy</bcf:citekey>
-    <bcf:citekey order="86" intorder="1">ibm_torcpy</bcf:citekey>
+    <bcf:citekey order="86" intorder="1">hadjidoukas2020torcpy</bcf:citekey>
+    <bcf:citekey order="87" intorder="1">ibm_torcpy</bcf:citekey>
+    <bcf:citekey order="88" intorder="1">ibm_torcpy</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">

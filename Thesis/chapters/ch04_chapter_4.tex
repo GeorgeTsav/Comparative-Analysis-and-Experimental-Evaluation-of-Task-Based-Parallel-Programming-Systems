@@ -99,3 +99,151 @@ StarPUPy να αποκτά άμεση πρόσβαση στα ακατέργασ
 \end{itemize}
 
 Αν και οι τελευταίες δύο στρατηγικές είναι υποσχόμενες δεν υποστηρίζονται και δεν τεκμηριώνονται πλήρως στην τρέχουσα έκδοση του StarPUPy, και η υποστήριξη για αυτές τις λειτουργίες αναμένεται να βελτιωθεί σε μελλοντικές εκδόσεις.
+
+\section{Παράδειγμα Χρήσης του StarPUPy}
+
+Στην παρακάτω ενότητα παρουσιάζεται ένα απλό παράδειγμα χρήσης του StarPUPy, το οποίο καλύπτει την υποβολή εργασιών και την γενική φιλοσοφία της διεπαφής με βάση ότι έχουμε αναφέρει μέχρι τώρα.
+
+Στο παράδειγμα αυτό δημιουργούνται και υποβάλλονται 8 CPU-bound εργασίες (busy loop) μέσω του StarPUPy. Η εκτέλεση των εργασιών μπορεί να παρακολουθηθεί σε πραγματικό χρόνο με την χρήση του εργαλείου \texttt{htop} σε linux σύστημα, το οποίο εμφανίζει τα νήματα/διεργασίες και τη χρήση της CPU.
+
+Θεωρούμε ότι το StarPUPy έχει εγκατασταθεί σωστά και είναι διαθέσιμο στο περιβάλλον Python. Οδηγίες γι' αυτό μπορείτε να βρείτε εδώ \cite{starpu2025handbook}. 
+
+Αρχικά πρέπει να εισάγουμε το module \texttt{starpu} μαζί με τις απαραίτητες βιβλιοθήκες και να ορίσουμε μια συνάρτηση που θα εκτελεί την CPU-bound εργασία. Παρακάτω φαίνεται το απόσπασμα κώδικα που περιγράφει την διαδικασία αυτή:
+
+\begin{minted}[fontsize=\small, frame=lines]{python}
+    import time
+    import asyncio
+    import os
+    from starpu import starpu
+
+    def busy_work(seconds):
+    # CPU-bound busy loop to generate measurable load
+    t0 = time.time()
+    x = 1
+    while time.time() - t0 < seconds:
+        # cheap integer ops to keep CPU busy
+        x = ((x << 1) ^ (x >> 3)) & 0xFFFFFFFF
+    return x
+\end{minted}
+
+Για την δημιουργία και υποβολή των εργασιών (tasks), που το καθένα θα εκτελεί την παραπάνω συνάρτηση busy\_work(), χρησιμοποιούμε μια ασύγχρονη συνάρτηση, ας την πούμε main(), η οποία πρώτα αρχικοποιεί το StarPUPy περιβάλλον καλώντας την συνάρτηση \texttt{starpu.init()}. Στην συνέχεια μέσα σε ένα βρόχο for δημιουργούνται και υποβάλλονται 8 εργασίες, οι οποίες εκτελούν την συνάρτηση busy\_work() για 8 δευτερόλεπτα η κάθε μία. Αυτό γίνεται με την επανειλημμένη χρήση της συνάρτησης \texttt{starpu.task\_submit()}. Τα αντικείμενα Future που επιστρέφονται από την υποβολή των εργασιών αποθηκεύονται σε μια λίστα futures. Παρακάτω φαίνεται το απόσπασμα κώδικα που περιγράφει την διαδικασία αυτή:
+
+\begin{minted}[fontsize=\small, frame=lines]{python}
+    async def main():
+        try:
+            starpu.init()
+        except Exception as e:
+            print(f"StarPU initialization error: {e}")
+            return
+
+        print(f"PID: {os.getpid()}, ntasks=8, sec=8.0")
+        print("Start submitting tasks...")
+
+        t0 = time.time()
+        futures = []
+        for i in range(8):
+            fut = starpu.task_submit()(busy_work, 8.0)
+            futures.append(fut)
+\end{minted}
+
+Στην συνέχεια, αφού έχουν υποβληθεί όλες οι εργασίες, η main() συνάρτηση περιμένει την ολοκλήρωση τους και συλλέγει τα αποτελέσματα από τα αντικείμενα Future. Αυτό γίνεται με την χρήση ενός δεύτερου βρόχου for, όπου για κάθε αντικείμενο Future καλείται η εντολή \texttt{await fut}, η οποία μπλοκάρει την εκτέλεση μέχρι να ολοκληρωθεί η αντίστοιχη εργασία. Τα αποτελέσματα αποθηκεύονται σε μια λίστα results. Μετά την ολοκλήρωση όλων των εργασιών, εμφανίζονται στην οθόνη ο χρόνος εκτέλεσης και τερματίζεται το περιβάλλον StarPUPy με την κλήση της συνάρτησης \texttt{starpu.shutdown()}. Παρακάτω φαίνεται το απόσπασμα κώδικα που περιγράφει την διαδικασία αυτή:
+
+\begin{minted}[fontsize=\small, frame=lines]{python}
+        # Wait for completion and collect results (force materialization)
+        results = []
+        for fut in futures:
+            res = await fut
+            results.append(res)
+
+        t1 = time.time()
+        elapsed = t1 - t0
+
+        print("=" * 60)
+        print("Framework: StarPU Python (Monitor dummy workload)")
+        print(f"Submitted tasks: 8")
+        print(f"Work per task (s): 8.0")
+        print(f"Elapsed time: {elapsed:.4f} seconds")
+        print("=" * 60)
+
+        starpu.shutdown()
+\end{minted}
+
+Τέλος για την εκτέλεση της main() συνάρτησης χρησιμοποιούμε την εντολή \texttt{asyncio\linebreak.run(main())}, η οποία εκκινεί το ασύγχρονο περιβάλλον και περιμένει την ολοκλήρωση της main() συνάρτησης. Παρακάτω φαίνεται το απόσπασμα κώδικα που περιγράφει την διαδικασία αυτή:
+
+\begin{minted}[fontsize=\small, frame=lines]{python}
+    if __name__ == '__main__':
+        try:
+            asyncio.run(main())
+        except Exception as e:
+            print(f"Error: {e}")
+\end{minted}
+
+\subsection{Ολοκληρωμένος Κώδικας Παραδείγματος}
+
+Παρακάτω παρουσιάζεται ο ολοκληρωμένος κώδικας του παραδείγματος χρήσης του StarPUPy, ο οποίος περιλαμβάνει όλα τα προηγούμενα αποσπάσματα κώδικα:
+
+\begin{minted}[fontsize=\footnotesize, frame=lines]{python}
+    """
+    Monitor example for StarPU Python
+    - Submits multiple CPU-bound dummy tasks (busy loop) via StarPU
+    - Use `htop` while it runs to observe threads/processes and CPU usage
+    """
+
+    import time
+    import asyncio
+    import os
+    from starpu import starpu
+
+
+    def busy_work(seconds):
+        # CPU-bound busy loop to generate measurable load
+        t0 = time.time()
+        x = 1
+        while time.time() - t0 < seconds:
+            # cheap integer ops to keep CPU busy
+            x = ((x << 1) ^ (x >> 3)) & 0xFFFFFFFF
+        return x
+
+
+    async def main():
+        try:
+            starpu.init()
+        except Exception as e:
+            print(f"StarPU initialization error: {e}")
+            return
+
+        print(f"PID: {os.getpid()}, ntasks=8, sec=8.0")
+        print("Start submitting tasks...")
+
+
+        t0 = time.time()
+        futures = []
+        for i in range(8):
+            fut = starpu.task_submit()(busy_work, 8.0)
+            futures.append(fut)
+
+        # Wait for completion and collect results (force materialization)
+        results = []
+        for fut in futures:
+            res = await fut
+            results.append(res)
+
+        t1 = time.time()
+        elapsed = t1 - t0
+
+        print("=" * 60)
+        print("Framework: StarPU Python (Monitor dummy workload)")
+        print(f"Submitted tasks: 8")
+        print(f"Work per task (s): 8.0")
+        print(f"Elapsed time: {elapsed:.4f} seconds")
+        print("=" * 60)
+
+        starpu.shutdown()
+
+
+    if __name__ == '__main__':
+        try:
+            asyncio.run(main())
+        except Exception as e:
+            print(f"Error: {e}")
+\end{minted}

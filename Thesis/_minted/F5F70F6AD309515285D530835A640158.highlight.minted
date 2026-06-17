@@ -1,0 +1,65 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+\PYG{+w}{    }\PYG{l+s+sd}{\PYGZdq{}\PYGZdq{}\PYGZdq{}}
+\PYG{l+s+sd}{    Monitor example for StarPU Python}
+\PYG{l+s+sd}{    \PYGZhy{} Submits multiple CPU\PYGZhy{}bound dummy tasks (busy loop) via StarPU}
+\PYG{l+s+sd}{    \PYGZhy{} Use `htop` while it runs to observe threads/processes and CPU usage}
+\PYG{l+s+sd}{    \PYGZdq{}\PYGZdq{}\PYGZdq{}}
+
+    \PYG{k+kn}{import}\PYG{+w}{ }\PYG{n+nn}{time}
+    \PYG{k+kn}{import}\PYG{+w}{ }\PYG{n+nn}{asyncio}
+    \PYG{k+kn}{import}\PYG{+w}{ }\PYG{n+nn}{os}
+    \PYG{k+kn}{from}\PYG{+w}{ }\PYG{n+nn}{starpu}\PYG{+w}{ }\PYG{k+kn}{import} \PYG{n}{starpu}
+
+
+    \PYG{k}{def}\PYG{+w}{ }\PYG{n+nf}{busy\PYGZus{}work}\PYG{p}{(}\PYG{n}{seconds}\PYG{p}{):}
+        \PYG{c+c1}{\PYGZsh{} CPU\PYGZhy{}bound busy loop to generate measurable load}
+        \PYG{n}{t0} \PYG{o}{=} \PYG{n}{time}\PYG{o}{.}\PYG{n}{time}\PYG{p}{()}
+        \PYG{n}{x} \PYG{o}{=} \PYG{l+m+mi}{1}
+        \PYG{k}{while} \PYG{n}{time}\PYG{o}{.}\PYG{n}{time}\PYG{p}{()} \PYG{o}{\PYGZhy{}} \PYG{n}{t0} \PYG{o}{\PYGZlt{}} \PYG{n}{seconds}\PYG{p}{:}
+            \PYG{c+c1}{\PYGZsh{} cheap integer ops to keep CPU busy}
+            \PYG{n}{x} \PYG{o}{=} \PYG{p}{((}\PYG{n}{x} \PYG{o}{\PYGZlt{}\PYGZlt{}} \PYG{l+m+mi}{1}\PYG{p}{)} \PYG{o}{\PYGZca{}} \PYG{p}{(}\PYG{n}{x} \PYG{o}{\PYGZgt{}\PYGZgt{}} \PYG{l+m+mi}{3}\PYG{p}{))} \PYG{o}{\PYGZam{}} \PYG{l+m+mh}{0xFFFFFFFF}
+        \PYG{k}{return} \PYG{n}{x}
+
+
+    \PYG{k}{async} \PYG{k}{def}\PYG{+w}{ }\PYG{n+nf}{main}\PYG{p}{():}
+        \PYG{k}{try}\PYG{p}{:}
+            \PYG{n}{starpu}\PYG{o}{.}\PYG{n}{init}\PYG{p}{()}
+        \PYG{k}{except} \PYG{n+ne}{Exception} \PYG{k}{as} \PYG{n}{e}\PYG{p}{:}
+            \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+sa}{f}\PYG{l+s+s2}{\PYGZdq{}StarPU initialization error: }\PYG{l+s+si}{\PYGZob{}}\PYG{n}{e}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{)}
+            \PYG{k}{return}
+
+        \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+sa}{f}\PYG{l+s+s2}{\PYGZdq{}PID: }\PYG{l+s+si}{\PYGZob{}}\PYG{n}{os}\PYG{o}{.}\PYG{n}{getpid}\PYG{p}{()}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+s2}{, ntasks=8, sec=8.0\PYGZdq{}}\PYG{p}{)}
+        \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Start submitting tasks...\PYGZdq{}}\PYG{p}{)}
+
+
+        \PYG{n}{t0} \PYG{o}{=} \PYG{n}{time}\PYG{o}{.}\PYG{n}{time}\PYG{p}{()}
+        \PYG{n}{futures} \PYG{o}{=} \PYG{p}{[]}
+        \PYG{k}{for} \PYG{n}{i} \PYG{o+ow}{in} \PYG{n+nb}{range}\PYG{p}{(}\PYG{l+m+mi}{8}\PYG{p}{):}
+            \PYG{n}{fut} \PYG{o}{=} \PYG{n}{starpu}\PYG{o}{.}\PYG{n}{task\PYGZus{}submit}\PYG{p}{()(}\PYG{n}{busy\PYGZus{}work}\PYG{p}{,} \PYG{l+m+mf}{8.0}\PYG{p}{)}
+            \PYG{n}{futures}\PYG{o}{.}\PYG{n}{append}\PYG{p}{(}\PYG{n}{fut}\PYG{p}{)}
+
+        \PYG{c+c1}{\PYGZsh{} Wait for completion and collect results (force materialization)}
+        \PYG{n}{results} \PYG{o}{=} \PYG{p}{[]}
+        \PYG{k}{for} \PYG{n}{fut} \PYG{o+ow}{in} \PYG{n}{futures}\PYG{p}{:}
+            \PYG{n}{res} \PYG{o}{=} \PYG{k}{await} \PYG{n}{fut}
+            \PYG{n}{results}\PYG{o}{.}\PYG{n}{append}\PYG{p}{(}\PYG{n}{res}\PYG{p}{)}
+
+        \PYG{n}{t1} \PYG{o}{=} \PYG{n}{time}\PYG{o}{.}\PYG{n}{time}\PYG{p}{()}
+        \PYG{n}{elapsed} \PYG{o}{=} \PYG{n}{t1} \PYG{o}{\PYGZhy{}} \PYG{n}{t0}
+
+        \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}=\PYGZdq{}} \PYG{o}{*} \PYG{l+m+mi}{60}\PYG{p}{)}
+        \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Framework: StarPU Python (Monitor dummy workload)\PYGZdq{}}\PYG{p}{)}
+        \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+sa}{f}\PYG{l+s+s2}{\PYGZdq{}Submitted tasks: 8\PYGZdq{}}\PYG{p}{)}
+        \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+sa}{f}\PYG{l+s+s2}{\PYGZdq{}Work per task (s): 8.0\PYGZdq{}}\PYG{p}{)}
+        \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+sa}{f}\PYG{l+s+s2}{\PYGZdq{}Elapsed time: }\PYG{l+s+si}{\PYGZob{}}\PYG{n}{elapsed}\PYG{l+s+si}{:}\PYG{l+s+s2}{.4f}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+s2}{ seconds\PYGZdq{}}\PYG{p}{)}
+        \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}=\PYGZdq{}} \PYG{o}{*} \PYG{l+m+mi}{60}\PYG{p}{)}
+
+        \PYG{n}{starpu}\PYG{o}{.}\PYG{n}{shutdown}\PYG{p}{()}
+
+
+    \PYG{k}{if} \PYG{n+nv+vm}{\PYGZus{}\PYGZus{}name\PYGZus{}\PYGZus{}} \PYG{o}{==} \PYG{l+s+s1}{\PYGZsq{}\PYGZus{}\PYGZus{}main\PYGZus{}\PYGZus{}\PYGZsq{}}\PYG{p}{:}
+        \PYG{k}{try}\PYG{p}{:}
+            \PYG{n}{asyncio}\PYG{o}{.}\PYG{n}{run}\PYG{p}{(}\PYG{n}{main}\PYG{p}{())}
+        \PYG{k}{except} \PYG{n+ne}{Exception} \PYG{k}{as} \PYG{n}{e}\PYG{p}{:}
+            \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+sa}{f}\PYG{l+s+s2}{\PYGZdq{}Error: }\PYG{l+s+si}{\PYGZob{}}\PYG{n}{e}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{)}
+\end{MintedVerbatim}
