@@ -1,0 +1,22 @@
+timestamp,app_name,workers,success_runs,timeout_runs,failed_runs,min_time_seconds,status,numa_mode
+2026-06-21 14:12:54,app00_starpupy_cmaes,1,5,0,0,32.8901,OK,numa_aware
+2026-06-21 14:14:28,app00_starpupy_cmaes,2,5,0,0,16.6401,OK,numa_aware
+2026-06-21 14:15:26,app00_starpupy_cmaes,4,5,0,0,8.5153,OK,numa_aware
+2026-06-21 14:16:02,app00_starpupy_cmaes,8,5,0,0,4.4558,OK,numa_aware
+2026-06-21 14:16:30,app00_starpupy_cmaes,16,5,0,0,2.6040,OK,numa_aware
+2026-06-21 14:16:53,app00_starpupy_cmaes,32,5,0,0,2.6005,OK,numa_aware
+2026-06-21 14:17:15,app00_starpupy_cmaes,64,5,0,0,2.6075,OK,numa_aware
+2026-06-21 14:21:24,app01_starpupy_improc,1,5,0,0,49.494989,OK,numa_aware
+2026-06-21 14:23:32,app01_starpupy_improc,2,5,0,0,25.067693,OK,numa_aware
+2026-06-21 14:24:43,app01_starpupy_improc,4,5,0,0,12.702989,OK,numa_aware
+2026-06-21 14:25:25,app01_starpupy_improc,8,5,0,0,7.341151,OK,numa_aware
+2026-06-21 14:26:36,app01_starpupy_improc,16,5,0,0,13.692850,OK,numa_aware
+2026-06-21 14:27:55,app01_starpupy_improc,32,5,0,0,15.350630,OK,numa_aware
+2026-06-21 14:29:54,app01_starpupy_improc,64,5,0,0,21.811802,OK,numa_aware
+2026-06-21 14:44:05,app02_starpupy_mc,1,5,0,0,169.752,OK,numa_aware
+2026-06-21 14:51:12,app02_starpupy_mc,2,5,0,0,84.992,OK,numa_aware
+2026-06-21 14:54:57,app02_starpupy_mc,4,5,0,0,43.659,OK,numa_aware
+2026-06-21 14:57:18,app02_starpupy_mc,8,5,0,0,27.090,OK,numa_aware
+2026-06-21 14:59:23,app02_starpupy_mc,16,5,0,0,24.176,OK,numa_aware
+2026-06-21 15:01:37,app02_starpupy_mc,32,5,0,0,26.408,OK,numa_aware
+2026-06-21 15:03:05,app02_starpupy_mc,64,5,0,0,16.972,OK,numa_aware
