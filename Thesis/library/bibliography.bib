@@ -1,15 +1,10 @@
 % ──────────────────────────────────────────────────────────────
 %  Bibliography  (Βιβλιογραφία)
 % ──────────────────────────────────────────────────────────────
-@book{papadakis2012,
-  title={{Προγραμματισμός και Αρχιτεκτονική Συστημάτων Παράλληλης Επεξεργασίας}},
-  author={Στυλιανός, Παπαδάκης and Κωνσταντίνος, Διαμαντάρας},
-  year={2012},
-  publisher={Εκδόσεις Κλειδάριθμος},
-  address={Αθήνα},
-  isbn={978-960-461-446-2},
-  edition={1}
-}
+
+####################################################
+#                torcpy References                 #
+####################################################
 
 @article{hadjidoukas2020torcpy,
   title={torcpy: Supporting task parallelism in Python},
@@ -27,6 +22,10 @@
   howpublished = {GitHub Repository},
   url          = {https://github.com/ibm/torc_py}
 }
+
+####################################################
+#               StarPU References                  #
+####################################################
 
 @inproceedings{augonnet2009starpu,
   title={StarPU: a unified platform for task scheduling on heterogeneous multicore architectures},
@@ -121,6 +120,20 @@
   url     = {https://redis.io/glossary/cache-coherence/}
 }
 
+#####################################################
+#                 General Information               #           
+#####################################################
+
+@book{papadakis2012,
+  title={{Προγραμματισμός και Αρχιτεκτονική Συστημάτων Παράλληλης Επεξεργασίας}},
+  author={Στυλιανός, Παπαδάκης and Κωνσταντίνος, Διαμαντάρας},
+  year={2012},
+  publisher={Εκδόσεις Κλειδάριθμος},
+  address={Αθήνα},
+  isbn={978-960-461-446-2},
+  edition={1}
+}
+
 @online{numa,
   title={NUMA (Non-Uniform Memory Access)},
   author={Wikipedia},
@@ -189,4 +202,108 @@
   year    = {2026},
   issn    = {2278-0181},
   url     = {https://www.ijert.org/understanding-and-implementing-concurrency-in-python-based-systems-ijertv15is031148}
+}
+
+
+########################################################################
+#     Application-Specific References (CMA-ES, Gabor, Monte Carlo)     #
+########################################################################
+
+@misc{Hansen2016,
+  author  = {Hansen, Nikolaus},
+  title   = {The {CMA} Evolution Strategy: A Tutorial},
+  year    = {2016},
+  eprint  = {1604.00772},
+  archivePrefix = {arXiv},
+  url     = {https://arxiv.org/abs/1604.00772}
+}
+
+@techreport{HansenCopenhagen,
+  author      = {Hansen, Nikolaus},
+  title       = {Covariance Matrix Adaptation Evolution Strategy ({CMA-ES})},
+  institution = {CMAP, École Polytechnique},
+  url         = {http://www.cmap.polytechnique.fr/~nikolaus.hansen/copenhagen-cma-es.pdf}
+}
+
+@misc{WikiCMAES,
+  title  = {{CMA-ES}},
+  author = {{Wikipedia contributors}},
+  year   = {2025},
+  url    = {https://en.wikipedia.org/wiki/CMA-ES}
+}
+
+@inproceedings{HansenGECCO2014,
+  author    = {Hansen, Nikolaus},
+  title     = {Tutorial: Evolution Strategies and {CMA-ES}
+               (Covariance Matrix Adaptation)},
+  booktitle = {Proceedings of GECCO 2014 (Tutorial)},
+  year      = {2014},
+  url       = {http://www.cmap.polytechnique.fr/~nikolaus.hansen/gecco2014-CMA-ES-tutorial.pdf}
+}
+
+@misc{HansenPDF2016,
+  author = {Hansen, Nikolaus},
+  title  = {The {CMA} Evolution Strategy: A Tutorial},
+  year   = {2016},
+  url    = {https://arxiv.org/pdf/1604.00772}
+}
+
+@misc{WikiGabor,
+  title  = {Gabor filter},
+  author = {{Wikipedia contributors}},
+  year   = {2025},
+  url    = {https://en.wikipedia.org/wiki/Gabor_filter}
+}
+
+@article{GaborMDPI,
+  author  = {others},
+  title   = {Design of a {Gabor} Filter-Based Image Denoising Hardware Model},
+  journal = {Electronics},
+  year    = {2022},
+  volume  = {11},
+  number  = {7},
+  pages   = {1063},
+  url     = {https://www.mdpi.com/2079-9292/11/7/1063}
+}
+
+@misc{Baeldung,
+  title  = {How to Use {Gabor} Filters to Generate Features for Machine Learning},
+  author = {{Baeldung}},
+  year   = {2024},
+  url    = {https://www.baeldung.com/cs/ml-gabor-filters}
+}
+
+@misc{GoddardMC,
+  author = {Goddard, Mark},
+  title  = {Monte-{C}arlo Option Pricing --- Correlated Random Sequences},
+  year   = {2024},
+  url    = {http://www.goddardconsulting.ca/option-pricing-monte-carlo-basket.html}
+}
+
+@misc{GilesMC,
+  author = {Giles, Mike B.},
+  title  = {Monte {C}arlo Methods: {G}eometric {B}rownian Motion,
+            Correlated {B}rownian Motions},
+  year   = {2013},
+  url    = {https://people.maths.ox.ac.uk/gilesm/mc/nanjing/giles_lecs-2x2.pdf}
+}
+
+@inproceedings{AtlantisMC,
+  title     = {A {Monte Carlo} Simulation Scheme for Basket Options with Barriers},
+  booktitle = {Atlantis Press},
+  year      = {2016},
+  url       = {https://www.atlantis-press.com/article/125971590.pdf}
+}
+
+#################################################
+#         Benchmark Application Source Code     #
+#################################################
+
+@misc{appcode,
+  author = {Tsavos, George},
+  title  = {Benchmark Application Source Code
+            (\texttt{app00}--\texttt{app02}, StarPU / torcpy implementations)},
+  year   = {2026},
+  note   = {Unpublished software, University of Patras diploma thesis},
+  url    = {https://github.com/GeorgeTsav/Comparative-Analysis-and-Experimental-Evaluation-of-Task-Based-Parallel-Programming-Systems}
 }

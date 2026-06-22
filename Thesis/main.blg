@@ -1,17 +1,22 @@
 [0] Config.pm:328> INFO - This is Biber 2.21
 [0] Config.pm:331> INFO - Logfile is 'main.blg'
-[128] biber-MSWIN64:342> INFO - === 
-[168] Biber.pm:421> INFO - Reading 'main.bcf'
-[319] Biber.pm:1002> INFO - Found 22 citekeys in bib section 0
-[335] Biber.pm:4487> INFO - Processing section 0
-[348] Biber.pm:4678> INFO - Looking for bibtex file 'library/bibliography.bib' for section 0
-[396] bibtex.pm:1713> INFO - LaTeX decoding ...
-[428] bibtex.pm:1519> INFO - Found BibTeX data source 'library/bibliography.bib'
-[618] UCollate.pm:68> INFO - Overriding locale 'el-GR' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[618] UCollate.pm:68> INFO - Overriding locale 'el-GR' defaults 'variable = shifted' with 'variable = non-ignorable'
-[618] Biber.pm:4307> INFO - Sorting list 'none/global//global/global/global' of type 'entry' with template 'none' and locale 'el-GR'
-[618] Biber.pm:4313> INFO - No sort tailoring available for locale 'el-GR'
-[640] bbl.pm:676> INFO - Writing 'main.bbl' with encoding 'UTF-8'
-[656] bbl.pm:779> INFO - Output to main.bbl
-[656] Biber.pm:132> WARN - BibTeX subsystem: C:\Users\georg\AppData\Local\Temp\biber_tmp_R4wQ\f4d088b3f9f145b5c3058da33afd57d4_17908.utf8, line 153, warning: undefined macro "Sept"
-[656] Biber.pm:134> INFO - WARNINGS: 1
+[133] biber-MSWIN64:342> INFO - === 
+[178] Biber.pm:421> INFO - Reading 'main.bcf'
+[362] Biber.pm:1002> INFO - Found 34 citekeys in bib section 0
+[380] Biber.pm:4487> INFO - Processing section 0
+[395] Biber.pm:4678> INFO - Looking for bibtex file 'library/bibliography.bib' for section 0
+[452] bibtex.pm:1713> INFO - LaTeX decoding ...
+[503] bibtex.pm:1519> INFO - Found BibTeX data source 'library/bibliography.bib'
+[764] UCollate.pm:68> INFO - Overriding locale 'el-GR' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[764] UCollate.pm:68> INFO - Overriding locale 'el-GR' defaults 'variable = shifted' with 'variable = non-ignorable'
+[764] Biber.pm:4307> INFO - Sorting list 'none/global//global/global/global' of type 'entry' with template 'none' and locale 'el-GR'
+[764] Biber.pm:4313> INFO - No sort tailoring available for locale 'el-GR'
+[795] bbl.pm:676> INFO - Writing 'main.bbl' with encoding 'UTF-8'
+[819] bbl.pm:779> INFO - Output to main.bbl
+[820] Biber.pm:132> WARN - BibTeX subsystem: C:\Users\georg\AppData\Local\Temp\biber_tmp_gj_1\f4d088b3f9f145b5c3058da33afd57d4_11972.utf8, line 9, warning: 122 characters of junk seen at toplevel
+[820] Biber.pm:132> WARN - BibTeX subsystem: C:\Users\georg\AppData\Local\Temp\biber_tmp_gj_1\f4d088b3f9f145b5c3058da33afd57d4_11972.utf8, line 30, warning: 122 characters of junk seen at toplevel
+[820] Biber.pm:132> WARN - BibTeX subsystem: C:\Users\georg\AppData\Local\Temp\biber_tmp_gj_1\f4d088b3f9f145b5c3058da33afd57d4_11972.utf8, line 127, warning: 126 characters of junk seen at toplevel
+[820] Biber.pm:132> WARN - BibTeX subsystem: C:\Users\georg\AppData\Local\Temp\biber_tmp_gj_1\f4d088b3f9f145b5c3058da33afd57d4_11972.utf8, line 166, warning: undefined macro "Sept"
+[820] Biber.pm:132> WARN - BibTeX subsystem: C:\Users\georg\AppData\Local\Temp\biber_tmp_gj_1\f4d088b3f9f145b5c3058da33afd57d4_11972.utf8, line 212, warning: 201 characters of junk seen at toplevel
+[820] Biber.pm:132> WARN - BibTeX subsystem: C:\Users\georg\AppData\Local\Temp\biber_tmp_gj_1\f4d088b3f9f145b5c3058da33afd57d4_11972.utf8, line 302, warning: 130 characters of junk seen at toplevel
+[820] Biber.pm:134> INFO - WARNINGS: 6

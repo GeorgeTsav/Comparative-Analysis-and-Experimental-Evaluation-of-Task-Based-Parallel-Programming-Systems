@@ -1,0 +1,10 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+    PID: 173923, ntasks=8, sec=8.0
+    Start submitting tasks...
+    ============================================================
+    Framework: StarPU Python (Monitor dummy workload)
+    Submitted tasks: 8
+    Work per task (s): 8.0
+    Elapsed time: 8.2067 seconds
+    ============================================================
+\end{MintedVerbatim}

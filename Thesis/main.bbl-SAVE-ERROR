@@ -506,10 +506,10 @@
       \field{title}{{StarPU Handbook for StarPU 1.4.12}}
       \field{year}{2025}
       \verb{urlraw}
-      \verb https://starpu.gitlabpages.inria.fr/doc.html
+      \verb https://files.inria.fr/starpu/doc/starpu.pdf
       \endverb
       \verb{url}
-      \verb https://starpu.gitlabpages.inria.fr/doc.html
+      \verb https://files.inria.fr/starpu/doc/starpu.pdf
       \endverb
     \endentry
     \entry{augonnet2010starpu_gtc}{misc}{}{}
@@ -796,6 +796,410 @@
       \endverb
       \verb{url}
       \verb https://redis.io/glossary/cache-coherence/
+      \endverb
+    \endentry
+    \entry{augonnet2010starpu_saahpc}{misc}{}{}
+      \name{author}{4}{}{%
+        {{hash=736f79b70cf6488db7dfa8e71456f718}{%
+           family={Augonnet},
+           familyi={A\bibinitperiod},
+           given={Cédric},
+           giveni={C\bibinitperiod}}}%
+        {{hash=301412a2bd543a51857df803efd6d225}{%
+           family={Furmento},
+           familyi={F\bibinitperiod},
+           given={Nathalie},
+           giveni={N\bibinitperiod}}}%
+        {{hash=2a6cddc12d90996f2d082705aab80d36}{%
+           family={Thibault},
+           familyi={T\bibinitperiod},
+           given={Samuel},
+           giveni={S\bibinitperiod}}}%
+        {{hash=4acb86ced09c0de0a698930a3ac8ed1a}{%
+           family={Namyst},
+           familyi={N\bibinitperiod},
+           given={Raymond},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{b8f74ceca10299b898b8f8bc125acf89}
+      \strng{fullhash}{3e48ca3931d78225b06d853cd6967471}
+      \strng{fullhashraw}{3e48ca3931d78225b06d853cd6967471}
+      \strng{bibnamehash}{b8f74ceca10299b898b8f8bc125acf89}
+      \strng{authorbibnamehash}{b8f74ceca10299b898b8f8bc125acf89}
+      \strng{authornamehash}{b8f74ceca10299b898b8f8bc125acf89}
+      \strng{authorfullhash}{3e48ca3931d78225b06d853cd6967471}
+      \strng{authorfullhashraw}{3e48ca3931d78225b06d853cd6967471}
+      \field{extraname}{3}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{Tutorial at Symposium on Application Accelerators in High-Performance Computing (SAAHPC 2010), Knoxville, USA}
+      \field{title}{{Getting Started with StarPU}}
+      \field{year}{2010}
+      \verb{urlraw}
+      \verb https://starpu.gitlabpages.inria.fr/tutorials/2010-07-SAAHPC/saahpc.pdf
+      \endverb
+      \verb{url}
+      \verb https://starpu.gitlabpages.inria.fr/tutorials/2010-07-SAAHPC/saahpc.pdf
+      \endverb
+    \endentry
+    \entry{ibm_torcpy}{software}{}{}
+      \name{author}{1}{}{%
+        {{hash=cbf44511d041dc6d1dd73cc0c033122c}{%
+           family={{IBM}},
+           familyi={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{cbf44511d041dc6d1dd73cc0c033122c}
+      \strng{fullhash}{cbf44511d041dc6d1dd73cc0c033122c}
+      \strng{fullhashraw}{cbf44511d041dc6d1dd73cc0c033122c}
+      \strng{bibnamehash}{cbf44511d041dc6d1dd73cc0c033122c}
+      \strng{authorbibnamehash}{cbf44511d041dc6d1dd73cc0c033122c}
+      \strng{authornamehash}{cbf44511d041dc6d1dd73cc0c033122c}
+      \strng{authorfullhash}{cbf44511d041dc6d1dd73cc0c033122c}
+      \strng{authorfullhashraw}{cbf44511d041dc6d1dd73cc0c033122c}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{GitHub Repository}
+      \field{title}{{torc\_py: A Platform-Agnostic Adaptive Load Balancing Library for Task Parallelism}}
+      \verb{urlraw}
+      \verb https://github.com/ibm/torc_py
+      \endverb
+      \verb{url}
+      \verb https://github.com/ibm/torc_py
+      \endverb
+    \endentry
+    \entry{HansenGECCO2014}{inproceedings}{}{}
+      \name{author}{1}{}{%
+        {{hash=71bc70e7c119a2151bf105823920cf83}{%
+           family={Hansen},
+           familyi={H\bibinitperiod},
+           given={Nikolaus},
+           giveni={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{71bc70e7c119a2151bf105823920cf83}
+      \strng{fullhash}{71bc70e7c119a2151bf105823920cf83}
+      \strng{fullhashraw}{71bc70e7c119a2151bf105823920cf83}
+      \strng{bibnamehash}{71bc70e7c119a2151bf105823920cf83}
+      \strng{authorbibnamehash}{71bc70e7c119a2151bf105823920cf83}
+      \strng{authornamehash}{71bc70e7c119a2151bf105823920cf83}
+      \strng{authorfullhash}{71bc70e7c119a2151bf105823920cf83}
+      \strng{authorfullhashraw}{71bc70e7c119a2151bf105823920cf83}
+      \field{extraname}{1}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of GECCO 2014 (Tutorial)}
+      \field{title}{Tutorial: Evolution Strategies and {CMA-ES} (Covariance Matrix Adaptation)}
+      \field{year}{2014}
+      \verb{urlraw}
+      \verb http://www.cmap.polytechnique.fr/~nikolaus.hansen/gecco2014-CMA-ES-tutorial.pdf
+      \endverb
+      \verb{url}
+      \verb http://www.cmap.polytechnique.fr/~nikolaus.hansen/gecco2014-CMA-ES-tutorial.pdf
+      \endverb
+    \endentry
+    \entry{Hansen2016}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=71bc70e7c119a2151bf105823920cf83}{%
+           family={Hansen},
+           familyi={H\bibinitperiod},
+           given={Nikolaus},
+           giveni={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{71bc70e7c119a2151bf105823920cf83}
+      \strng{fullhash}{71bc70e7c119a2151bf105823920cf83}
+      \strng{fullhashraw}{71bc70e7c119a2151bf105823920cf83}
+      \strng{bibnamehash}{71bc70e7c119a2151bf105823920cf83}
+      \strng{authorbibnamehash}{71bc70e7c119a2151bf105823920cf83}
+      \strng{authornamehash}{71bc70e7c119a2151bf105823920cf83}
+      \strng{authorfullhash}{71bc70e7c119a2151bf105823920cf83}
+      \strng{authorfullhashraw}{71bc70e7c119a2151bf105823920cf83}
+      \field{extraname}{2}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprinttype}{arXiv}
+      \field{title}{The {CMA} Evolution Strategy: A Tutorial}
+      \field{year}{2016}
+      \verb{eprint}
+      \verb 1604.00772
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/1604.00772
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/1604.00772
+      \endverb
+    \endentry
+    \entry{HansenCopenhagen}{report}{}{}
+      \name{author}{1}{}{%
+        {{hash=71bc70e7c119a2151bf105823920cf83}{%
+           family={Hansen},
+           familyi={H\bibinitperiod},
+           given={Nikolaus},
+           giveni={N\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {CMAP, École Polytechnique}%
+      }
+      \strng{namehash}{71bc70e7c119a2151bf105823920cf83}
+      \strng{fullhash}{71bc70e7c119a2151bf105823920cf83}
+      \strng{fullhashraw}{71bc70e7c119a2151bf105823920cf83}
+      \strng{bibnamehash}{71bc70e7c119a2151bf105823920cf83}
+      \strng{authorbibnamehash}{71bc70e7c119a2151bf105823920cf83}
+      \strng{authornamehash}{71bc70e7c119a2151bf105823920cf83}
+      \strng{authorfullhash}{71bc70e7c119a2151bf105823920cf83}
+      \strng{authorfullhashraw}{71bc70e7c119a2151bf105823920cf83}
+      \field{extraname}{3}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Covariance Matrix Adaptation Evolution Strategy ({CMA-ES})}
+      \field{type}{techreport}
+      \verb{urlraw}
+      \verb http://www.cmap.polytechnique.fr/~nikolaus.hansen/copenhagen-cma-es.pdf
+      \endverb
+      \verb{url}
+      \verb http://www.cmap.polytechnique.fr/~nikolaus.hansen/copenhagen-cma-es.pdf
+      \endverb
+    \endentry
+    \entry{WikiCMAES}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=b6aea1a416c89509a7df1cbb69249cb6}{%
+           family={{Wikipedia contributors}},
+           familyi={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{fullhash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{fullhashraw}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{bibnamehash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{authorbibnamehash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{authornamehash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{authorfullhash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{authorfullhashraw}{b6aea1a416c89509a7df1cbb69249cb6}
+      \field{extraname}{1}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{CMA-ES}}
+      \field{year}{2025}
+      \verb{urlraw}
+      \verb https://en.wikipedia.org/wiki/CMA-ES
+      \endverb
+      \verb{url}
+      \verb https://en.wikipedia.org/wiki/CMA-ES
+      \endverb
+    \endentry
+    \entry{HansenPDF2016}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=71bc70e7c119a2151bf105823920cf83}{%
+           family={Hansen},
+           familyi={H\bibinitperiod},
+           given={Nikolaus},
+           giveni={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{71bc70e7c119a2151bf105823920cf83}
+      \strng{fullhash}{71bc70e7c119a2151bf105823920cf83}
+      \strng{fullhashraw}{71bc70e7c119a2151bf105823920cf83}
+      \strng{bibnamehash}{71bc70e7c119a2151bf105823920cf83}
+      \strng{authorbibnamehash}{71bc70e7c119a2151bf105823920cf83}
+      \strng{authornamehash}{71bc70e7c119a2151bf105823920cf83}
+      \strng{authorfullhash}{71bc70e7c119a2151bf105823920cf83}
+      \strng{authorfullhashraw}{71bc70e7c119a2151bf105823920cf83}
+      \field{extraname}{4}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{The {CMA} Evolution Strategy: A Tutorial}
+      \field{year}{2016}
+      \verb{urlraw}
+      \verb https://arxiv.org/pdf/1604.00772
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/pdf/1604.00772
+      \endverb
+    \endentry
+    \entry{appcode}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=b0f6a856ff7799c58873ba85d9733475}{%
+           family={Tsavos},
+           familyi={T\bibinitperiod},
+           given={George},
+           giveni={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{b0f6a856ff7799c58873ba85d9733475}
+      \strng{fullhash}{b0f6a856ff7799c58873ba85d9733475}
+      \strng{fullhashraw}{b0f6a856ff7799c58873ba85d9733475}
+      \strng{bibnamehash}{b0f6a856ff7799c58873ba85d9733475}
+      \strng{authorbibnamehash}{b0f6a856ff7799c58873ba85d9733475}
+      \strng{authornamehash}{b0f6a856ff7799c58873ba85d9733475}
+      \strng{authorfullhash}{b0f6a856ff7799c58873ba85d9733475}
+      \strng{authorfullhashraw}{b0f6a856ff7799c58873ba85d9733475}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Unpublished software, University of Patras diploma thesis}
+      \field{title}{Benchmark Application Source Code (\texttt{app00}--\texttt{app02}, StarPU / torcpy implementations)}
+      \field{year}{2026}
+      \verb{urlraw}
+      \verb https://github.com/GeorgeTsav/Comparative-Analysis-and-Experimental-Evaluation-of-Task-Based-Parallel-Programming-Systems
+      \endverb
+      \verb{url}
+      \verb https://github.com/GeorgeTsav/Comparative-Analysis-and-Experimental-Evaluation-of-Task-Based-Parallel-Programming-Systems
+      \endverb
+    \endentry
+    \entry{WikiGabor}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=b6aea1a416c89509a7df1cbb69249cb6}{%
+           family={{Wikipedia contributors}},
+           familyi={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{fullhash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{fullhashraw}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{bibnamehash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{authorbibnamehash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{authornamehash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{authorfullhash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{authorfullhashraw}{b6aea1a416c89509a7df1cbb69249cb6}
+      \field{extraname}{2}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Gabor filter}
+      \field{year}{2025}
+      \verb{urlraw}
+      \verb https://en.wikipedia.org/wiki/Gabor_filter
+      \endverb
+      \verb{url}
+      \verb https://en.wikipedia.org/wiki/Gabor_filter
+      \endverb
+    \endentry
+    \entry{GaborMDPI}{article}{}{}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Electronics}
+      \field{number}{7}
+      \field{title}{Design of a {Gabor} Filter-Based Image Denoising Hardware Model}
+      \field{volume}{11}
+      \field{year}{2022}
+      \field{pages}{1063}
+      \range{pages}{1}
+      \verb{urlraw}
+      \verb https://www.mdpi.com/2079-9292/11/7/1063
+      \endverb
+      \verb{url}
+      \verb https://www.mdpi.com/2079-9292/11/7/1063
+      \endverb
+    \endentry
+    \entry{Baeldung}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=d58b26d9f7600672080ebf3851115e45}{%
+           family={{Baeldung}},
+           familyi={B\bibinitperiod}}}%
+      }
+      \strng{namehash}{d58b26d9f7600672080ebf3851115e45}
+      \strng{fullhash}{d58b26d9f7600672080ebf3851115e45}
+      \strng{fullhashraw}{d58b26d9f7600672080ebf3851115e45}
+      \strng{bibnamehash}{d58b26d9f7600672080ebf3851115e45}
+      \strng{authorbibnamehash}{d58b26d9f7600672080ebf3851115e45}
+      \strng{authornamehash}{d58b26d9f7600672080ebf3851115e45}
+      \strng{authorfullhash}{d58b26d9f7600672080ebf3851115e45}
+      \strng{authorfullhashraw}{d58b26d9f7600672080ebf3851115e45}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{How to Use {Gabor} Filters to Generate Features for Machine Learning}
+      \field{year}{2024}
+      \verb{urlraw}
+      \verb https://www.baeldung.com/cs/ml-gabor-filters
+      \endverb
+      \verb{url}
+      \verb https://www.baeldung.com/cs/ml-gabor-filters
+      \endverb
+    \endentry
+    \entry{GoddardMC}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=e1333a91e605a64be09f8a9ded2a6b36}{%
+           family={Goddard},
+           familyi={G\bibinitperiod},
+           given={Mark},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{e1333a91e605a64be09f8a9ded2a6b36}
+      \strng{fullhash}{e1333a91e605a64be09f8a9ded2a6b36}
+      \strng{fullhashraw}{e1333a91e605a64be09f8a9ded2a6b36}
+      \strng{bibnamehash}{e1333a91e605a64be09f8a9ded2a6b36}
+      \strng{authorbibnamehash}{e1333a91e605a64be09f8a9ded2a6b36}
+      \strng{authornamehash}{e1333a91e605a64be09f8a9ded2a6b36}
+      \strng{authorfullhash}{e1333a91e605a64be09f8a9ded2a6b36}
+      \strng{authorfullhashraw}{e1333a91e605a64be09f8a9ded2a6b36}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Monte-{C}arlo Option Pricing --- Correlated Random Sequences}
+      \field{year}{2024}
+      \verb{urlraw}
+      \verb http://www.goddardconsulting.ca/option-pricing-monte-carlo-basket.html
+      \endverb
+      \verb{url}
+      \verb http://www.goddardconsulting.ca/option-pricing-monte-carlo-basket.html
+      \endverb
+    \endentry
+    \entry{GilesMC}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=d88c4457088e4172d40ac265ff830068}{%
+           family={Giles},
+           familyi={G\bibinitperiod},
+           given={Mike\bibnamedelima B.},
+           giveni={M\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+      }
+      \strng{namehash}{d88c4457088e4172d40ac265ff830068}
+      \strng{fullhash}{d88c4457088e4172d40ac265ff830068}
+      \strng{fullhashraw}{d88c4457088e4172d40ac265ff830068}
+      \strng{bibnamehash}{d88c4457088e4172d40ac265ff830068}
+      \strng{authorbibnamehash}{d88c4457088e4172d40ac265ff830068}
+      \strng{authornamehash}{d88c4457088e4172d40ac265ff830068}
+      \strng{authorfullhash}{d88c4457088e4172d40ac265ff830068}
+      \strng{authorfullhashraw}{d88c4457088e4172d40ac265ff830068}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Monte {C}arlo Methods: {G}eometric {B}rownian Motion, Correlated {B}rownian Motions}
+      \field{year}{2013}
+      \verb{urlraw}
+      \verb https://people.maths.ox.ac.uk/gilesm/mc/nanjing/giles_lecs-2x2.pdf
+      \endverb
+      \verb{url}
+      \verb https://people.maths.ox.ac.uk/gilesm/mc/nanjing/giles_lecs-2x2.pdf
+      \endverb
+    \endentry
+    \entry{AtlantisMC}{inproceedings}{}{}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Atlantis Press}
+      \field{title}{A {Monte Carlo} Simulation Scheme for Basket Options with Barriers}
+      \field{year}{2016}
+      \verb{urlraw}
+      \verb https://www.atlantis-press.com/article/125971590.pdf
+      \endverb
+      \verb{url}
+      \verb https://www.atlantis-press.com/article/125971590.pdf
       \endverb
     \endentry
   \enddatalist

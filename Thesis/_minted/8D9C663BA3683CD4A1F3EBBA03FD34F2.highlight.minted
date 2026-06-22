@@ -1,0 +1,10 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+    PID: 173652, ntasks=8, sec=8.0
+    Start submitting tasks...
+    ============================================================
+    Framework: torcpy (Monitor dummy workload)
+    Submitted tasks: 8
+    Work per task (s): 8.0
+    Elapsed time: 8.0513 seconds
+    ============================================================
+\end{MintedVerbatim}
