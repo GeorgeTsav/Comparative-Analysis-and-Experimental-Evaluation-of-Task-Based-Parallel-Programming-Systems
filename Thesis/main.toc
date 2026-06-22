@@ -75,4 +75,8 @@
 \contentsline {section}{\numberline {6.2}Μεθοδολογία Αξιολόγησης}{54}{section.6.2}%
 \contentsline {subsection}{\numberline {6.2.1}Εξασφάλιση Ισοδυναμίας Εκδόσεων και Δυσκολίες Υλοποίησης}{54}{subsection.6.2.1}%
 \contentsline {subsection}{\numberline {6.2.2}Πειραματική Διαδικασία}{55}{subsection.6.2.2}%
-\contentsline {chapter}{Βιβλιογραφία}{59}{chapter*.20}%
+\contentsline {section}{\numberline {6.3}Δοκιμές Δυνατοτήτων του StarPUPy και torcpy}{57}{section.6.3}%
+\contentsline {subsection}{\numberline {6.3.1}StarPUPy: MPI Server-Client}{58}{subsection.6.3.1}%
+\contentsline {subsection}{\numberline {6.3.2}Εμφολευμένη Παραλληλοποίηση (Nested Parallelism)}{58}{subsection.6.3.2}%
+\contentsline {chapter}{\numberline {7}Πειραματική Αξιολόγηση και Συμπεράσματα}{61}{chapter.7}%
+\contentsline {chapter}{Βιβλιογραφία}{63}{chapter*.20}%

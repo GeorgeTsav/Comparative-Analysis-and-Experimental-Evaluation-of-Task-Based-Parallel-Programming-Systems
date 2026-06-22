@@ -2545,6 +2545,8 @@
     <bcf:citekey order="120" intorder="1">starpu2025handbook</bcf:citekey>
     <bcf:citekey order="120" intorder="2">starpu_dev_manual</bcf:citekey>
     <bcf:citekey order="120" intorder="3">ibm_torcpy</bcf:citekey>
+    <bcf:citekey order="121" intorder="1">appcode</bcf:citekey>
+    <bcf:citekey order="122" intorder="1">appcode</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">
