@@ -64,19 +64,20 @@
 \contentsline {subsubsection}{Παράλληλη Δομή και Χαρακτηρισμός}{50}{section*.11}%
 \contentsline {subsection}{\numberline {6.1.2}Ανάλυση Υφής Εικόνων με Συστοιχίες Φίλτρων Gabor (app01)}{51}{subsection.6.1.2}%
 \contentsline {subsubsection}{Μαθηματική Διατύπωση Φίλτρου Gabor}{51}{section*.12}%
-\contentsline {subsubsection}{Συστοιχία Φίλτρων και FFT Convolution}{51}{section*.13}%
-\contentsline {subsubsection}{Παράλληλη Δομή και Χαρακτηρισμός}{52}{section*.14}%
-\contentsline {subsection}{\numberline {6.1.3}Αποτίμηση Χρηματοοικονομικών Παραγώγων με Monte Carlo (app02)}{52}{subsection.6.1.3}%
-\contentsline {subsubsection}{Στοχαστικό Μοντέλο — Γεωμετρική Κίνηση Brown}{52}{section*.15}%
-\contentsline {subsubsection}{Συσχέτιση και Παραγοντοποίηση Cholesky}{53}{section*.16}%
-\contentsline {subsubsection}{Μη-Γραμμικές Διαταραχές («Heavy» Monte Carlo)}{53}{section*.17}%
-\contentsline {subsubsection}{Συνθήκες Αποπληρωμής}{53}{section*.18}%
-\contentsline {subsubsection}{Παράλληλη Δομή — Batching και Parallel Reduction}{54}{section*.19}%
-\contentsline {section}{\numberline {6.2}Μεθοδολογία Αξιολόγησης}{54}{section.6.2}%
-\contentsline {subsection}{\numberline {6.2.1}Εξασφάλιση Ισοδυναμίας Εκδόσεων και Δυσκολίες Υλοποίησης}{54}{subsection.6.2.1}%
-\contentsline {subsection}{\numberline {6.2.2}Πειραματική Διαδικασία}{55}{subsection.6.2.2}%
-\contentsline {section}{\numberline {6.3}Δοκιμές Δυνατοτήτων του StarPUPy και torcpy}{57}{section.6.3}%
-\contentsline {subsection}{\numberline {6.3.1}StarPUPy: MPI Server-Client}{58}{subsection.6.3.1}%
-\contentsline {subsection}{\numberline {6.3.2}Εμφολευμένη Παραλληλοποίηση (Nested Parallelism)}{58}{subsection.6.3.2}%
+\contentsline {subsubsection}{Συστοιχία Φίλτρων και FFT Convolution}{52}{section*.13}%
+\contentsline {subsubsection}{Παράλληλη Δομή και Χαρακτηρισμός}{53}{section*.14}%
+\contentsline {subsection}{\numberline {6.1.3}Αποτίμηση Χρηματοοικονομικών Παραγώγων με Monte Carlo (app02)}{53}{subsection.6.1.3}%
+\contentsline {subsubsection}{Στοχαστικό Μοντέλο — Γεωμετρική Κίνηση Brown}{53}{section*.15}%
+\contentsline {subsubsection}{Συσχέτιση και Παραγοντοποίηση Cholesky}{54}{section*.16}%
+\contentsline {subsubsection}{Μη-Γραμμικές Διαταραχές («Heavy» Monte Carlo)}{54}{section*.17}%
+\contentsline {subsubsection}{Συνθήκες Αποπληρωμής}{54}{section*.18}%
+\contentsline {subsubsection}{Παράλληλη Δομή — Batching και Parallel Reduction}{55}{section*.19}%
+\contentsline {section}{\numberline {6.2}Μεθοδολογία Αξιολόγησης και διεξαγωγής των Πειραμάτων}{56}{section.6.2}%
+\contentsline {subsection}{\numberline {6.2.1}Εξασφάλιση Ισοδυναμίας Εκδόσεων και Δυσκολίες Υλoπoίησης}{56}{subsection.6.2.1}%
+\contentsline {subsection}{\numberline {6.2.2}Πειραματική Διαδικασία}{57}{subsection.6.2.2}%
 \contentsline {chapter}{\numberline {7}Πειραματική Αξιολόγηση και Συμπεράσματα}{61}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Δοκιμές Δυνατοτήτων του StarPUPy και torcpy}{61}{section.7.1}%
+\contentsline {subsection}{\numberline {7.1.1}StarPUPy: MPI Server-Client}{61}{subsection.7.1.1}%
+\contentsline {subsection}{\numberline {7.1.2}Εμφολευμένη Παραλληλοποίηση (Nested Parallelism)}{62}{subsection.7.1.2}%
+\contentsline {section}{\numberline {7.2}Αποτελέσματα Πειραμάτων}{62}{section.7.2}%
 \contentsline {chapter}{Βιβλιογραφία}{63}{chapter*.20}%

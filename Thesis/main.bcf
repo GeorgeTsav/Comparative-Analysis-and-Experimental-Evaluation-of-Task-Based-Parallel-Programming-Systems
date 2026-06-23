@@ -2507,46 +2507,53 @@
     <bcf:citekey order="94" intorder="1">appcode</bcf:citekey>
     <bcf:citekey order="95" intorder="1">appcode</bcf:citekey>
     <bcf:citekey order="96" intorder="1">appcode</bcf:citekey>
-    <bcf:citekey order="97" intorder="1">WikiGabor</bcf:citekey>
-    <bcf:citekey order="97" intorder="2">GaborMDPI</bcf:citekey>
-    <bcf:citekey order="98" intorder="1">WikiGabor</bcf:citekey>
-    <bcf:citekey order="98" intorder="2">Baeldung</bcf:citekey>
-    <bcf:citekey order="99" intorder="1">Baeldung</bcf:citekey>
-    <bcf:citekey order="100" intorder="1">appcode</bcf:citekey>
-    <bcf:citekey order="100" intorder="2">WikiGabor</bcf:citekey>
-    <bcf:citekey order="100" intorder="3">GaborMDPI</bcf:citekey>
-    <bcf:citekey order="101" intorder="1">GaborMDPI</bcf:citekey>
-    <bcf:citekey order="101" intorder="2">appcode</bcf:citekey>
+    <bcf:citekey order="97" intorder="1">appcode</bcf:citekey>
+    <bcf:citekey order="98" intorder="1">appcode</bcf:citekey>
+    <bcf:citekey order="99" intorder="1">WikiGabor</bcf:citekey>
+    <bcf:citekey order="99" intorder="2">GaborMDPI</bcf:citekey>
+    <bcf:citekey order="100" intorder="1">WikiGabor</bcf:citekey>
+    <bcf:citekey order="100" intorder="2">Baeldung</bcf:citekey>
+    <bcf:citekey order="101" intorder="1">Baeldung</bcf:citekey>
     <bcf:citekey order="102" intorder="1">appcode</bcf:citekey>
     <bcf:citekey order="102" intorder="2">WikiGabor</bcf:citekey>
-    <bcf:citekey order="103" intorder="1">appcode</bcf:citekey>
+    <bcf:citekey order="102" intorder="3">GaborMDPI</bcf:citekey>
+    <bcf:citekey order="103" intorder="1">GaborMDPI</bcf:citekey>
+    <bcf:citekey order="103" intorder="2">appcode</bcf:citekey>
     <bcf:citekey order="104" intorder="1">appcode</bcf:citekey>
+    <bcf:citekey order="104" intorder="2">WikiGabor</bcf:citekey>
     <bcf:citekey order="105" intorder="1">appcode</bcf:citekey>
-    <bcf:citekey order="106" intorder="1">GoddardMC</bcf:citekey>
-    <bcf:citekey order="106" intorder="2">GilesMC</bcf:citekey>
-    <bcf:citekey order="107" intorder="1">GilesMC</bcf:citekey>
-    <bcf:citekey order="108" intorder="1">GilesMC</bcf:citekey>
+    <bcf:citekey order="106" intorder="1">appcode</bcf:citekey>
+    <bcf:citekey order="107" intorder="1">appcode</bcf:citekey>
+    <bcf:citekey order="108" intorder="1">appcode</bcf:citekey>
     <bcf:citekey order="109" intorder="1">appcode</bcf:citekey>
     <bcf:citekey order="110" intorder="1">GoddardMC</bcf:citekey>
     <bcf:citekey order="110" intorder="2">GilesMC</bcf:citekey>
-    <bcf:citekey order="110" intorder="3">appcode</bcf:citekey>
-    <bcf:citekey order="111" intorder="1">GoddardMC</bcf:citekey>
-    <bcf:citekey order="111" intorder="2">GilesMC</bcf:citekey>
-    <bcf:citekey order="111" intorder="3">appcode</bcf:citekey>
-    <bcf:citekey order="112" intorder="1">appcode</bcf:citekey>
+    <bcf:citekey order="111" intorder="1">GilesMC</bcf:citekey>
+    <bcf:citekey order="112" intorder="1">GilesMC</bcf:citekey>
     <bcf:citekey order="113" intorder="1">appcode</bcf:citekey>
-    <bcf:citekey order="114" intorder="1">appcode</bcf:citekey>
-    <bcf:citekey order="115" intorder="1">AtlantisMC</bcf:citekey>
-    <bcf:citekey order="115" intorder="2">appcode</bcf:citekey>
-    <bcf:citekey order="116" intorder="1">AtlantisMC</bcf:citekey>
+    <bcf:citekey order="114" intorder="1">GoddardMC</bcf:citekey>
+    <bcf:citekey order="114" intorder="2">GilesMC</bcf:citekey>
+    <bcf:citekey order="114" intorder="3">appcode</bcf:citekey>
+    <bcf:citekey order="115" intorder="1">GoddardMC</bcf:citekey>
+    <bcf:citekey order="115" intorder="2">GilesMC</bcf:citekey>
+    <bcf:citekey order="115" intorder="3">appcode</bcf:citekey>
+    <bcf:citekey order="116" intorder="1">appcode</bcf:citekey>
     <bcf:citekey order="117" intorder="1">appcode</bcf:citekey>
     <bcf:citekey order="118" intorder="1">appcode</bcf:citekey>
-    <bcf:citekey order="119" intorder="1">appcode</bcf:citekey>
-    <bcf:citekey order="120" intorder="1">starpu2025handbook</bcf:citekey>
-    <bcf:citekey order="120" intorder="2">starpu_dev_manual</bcf:citekey>
-    <bcf:citekey order="120" intorder="3">ibm_torcpy</bcf:citekey>
+    <bcf:citekey order="119" intorder="1">AtlantisMC</bcf:citekey>
+    <bcf:citekey order="119" intorder="2">appcode</bcf:citekey>
+    <bcf:citekey order="120" intorder="1">AtlantisMC</bcf:citekey>
     <bcf:citekey order="121" intorder="1">appcode</bcf:citekey>
     <bcf:citekey order="122" intorder="1">appcode</bcf:citekey>
+    <bcf:citekey order="123" intorder="1">appcode</bcf:citekey>
+    <bcf:citekey order="124" intorder="1">appcode</bcf:citekey>
+    <bcf:citekey order="125" intorder="1">appcode</bcf:citekey>
+    <bcf:citekey order="126" intorder="1">appcode</bcf:citekey>
+    <bcf:citekey order="127" intorder="1">starpu2025handbook</bcf:citekey>
+    <bcf:citekey order="127" intorder="2">starpu_dev_manual</bcf:citekey>
+    <bcf:citekey order="127" intorder="3">ibm_torcpy</bcf:citekey>
+    <bcf:citekey order="128" intorder="1">appcode</bcf:citekey>
+    <bcf:citekey order="129" intorder="1">appcode</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">

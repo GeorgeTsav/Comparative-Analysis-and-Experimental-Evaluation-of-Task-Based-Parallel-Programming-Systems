@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.24.0 (TeX Live 2026)  (format=lualatex 2026.5.18)  22 JUN 2026 18:13
+This is LuaHBTeX, Version 1.24.0 (TeX Live 2026)  (format=lualatex 2026.5.18)  23 JUN 2026 18:18
  system commands enabled.
 **"c:/Users/georg/Desktop/CEID/My Thesis/Thesis/main"
 ("c:/Users/georg/Desktop/CEID/My Thesis/Thesis/main.tex"
@@ -1323,7 +1323,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 
 \openout2 = intro/titlepage.aux
  (./intro/titlepage.tex
-<images/university_logo/up_stamp.jpg, id=285, 147.6717pt x 148.1535pt>
+<images/university_logo/up_stamp.jpg, id=289, 147.6717pt x 148.1535pt>
 File: images/university_logo/up_stamp.jpg Graphic file (type jpg)
 <use images/university_logo/up_stamp.jpg>
 Package luatex.def Info: images/university_logo/up_stamp.jpg  used on input line 9.
@@ -1434,13 +1434,13 @@ LaTeX Font Info:    Font shape `TU/TimesNewRoman(1)/m/sl' in size <12> not avail
 ]
 Κεφάλαιο 2.
 [5]
-<images/figures/Parallelization-with-tasks-papadakis2012.jpg, id=475, 1003.75pt x 414.54875pt>
+<images/figures/Parallelization-with-tasks-papadakis2012.jpg, id=480, 1003.75pt x 414.54875pt>
 File: images/figures/Parallelization-with-tasks-papadakis2012.jpg Graphic file (type jpg)
 <use images/figures/Parallelization-with-tasks-papadakis2012.jpg>
 Package luatex.def Info: images/figures/Parallelization-with-tasks-papadakis2012.jpg  used on input line 26.
 (luatex.def)             Requested size: 341.43437pt x 141.01428pt.
  [6<./images/figures/Parallelization-with-tasks-papadakis2012.jpg>]
-<images/figures/uma-smp.jpg, id=489, 608.2725pt x 418.56375pt>
+<images/figures/uma-smp.jpg, id=494, 608.2725pt x 418.56375pt>
 File: images/figures/uma-smp.jpg Graphic file (type jpg)
 <use images/figures/uma-smp.jpg>
 Package luatex.def Info: images/figures/uma-smp.jpg  used on input line 49.
@@ -1452,7 +1452,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [7]
-<images/figures/numa.jpg, id=503, 574.39594pt x 243.91125pt>
+<images/figures/numa.jpg, id=508, 574.39594pt x 243.91125pt>
 File: images/figures/numa.jpg Graphic file (type jpg)
 <use images/figures/numa.jpg>
 Package luatex.def Info: images/figures/numa.jpg  used on input line 58.
@@ -1555,9 +1555,9 @@ Underfull \vbox (badness 3872) has occurred while \output is active []
 \pydata@fh@0=\write9
 
 \openout9 = _FAD58DE7366495DB4650CFEFAC2FCD61.data.minted
-runsystem(latexminted config  --timestamp 20260622181317 FAD58DE7366495DB4650CFEFAC2FCD61)...executed.
+runsystem(latexminted config  --timestamp 20260623181826 FAD58DE7366495DB4650CFEFAC2FCD61)...executed.
  (./_FAD58DE7366495DB4650CFEFAC2FCD61.config.minted)
-runsystem(latexminted cleanconfig  --timestamp 20260622181317 FAD58DE7366495DB4650CFEFAC2FCD61)...executed.
+runsystem(latexminted cleanconfig  --timestamp 20260623181826 FAD58DE7366495DB4650CFEFAC2FCD61)...executed.
  (./_minted/default.style.minted) (./_minted/97D92E8007CC405B3A16584E16881389.highlight.minted [30]) (./_minted/2750951DFABCF81A93099FD1607DC20E.highlight.minted) [31] (./_minted/BEF345D4119D303D6A77198F912DF3A3.highlight.minted) (./_minted/778571A8967796752DA8DE5CA58926D8.highlight.minted) [32] (./_minted/D33323A1280F1A79CB13234E6D1FB3AA.highlight.minted) (./_minted/A91EFDC37856DA53641D4E47F1EA48AA.highlight.minted) (./_minted/F5F70F6AD309515285D530835A640158.highlight.minted [33]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -1612,91 +1612,102 @@ Overfull \hbox (1.43973pt too wide) in paragraph at lines 7--8
 \TU/TimesNewRoman(1)/b/n/12 torcpy\TU/TimesNewRoman(1)/m/n/12 , προ-ϋ-πο-θέ-τει τη χρήση κα-τάλ-λη-λων υπο-λο-γι-στι-κών σε-να-ρίων ελέγ-χου (benchmarks).
  []
 
-[49] [50] [51] [52] [53] [54]
-Overfull \hbox (3.7846pt too wide) in paragraph at lines 197--198
-[]\TU/TimesNewRoman(1)/m/n/12 Μόνο για την εφαρ-μογή της CMA-ES (app00) χρη-σι-μο-ποι-ή-θηκε η βι-βλιο-θήκη \TU/DejaVuSansMono(0)/m/n/12 numba[][][][][][]\TU/TimesNewRoman(1)/m/n/12 ,
+[49] [50] [51] [52]
+Overfull \hbox (0.21109pt too wide) in paragraph at lines 130--131
+\TU/DejaVuSansMono(0)/m/n/12 ask_submit()(process_image, $\OML/cmm/m/it/12 f[]$\TU/DejaVuSansMono(0)/m/n/12 , cfg)\TU/TimesNewRoman(1)/m/n/12 , όπου \TU/DejaVuSansMono(0)/m/n/12 cfg \TU/TimesNewRoman(1)/m/n/12 πε-ριέ-χει τις πα-ρα-μέ-τρους
+ []
+
+[53] [54]
+Overfull \hbox (17.8952pt too wide) in paragraph at lines 214--215
+\TU/DejaVuSansMono(0)/m/n/12 oads)\TU/TimesNewRoman(1)/m/n/12 , όπου κάθε στοι-χείο της λί-στας \TU/DejaVuSansMono(0)/m/n/12 payloads \TU/TimesNewRoman(1)/m/n/12 εί-ναι η πλειάδα $\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 n[];  [][];  [];  []\OT1/cmr/m/n/12 )$
  []
 
 [55]
-Underfull \hbox (badness 1320) in paragraph at lines 252--252
+Overfull \hbox (3.7846pt too wide) in paragraph at lines 228--229
+[]\TU/TimesNewRoman(1)/m/n/12 Μόνο για την εφαρ-μογή της CMA-ES (app00) χρη-σι-μο-ποι-ή-θηκε η βι-βλιο-θήκη \TU/DejaVuSansMono(0)/m/n/12 numba[][][][][][]\TU/TimesNewRoman(1)/m/n/12 ,
+ []
+
+[56]
+Underfull \hbox (badness 1320) in paragraph at lines 283--283
 []|\TU/TimesNewRoman(1)/m/n/12 Συ-νο-λι-κός αριθ-μός νη-μά-
  []
 
 
-Underfull \hbox (badness 6268) in paragraph at lines 252--252
+Underfull \hbox (badness 6268) in paragraph at lines 283--283
 \TU/TimesNewRoman(1)/m/n/12 των ερ-γα-σίας χω-ρίς δέ-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 252--252
+Underfull \hbox (badness 10000) in paragraph at lines 283--283
 []|\TU/TimesNewRoman(1)/m/n/12 Αριθ-μός CPU ερ-γα-τών,
  []
 
 
-Underfull \hbox (badness 2012) in paragraph at lines 252--252
+Underfull \hbox (badness 2012) in paragraph at lines 283--283
 \TU/TimesNewRoman(1)/m/n/12 σης μνή-μης ανά NUMA
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 252--252
+Underfull \hbox (badness 10000) in paragraph at lines 283--283
 []|\TU/DejaVuSansMono(0)/m/n/12 STARPU_WORKERS_GET
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 252--252
+Underfull \hbox (badness 10000) in paragraph at lines 283--283
 []|\TU/DejaVuSansMono(0)/m/n/12 STARPU_LIMIT_CPU_N
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 252--252
+Underfull \hbox (badness 10000) in paragraph at lines 283--283
 \TU/TimesNewRoman(1)/m/n/12 κόμβο σε MB (τιμή:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 252--252
+Underfull \hbox (badness 10000) in paragraph at lines 283--283
 []|\TU/DejaVuSansMono(0)/m/n/12 STARPU_NCUDA=0\TU/TimesNewRoman(1)/m/n/12 ,
  []
 
 
-Underfull \hbox (badness 4001) in paragraph at lines 252--252
+Underfull \hbox (badness 4001) in paragraph at lines 283--283
 []|\TU/TimesNewRoman(1)/m/n/12 Συ-νο-λι-κός αριθ-μός CPU
  []
 
 
-Underfull \hbox (badness 1137) in paragraph at lines 252--252
+Underfull \hbox (badness 1137) in paragraph at lines 283--283
 \TU/TimesNewRoman(1)/m/n/12 ερ-γα-τών χω-ρίς δέ-σμευση
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 252--252
+Underfull \hbox (badness 10000) in paragraph at lines 283--283
 []|\TU/DejaVuSansMono(0)/m/n/12 STARPU_NCUDA=0\TU/TimesNewRoman(1)/m/n/12 ,
  []
 
-ignored: Infinite glue shrinkage found in box being split [56]
-Underfull \vbox (badness 7451) has occurred while \output is active []
-
-
-Underfull \vbox (badness 7451) has occurred while \output is active []
-
- [57]) [58] [59] (./chapters/ch07_chapter_7.tex [60
+ignored: Infinite glue shrinkage found in box being split [57]
+ignored: Infinite glue shrinkage found in box being split [58]) [59] (./chapters/ch07_chapter_7.tex [60
 
 
 ]
 Κεφάλαιο 7.
-) [61]
+
+Underfull \vbox (badness 6094) has occurred while \output is active []
+
+
+Underfull \vbox (badness 6094) has occurred while \output is active []
+
+ [61])
 Underfull \hbox (badness 10000) has occurred while \output is active
 []\TU/TimesNewRoman(1)/m/it/12 7. Πειραματική Αξιολόγηση και
  []
 
-[62
-
-
-]
+[62]
 Underfull \hbox (badness 1546) in paragraph at lines 146--146
 []\TU/TimesNewRoman(1)/m/n/12 Cédric Augonnet κ.ά. ``StarPU: a unified platform for task scheduling on
  []
 
-[63] [64]
+[63
+
+
+] [64]
 Underfull \hbox (badness 1072) in paragraph at lines 146--146
 []\TU/TimesNewRoman(1)/m/n/12 Cédric Augonnet κ.ά. \TU/TimesNewRoman(1)/m/it/12 Getting Started with StarPU\TU/TimesNewRoman(1)/m/n/12 . Tutorial at Symposium
  []
@@ -1714,26 +1725,26 @@ LaTeX2e <2025-11-01>
 L3 programming layer <2026-04-28>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 26A15656D8CDDD9A3D1FBAA96B4ED1FF;21362.
+(rerunfilecheck)             Checksum: 0119F4FC09F802001B7644D7978E983E;21835.
 Package logreq Info: Writing requests to 'main.run.xml'.
 
 \openout1 = main.run.xml
 )
 
 Here is how much of LuaTeX's memory you used:
- 43599 strings out of 475892
+ 43616 strings out of 475892
  125342,2373549 words of node,token memory allocated
- 1409 words of node memory still in use:
-   7 hlist, 2 vlist, 2 rule, 1 local_par, 14 glue, 5 kern, 1 penalty, 3 glyph, 84 attribute, 112 glue_spec, 84 attribute_list, 1 write, 32 pdf_action nodes
-   avail lists: 1:3,2:1877,3:1591,4:411,5:307,6:149,7:7576,8:121,9:1522,10:29,11:886,12:1
- 65020 multiletter control sequences out of 65536+600000
- 129 fonts using 77058655 bytes
+ 1401 words of node memory still in use:
+   7 hlist, 2 vlist, 2 rule, 1 local_par, 14 glue, 5 kern, 1 penalty, 3 glyph, 82 attribute, 112 glue_spec, 82 attribute_list, 1 write, 32 pdf_action nodes
+   avail lists: 1:3,2:1881,3:1591,4:411,5:338,6:149,7:9767,8:121,9:1568,10:29,11:886,12:1
+ 65025 multiletter control sequences out of 65536+600000
+ 131 fonts using 79161071 bytes
  102i,14n,128p,3271b,2786s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2026/texmf-dist/fonts/truetype/public/dejavu/DejaVuSansMono-Oblique.ttf><c:/texlive/2026/texmf-dist/fonts/truetype/public/dejavu/DejaVuSansMono-Bold.ttf><c:/texlive/2026/texmf-dist/fonts/truetype/public/dejavu/DejaVuSansMono.ttf><c:/Windows/Fonts/timesi.ttf><c:/Windows/Fonts/times.ttf><c:/Windows/Fonts/timesbd.ttf><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (80 pages, 825008 bytes).
+Output written on main.pdf (80 pages, 831324 bytes).
 
-PDF statistics: 1200 PDF objects out of 1200 (max. 8388607)
- 1071 compressed objects within 11 object streams
- 244 named destinations out of 1000 (max. 1048576)
- 561 words of extra memory for PDF output out of 10000 (max. 100000000)
+PDF statistics: 1225 PDF objects out of 1440 (max. 8388607)
+ 1096 compressed objects within 11 object streams
+ 256 named destinations out of 1000 (max. 1048576)
+ 569 words of extra memory for PDF output out of 10000 (max. 100000000)
 
