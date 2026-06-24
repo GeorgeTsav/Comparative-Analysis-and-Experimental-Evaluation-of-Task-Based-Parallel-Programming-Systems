@@ -10,3 +10,4 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {7.1}{\ignorespaces \xpg@aux {}{greek}\ignorespaces Αποτελέσματα Πειραμάτων - Standard (NUMA-oblivious) τρόπος εκτέλεσης.}}{63}{figure.caption.20}%
 \contentsline {figure}{\numberline {7.2}{\ignorespaces \xpg@aux {}{greek}\ignorespaces Παράμετρος Παραλληλικής Αποδοτικότητας (Parallel Efficiency) για κάθε εφαρμογή και για κάθε αριθμό νήματων εργασίας.}}{64}{figure.caption.21}%
+\contentsline {figure}{\numberline {7.3}{\ignorespaces \xpg@aux {}{greek}\ignorespaces Αποτελέσματα Πειραμάτων - NUMA-aware εκτέλεση των εφαρμογών σε σύγκριση με την Standard (NUMA-oblivious) εκτέλεση.}}{66}{figure.caption.25}%
