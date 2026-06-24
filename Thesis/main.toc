@@ -79,5 +79,10 @@
 \contentsline {section}{\numberline {7.1}Δοκιμές Δυνατοτήτων του StarPUPy και torcpy}{61}{section.7.1}%
 \contentsline {subsection}{\numberline {7.1.1}StarPUPy: MPI Server-Client}{61}{subsection.7.1.1}%
 \contentsline {subsection}{\numberline {7.1.2}Εμφολευμένη Παραλληλοποίηση (Nested Parallelism)}{62}{subsection.7.1.2}%
-\contentsline {section}{\numberline {7.2}Αποτελέσματα Πειραμάτων}{62}{section.7.2}%
-\contentsline {chapter}{Βιβλιογραφία}{63}{chapter*.20}%
+\contentsline {section}{\numberline {7.2}Αποτελέσματα Πειραμάτων και Συμπεράσματα}{62}{section.7.2}%
+\contentsline {subsection}{\numberline {7.2.1}Ανάλυση Αποτελεσμάτων Πειραμάτων}{64}{subsection.7.2.1}%
+\contentsline {subsubsection}{CMA-ES (app00)}{64}{section*.22}%
+\contentsline {subsubsection}{Image Processing - Gabor Filters (app01)}{65}{section*.23}%
+\contentsline {subsubsection}{Monte Carlo (app02)}{65}{section*.24}%
+\contentsline {subsection}{\numberline {7.2.2}NUMA-aware εκτέλεση των εφαρμογών}{65}{subsection.7.2.2}%
+\contentsline {chapter}{Βιβλιογραφία}{67}{chapter*.25}%
