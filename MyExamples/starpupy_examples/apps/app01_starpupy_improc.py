@@ -26,6 +26,7 @@ from starpu import starpu
 
 
 def get_files(path):
+    """Recursively finds image files with common extensions. Returns sorted list of paths."""
     exts = {".ppm", ".jpg", ".jpeg", ".png", ".tif", ".tiff", ".bmp", ".gif", ".JPEG"}
     all_files = []
     for dirpath, _, filenames in os.walk(path):
@@ -37,6 +38,8 @@ def get_files(path):
 
 
 def gabor_kernel(lmbda, theta, psi, sigma, gamma):
+    """Generates Gabor filter kernel with wavelength lmbda and orientation theta.
+    Returns: zero-mean 2D Gabor filter kernel."""
     sz = max(9, 2 * int(np.ceil(3 * sigma)) + 1)
     half = sz // 2
     x, y = np.meshgrid(np.arange(-half, half + 1), np.arange(-half, half + 1))
@@ -51,6 +54,7 @@ def gabor_kernel(lmbda, theta, psi, sigma, gamma):
 
 
 def fftconv2_same(img, ker):
+    """Performs 2D convolution via FFT with output size same as input (efficient method)."""
     hi, wi = img.shape
     hk, wk = ker.shape
 
@@ -67,6 +71,8 @@ def fftconv2_same(img, ker):
 
 
 def gabor_energy(img, n_scales, n_orients, reps):
+    """Computes multi-scale Gabor filter bank energy (expensive computation).
+    Returns: texture energy magnitude at each pixel."""
     e = np.zeros_like(img, dtype=np.float64)
 
     for _ in range(reps):
@@ -85,6 +91,7 @@ def gabor_energy(img, n_scales, n_orients, reps):
 
 
 def energy_hist(e, n_bins):
+    """Computes histogram of log-transformed Gabor energy values."""
     x = np.log1p(e.ravel())
     mn = np.min(x)
     mx = np.max(x)
@@ -98,6 +105,7 @@ def energy_hist(e, n_bins):
 
 
 def process_image(file_path, cfg):
+    """Single image processing: load, resize, compute Gabor energy, histogram, return feature."""
     with Image.open(file_path) as im:
         if im.mode != "L":
             im = im.convert("L")
@@ -111,6 +119,7 @@ def process_image(file_path, cfg):
 
 
 async def main():
+    """Main async driver: processes images in parallel using StarPU task submission."""
     parser = argparse.ArgumentParser(description="Heavy image pipeline StarPU")
     parser.add_argument("--images", default=os.path.join(os.path.dirname(__file__), "..", "..", "images"))
     parser.add_argument("--resize", type=int, default=256)

@@ -1,14 +1,6 @@
 {
 	"folders": [
 		{
-			"name": "examples",
-			"path": "../torc_py/examples"
-		},
-		{
-			"name": "python",
-			"path": "../../../../../../usr/local/lib/starpu/python"
-		},
-		{
 			"name": "MyExamples",
 			"path": "."
 		}

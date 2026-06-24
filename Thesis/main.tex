@@ -1,0 +1,153 @@
+\documentclass[a4paper,12pt,twoside]{book}
+\usepackage{upatras-thesis}
+\addbibresource{library/bibliography.bib}
+
+%
+% These commands need to be defined in order to produce a correct and personalized document
+%
+\newcommand{\shortdoctitle}{Διπλωματική Εργασία}
+\newcommand{\doctitle}{Συγκριτική Ανάλυση και Πειραματική Αξιολόγηση Συστημάτων Παράλληλου Προγραμματισμού 
+Βασισμένου σε Εργασίες }
+\newcommand{\docsubtitle}{Υπότιτλος εγγράφου}
+\newcommand{\division}{Υπολογιστική Υψηλών Επιδόσεων}
+\newcommand{\lab}{Εργαστήριο Πληροφοριακών Συστημάτων Υψηλών Επιδόσεων}
+
+\newcommand{\me}{Γεωργίου Τσάβου του Κωνσταντίνου} %(σε γενική πτώση) ΠΡΟΣΟΧΗ: στοιχεία σε γενική πτώση. Παράδειγμα: Άγγελου Σικελιανού του Ιωάννη
+%
+\newcommand{\nomme}{Γεώργιος Τσάβος του Κωνσταντίνου} %(σε ονομαστική πτώση) ΠΡΟΣΟΧΗ: στοιχεία σε ονομαστική πτώση. Παράδειγμα: Άγγελος Σικελιανός του Ιωάννη
+%
+\newcommand{\studnum}{1084606}
+\newcommand{\keywordsgr}{Υπολογιστική Υψηλών Επιδόσεων, Εργασίες, Παράλληλος Προγραμματισμός με Εργασίες, Ετερογένεια, NUMA, Συστήματα Εκτέλεσης}
+\newcommand{\keywordsen}{High Performance Computing, Tasks, Task-based Parallel Programming, Heterogeneity, NUMA, runtime systems}
+\newcommand{\monthyear}{Ιούνιος 2026}
+
+\newcommand{\supname}{Παναγιώτης Χατζηδούκας}
+\newcommand{\suptitle}{Αναπληρωτής Καθηγητής}
+\newcommand{\supuni}{Πανεπιστήμιο Πατρών}
+
+%\newcommand{\cosupname}{Συνεπιβλέποντας Καθηγητής}
+%\newcommand{\cosuptitle}{Τίτλος Συνεπιβλέποντα Καθηγητή}
+%\newcommand{\cosupuni}{Πανεπιστήμιο Συνεπιβλέποντα}
+
+%\newcommand{\headofdivision}{Ονοματεπώνυμο Διεθυντή Τομέα}
+%\newcommand{\headofdivisiontitle}{Τίτλος Διευθυντή Τομέα}
+
+\author{\me}
+
+% PDF settings
+%
+\hypersetup
+{
+    pdfauthor={\me},
+    pdftitle={\shortdoctitle},
+    pdfsubject={\doctitle},
+    pdfkeywords={\keywordsgr},
+    pdfkeywords={\keywordsen},
+    pdfproducer={lualatex},
+    pdfcreator={\creator}
+}
+
+
+% BEGIN DOCUMENT
+\begin{document}
+
+% SET PAGE NUMBERING TO ROMAN
+\pagenumbering{roman}
+\setcounter{page}{3}
+
+%*************************%
+%         TITLES          %
+%*************************%
+
+\include{intro/titlepage}
+\clearemptydoublepage
+
+\include{intro/certification}
+\clearemptydoublepage
+
+\include{intro/about}
+\clearemptydoublepage
+
+\include{intro/summary}
+\clearemptydoublepage
+
+\include{intro/acknowledgements}
+\clearemptydoublepage
+
+\pagestyle{empty}
+
+%*************************%
+%    Table of Contents    %
+%*************************%     
+{\hypersetup{linkcolor=black}
+\tableofcontents
+}
+\clearemptydoublepage
+
+%*************************%
+%    1. Abbreviations     %
+%    2. Lists of figures  %
+%    3. Lists of tables   %
+%*************************%
+\include{library/abbreviations}
+\clearpage
+\listoffigures
+\clearpage
+\listoftables
+\clearpage
+
+\clearpage
+
+\pagestyle{fancy}
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+%*************************%
+%       Main Chapters     %
+%*************************%
+
+% Introduction
+\input{chapters/ch01_introduction.tex}
+\clearpage
+
+% Theoretical Background
+\input{chapters/ch02_chapter_2.tex}
+\clearpage
+
+% System StarPU
+\input{chapters/ch03_chapter_3.tex}
+\clearpage
+
+% StarPUPy Interface
+\input{chapters/ch04_chapter_4.tex}
+\clearpage
+
+% System torcpy
+\input{chapters/ch05_chapter_5.tex}
+\clearpage
+
+% Applications and Methodology
+\input{chapters/ch06_chapter_6.tex}
+\clearpage
+
+% Experimental Evaluation and Conclusions
+\input{chapters/ch07_chapter_7.tex}
+\clearpage
+
+% Next Chapters
+% .............
+% .............
+
+%**************************%
+%    END OF MAIN THESIS    %
+%**************************%
+
+% Bibliography
+% Include all .bib entries even if not explicitly cited
+% \nocite{*}
+\printbibliography[heading=bibintoc]
+\clearemptydoublepage
+
+% Last Page
+\input{intro/lastpage}
+\end{document}

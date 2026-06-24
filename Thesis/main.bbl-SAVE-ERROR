@@ -1,0 +1,1208 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global/global}
+    \entry{papadakis2012}{book}{}{}
+      \name{author}{2}{}{%
+        {{hash=7e03da661e27c44c762c57e892313131}{%
+           family={Στυλιανός},
+           familyi={Σ\bibinitperiod},
+           given={Παπαδάκης},
+           giveni={Π\bibinitperiod}}}%
+        {{hash=9a0ecb06b2c1b19450d4a5527f838fa2}{%
+           family={Κωνσταντίνος},
+           familyi={Κ\bibinitperiod},
+           given={Διαμαντάρας},
+           giveni={Δ\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Αθήνα}%
+      }
+      \list{publisher}{1}{%
+        {Εκδόσεις Κλειδάριθμος}%
+      }
+      \strng{namehash}{f66eea1329f78c5c3342ffd336200f91}
+      \strng{fullhash}{f66eea1329f78c5c3342ffd336200f91}
+      \strng{fullhashraw}{f66eea1329f78c5c3342ffd336200f91}
+      \strng{bibnamehash}{f66eea1329f78c5c3342ffd336200f91}
+      \strng{authorbibnamehash}{f66eea1329f78c5c3342ffd336200f91}
+      \strng{authornamehash}{f66eea1329f78c5c3342ffd336200f91}
+      \strng{authorfullhash}{f66eea1329f78c5c3342ffd336200f91}
+      \strng{authorfullhashraw}{f66eea1329f78c5c3342ffd336200f91}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{1}
+      \field{isbn}{978-960-461-446-2}
+      \field{title}{{Προγραμματισμός και Αρχιτεκτονική Συστημάτων Παράλληλης Επεξεργασίας}}
+      \field{year}{2012}
+    \endentry
+    \entry{hadjidoukas2020torcpy}{article}{}{}
+      \name{author}{6}{}{%
+        {{hash=378305958400259996bd2e0c16eec508}{%
+           family={Hadjidoukas},
+           familyi={H\bibinitperiod},
+           given={Panagiotis\bibnamedelima E},
+           giveni={P\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=c6a2d3a76fc75f71dece07391679046d}{%
+           family={Bartezzaghi},
+           familyi={B\bibinitperiod},
+           given={Andrea},
+           giveni={A\bibinitperiod}}}%
+        {{hash=e605ef30b60434817635c4cdf7a776f2}{%
+           family={Scheidegger},
+           familyi={S\bibinitperiod},
+           given={Florian},
+           giveni={F\bibinitperiod}}}%
+        {{hash=c94476ca1544696242f8ab1b843dff1c}{%
+           family={Istrate},
+           familyi={I\bibinitperiod},
+           given={Roxana},
+           giveni={R\bibinitperiod}}}%
+        {{hash=ed5f598d8cc43f361f31d4e4ae3839df}{%
+           family={Bekas},
+           familyi={B\bibinitperiod},
+           given={Costas},
+           giveni={C\bibinitperiod}}}%
+        {{hash=a336126c47549622257f94ac2e08b769}{%
+           family={Malossi},
+           familyi={M\bibinitperiod},
+           given={A\bibnamedelima Cristiano\bibnamedelima I},
+           giveni={A\bibinitperiod\bibinitdelim C\bibinitperiod\bibinitdelim I\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{6c176e0d4167fa5cf25d9e4d98b7ff12}
+      \strng{fullhash}{6164f9dd975a765d5b3675ab45aa71ad}
+      \strng{fullhashraw}{6164f9dd975a765d5b3675ab45aa71ad}
+      \strng{bibnamehash}{6c176e0d4167fa5cf25d9e4d98b7ff12}
+      \strng{authorbibnamehash}{6c176e0d4167fa5cf25d9e4d98b7ff12}
+      \strng{authornamehash}{6c176e0d4167fa5cf25d9e4d98b7ff12}
+      \strng{authorfullhash}{6164f9dd975a765d5b3675ab45aa71ad}
+      \strng{authorfullhashraw}{6164f9dd975a765d5b3675ab45aa71ad}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{SoftwareX}
+      \field{title}{torcpy: Supporting task parallelism in Python}
+      \field{volume}{12}
+      \field{year}{2020}
+      \field{pages}{100517}
+      \range{pages}{1}
+    \endentry
+    \entry{augonnet2009starpu}{inproceedings}{}{}
+      \name{author}{4}{}{%
+        {{hash=736f79b70cf6488db7dfa8e71456f718}{%
+           family={Augonnet},
+           familyi={A\bibinitperiod},
+           given={Cédric},
+           giveni={C\bibinitperiod}}}%
+        {{hash=2a6cddc12d90996f2d082705aab80d36}{%
+           family={Thibault},
+           familyi={T\bibinitperiod},
+           given={Samuel},
+           giveni={S\bibinitperiod}}}%
+        {{hash=4acb86ced09c0de0a698930a3ac8ed1a}{%
+           family={Namyst},
+           familyi={N\bibinitperiod},
+           given={Raymond},
+           giveni={R\bibinitperiod}}}%
+        {{hash=8ba8cc921b7f67cebb81bb14543c2bd2}{%
+           family={Wacrenier},
+           familyi={W\bibinitperiod},
+           given={Pierre-André},
+           giveni={P\bibinithyphendelim A\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{b8f74ceca10299b898b8f8bc125acf89}
+      \strng{fullhash}{8632844a4577bc666687a3056a23320e}
+      \strng{fullhashraw}{8632844a4577bc666687a3056a23320e}
+      \strng{bibnamehash}{b8f74ceca10299b898b8f8bc125acf89}
+      \strng{authorbibnamehash}{b8f74ceca10299b898b8f8bc125acf89}
+      \strng{authornamehash}{b8f74ceca10299b898b8f8bc125acf89}
+      \strng{authorfullhash}{8632844a4577bc666687a3056a23320e}
+      \strng{authorfullhashraw}{8632844a4577bc666687a3056a23320e}
+      \field{extraname}{1}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{European Conference on Parallel Processing}
+      \field{title}{StarPU: a unified platform for task scheduling on heterogeneous multicore architectures}
+      \field{year}{2009}
+      \field{pages}{863\bibrangedash 874}
+      \range{pages}{12}
+    \endentry
+    \entry{numa}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=9c677286866aad38f8e9b660f5411814}{%
+           family={Wikipedia},
+           familyi={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{fullhash}{9c677286866aad38f8e9b660f5411814}
+      \strng{fullhashraw}{9c677286866aad38f8e9b660f5411814}
+      \strng{bibnamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authorbibnamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authornamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authorfullhash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authorfullhashraw}{9c677286866aad38f8e9b660f5411814}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{NUMA (Non-Uniform Memory Access)}
+      \field{year}{2024}
+      \verb{urlraw}
+      \verb https://en.wikipedia.org/wiki/Non-uniform_memory_access
+      \endverb
+      \verb{url}
+      \verb https://en.wikipedia.org/wiki/Non-uniform_memory_access
+      \endverb
+    \endentry
+    \entry{denneman2016numa}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=36eabb5c035231b7c5b083af4fde21ca}{%
+           family={Denneman},
+           familyi={D\bibinitperiod},
+           given={Frank},
+           giveni={F\bibinitperiod}}}%
+      }
+      \strng{namehash}{36eabb5c035231b7c5b083af4fde21ca}
+      \strng{fullhash}{36eabb5c035231b7c5b083af4fde21ca}
+      \strng{fullhashraw}{36eabb5c035231b7c5b083af4fde21ca}
+      \strng{bibnamehash}{36eabb5c035231b7c5b083af4fde21ca}
+      \strng{authorbibnamehash}{36eabb5c035231b7c5b083af4fde21ca}
+      \strng{authornamehash}{36eabb5c035231b7c5b083af4fde21ca}
+      \strng{authorfullhash}{36eabb5c035231b7c5b083af4fde21ca}
+      \strng{authorfullhashraw}{36eabb5c035231b7c5b083af4fde21ca}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{NUMA Deep Dive Part 1: From UMA to NUMA}}
+      \field{year}{2016}
+      \verb{urlraw}
+      \verb https://frankdenneman.ai/2016-07-07-numa-deep-dive-part-1-uma-numa/
+      \endverb
+      \verb{url}
+      \verb https://frankdenneman.ai/2016-07-07-numa-deep-dive-part-1-uma-numa/
+      \endverb
+    \endentry
+    \entry{supermicro_numa}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=d82c4715e10ce521355045df07cce492}{%
+           family={{Super Micro Computer, Inc.}},
+           familyi={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{d82c4715e10ce521355045df07cce492}
+      \strng{fullhash}{d82c4715e10ce521355045df07cce492}
+      \strng{fullhashraw}{d82c4715e10ce521355045df07cce492}
+      \strng{bibnamehash}{d82c4715e10ce521355045df07cce492}
+      \strng{authorbibnamehash}{d82c4715e10ce521355045df07cce492}
+      \strng{authornamehash}{d82c4715e10ce521355045df07cce492}
+      \strng{authorfullhash}{d82c4715e10ce521355045df07cce492}
+      \strng{authorfullhashraw}{d82c4715e10ce521355045df07cce492}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{What Is Non-Uniform Memory Access (NUMA)?}}
+      \field{year}{2025}
+      \verb{urlraw}
+      \verb https://www.supermicro.com/en/glossary/numa
+      \endverb
+      \verb{url}
+      \verb https://www.supermicro.com/en/glossary/numa
+      \endverb
+    \endentry
+    \entry{Deters_2018}{inproceedings}{}{}
+      \name{author}{4}{}{%
+        {{hash=e05163d01e7a4c956fb7ecd63979fa93}{%
+           family={Deters},
+           familyi={D\bibinitperiod},
+           given={Justin},
+           giveni={J\bibinitperiod}}}%
+        {{hash=2d3f7a945938f7f039468b3411e614e9}{%
+           family={Wu},
+           familyi={W\bibinitperiod},
+           given={Jiaye},
+           giveni={J\bibinitperiod}}}%
+        {{hash=bb7f398dd3bbc927839cf1b066831cc3}{%
+           family={Xu},
+           familyi={X\bibinitperiod},
+           given={Yifan},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=13664e2675ff0d148f5087e20cb9a226}{%
+           family={Lee},
+           familyi={L\bibinitperiod},
+           given={I-Ting\bibnamedelima Angelina},
+           giveni={I\bibinithyphendelim T\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{706572463e358e3ba5cbdb3336aba9d8}
+      \strng{fullhash}{fd5f2cf170fbbc6869443ab1f6105f27}
+      \strng{fullhashraw}{fd5f2cf170fbbc6869443ab1f6105f27}
+      \strng{bibnamehash}{706572463e358e3ba5cbdb3336aba9d8}
+      \strng{authorbibnamehash}{706572463e358e3ba5cbdb3336aba9d8}
+      \strng{authornamehash}{706572463e358e3ba5cbdb3336aba9d8}
+      \strng{authorfullhash}{fd5f2cf170fbbc6869443ab1f6105f27}
+      \strng{authorfullhashraw}{fd5f2cf170fbbc6869443ab1f6105f27}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2018 IEEE International Symposium on Workload Characterization (IISWC)}
+      \field{title}{A NUMA-Aware Provably-Efficient Task-Parallel Platform Based on the Work-First Principle}
+      \field{year}{2018}
+      \field{pages}{59\bibrangedash 70}
+      \range{pages}{12}
+      \verb{doi}
+      \verb 10.1109/iiswc.2018.8573486
+      \endverb
+      \verb{urlraw}
+      \verb http://dx.doi.org/10.1109/IISWC.2018.8573486
+      \endverb
+      \verb{url}
+      \verb http://dx.doi.org/10.1109/IISWC.2018.8573486
+      \endverb
+    \endentry
+    \entry{rapidfork2023gil}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=b310f0e1884abadf6b04639753d16c79}{%
+           family={{RapidFork Technology}},
+           familyi={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{b310f0e1884abadf6b04639753d16c79}
+      \strng{fullhash}{b310f0e1884abadf6b04639753d16c79}
+      \strng{fullhashraw}{b310f0e1884abadf6b04639753d16c79}
+      \strng{bibnamehash}{b310f0e1884abadf6b04639753d16c79}
+      \strng{authorbibnamehash}{b310f0e1884abadf6b04639753d16c79}
+      \strng{authornamehash}{b310f0e1884abadf6b04639753d16c79}
+      \strng{authorfullhash}{b310f0e1884abadf6b04639753d16c79}
+      \strng{authorfullhashraw}{b310f0e1884abadf6b04639753d16c79}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{Breaking Down Python Concurrency: The Global Interpreter Lock (GIL) and Its Effect on Multi-threading}}
+      \field{year}{2023}
+      \verb{urlraw}
+      \verb https://rapidfork.medium.com/breaking-down-python-concurrency-the-gil-and-its-effect-on-multi-threading-b5ab99083cb2
+      \endverb
+      \verb{url}
+      \verb https://rapidfork.medium.com/breaking-down-python-concurrency-the-gil-and-its-effect-on-multi-threading-b5ab99083cb2
+      \endverb
+    \endentry
+    \entry{gross2023pep703}{report}{}{}
+      \name{author}{1}{}{%
+        {{hash=4ba5062e5919c814aceec188d54c01f2}{%
+           family={Gross},
+           familyi={G\bibinitperiod},
+           given={Sam},
+           giveni={S\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Python Software Foundation}%
+      }
+      \strng{namehash}{4ba5062e5919c814aceec188d54c01f2}
+      \strng{fullhash}{4ba5062e5919c814aceec188d54c01f2}
+      \strng{fullhashraw}{4ba5062e5919c814aceec188d54c01f2}
+      \strng{bibnamehash}{4ba5062e5919c814aceec188d54c01f2}
+      \strng{authorbibnamehash}{4ba5062e5919c814aceec188d54c01f2}
+      \strng{authornamehash}{4ba5062e5919c814aceec188d54c01f2}
+      \strng{authorfullhash}{4ba5062e5919c814aceec188d54c01f2}
+      \strng{authorfullhashraw}{4ba5062e5919c814aceec188d54c01f2}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{number}{703}
+      \field{title}{{PEP 703 -- Making the Global Interpreter Lock Optional in CPython}}
+      \field{type}{Python Enhancement Proposal}
+      \field{year}{2023}
+      \verb{urlraw}
+      \verb https://peps.python.org/pep-0703/
+      \endverb
+      \verb{url}
+      \verb https://peps.python.org/pep-0703/
+      \endverb
+    \endentry
+    \entry{ruys2024deep}{inproceedings}{}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{10}{}{%
+        {{hash=4d547ebc74e994539739739996e76e3c}{%
+           family={Ruys},
+           familyi={R\bibinitperiod},
+           given={William},
+           giveni={W\bibinitperiod}}}%
+        {{hash=a097b3f7288b95ebe1aa9dc7235c1bb8}{%
+           family={Lee},
+           familyi={L\bibinitperiod},
+           given={Hochan},
+           giveni={H\bibinitperiod}}}%
+        {{hash=fe4661deebdf75df830a6d0994863a78}{%
+           family={You},
+           familyi={Y\bibinitperiod},
+           given={Bozhi},
+           giveni={B\bibinitperiod}}}%
+        {{hash=f1c96a75e7d83d0accb24554b482237b}{%
+           family={Talati},
+           familyi={T\bibinitperiod},
+           given={Shreya},
+           giveni={S\bibinitperiod}}}%
+        {{hash=f74ec735fa387b0c2ebe223f24079ea3}{%
+           family={Park},
+           familyi={P\bibinitperiod},
+           given={Jaeyoung},
+           giveni={J\bibinitperiod}}}%
+        {{hash=6fe8e810b43ed89417c6e85ce7088d45}{%
+           family={Almgren-Bell},
+           familyi={A\bibinithyphendelim B\bibinitperiod},
+           given={James},
+           giveni={J\bibinitperiod}}}%
+        {{hash=58d399d13a5705c29d631c1c7fda8407}{%
+           family={Yan},
+           familyi={Y\bibinitperiod},
+           given={Yineng},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=06e7dbb2442db4ddaf981b0af6e0b78e}{%
+           family={Fernando},
+           familyi={F\bibinitperiod},
+           given={Milinda},
+           giveni={M\bibinitperiod}}}%
+        {{hash=c666809dd286126d267d3807218186db}{%
+           family={Biros},
+           familyi={B\bibinitperiod},
+           given={George},
+           giveni={G\bibinitperiod}}}%
+        {{hash=a986b0ee2e2c72da3be0fe0690ea2db8}{%
+           family={Erez},
+           familyi={E\bibinitperiod},
+           given={Mattan},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{c945e9b09a236663b2ee717c362c4a24}
+      \strng{fullhash}{4737a5f3786c1ebf7edc89c346c64ed5}
+      \strng{fullhashraw}{4737a5f3786c1ebf7edc89c346c64ed5}
+      \strng{bibnamehash}{c945e9b09a236663b2ee717c362c4a24}
+      \strng{authorbibnamehash}{c945e9b09a236663b2ee717c362c4a24}
+      \strng{authornamehash}{c945e9b09a236663b2ee717c362c4a24}
+      \strng{authorfullhash}{4737a5f3786c1ebf7edc89c346c64ed5}
+      \strng{authorfullhashraw}{4737a5f3786c1ebf7edc89c346c64ed5}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2024 IEEE International Parallel and Distributed Processing Symposium Workshops (IPDPSW)}
+      \field{title}{A deep dive into task-based parallelism in Python}
+      \field{year}{2024}
+      \field{pages}{1147\bibrangedash 1149}
+      \range{pages}{3}
+    \endentry
+    \entry{adewole2026concurrency}{article}{}{}
+      \name{author}{5}{}{%
+        {{hash=cc6ea87a3dd8fc675962f8b05af44ae4}{%
+           family={Adewole},
+           familyi={A\bibinitperiod},
+           given={A.P.},
+           giveni={A\bibinitperiod}}}%
+        {{hash=512352ac1fe32267a602275987b2a782}{%
+           family={Ezikeakukwu},
+           familyi={E\bibinitperiod},
+           given={Adaeze\bibnamedelima Modesta},
+           giveni={A\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=caaeaf2f75f8c576a9ba59cd7c684954}{%
+           family={Fadupin},
+           familyi={F\bibinitperiod},
+           given={Isaac\bibnamedelima Abayomi},
+           giveni={I\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=d41c4ea1fa642dfb6d374a370dd61cd7}{%
+           family={Amokomowo},
+           familyi={A\bibinitperiod},
+           given={Bashir\bibnamedelima Adeyemi},
+           giveni={B\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=0634c1f3259c56a05a86d4af8fec0a04}{%
+           family={Ameh},
+           familyi={A\bibinitperiod},
+           given={Frank\bibnamedelima Adakole},
+           giveni={F\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \strng{namehash}{56cbbe964d26c18a2a60a229f410dda9}
+      \strng{fullhash}{c5ab054e84fd41853f37c3691a79f5af}
+      \strng{fullhashraw}{c5ab054e84fd41853f37c3691a79f5af}
+      \strng{bibnamehash}{56cbbe964d26c18a2a60a229f410dda9}
+      \strng{authorbibnamehash}{56cbbe964d26c18a2a60a229f410dda9}
+      \strng{authornamehash}{56cbbe964d26c18a2a60a229f410dda9}
+      \strng{authorfullhash}{c5ab054e84fd41853f37c3691a79f5af}
+      \strng{authorfullhashraw}{c5ab054e84fd41853f37c3691a79f5af}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{2278-0181}
+      \field{journaltitle}{International Journal of Engineering Research \& Technology (IJERT)}
+      \field{number}{03}
+      \field{title}{{Understanding and Implementing Concurrency in Python-based Systems}}
+      \field{volume}{15}
+      \field{year}{2026}
+      \verb{urlraw}
+      \verb https://www.ijert.org/understanding-and-implementing-concurrency-in-python-based-systems-ijertv15is031148
+      \endverb
+      \verb{url}
+      \verb https://www.ijert.org/understanding-and-implementing-concurrency-in-python-based-systems-ijertv15is031148
+      \endverb
+    \endentry
+    \entry{starpu2025handbook}{manual}{}{}
+      \name{author}{1}{}{%
+        {{hash=cdcaa5e3d7d378b79dbfa572b2a9ad5b}{%
+           family={{StarPU Development Team}},
+           familyi={S\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {INRIA}%
+      }
+      \strng{namehash}{cdcaa5e3d7d378b79dbfa572b2a9ad5b}
+      \strng{fullhash}{cdcaa5e3d7d378b79dbfa572b2a9ad5b}
+      \strng{fullhashraw}{cdcaa5e3d7d378b79dbfa572b2a9ad5b}
+      \strng{bibnamehash}{cdcaa5e3d7d378b79dbfa572b2a9ad5b}
+      \strng{authorbibnamehash}{cdcaa5e3d7d378b79dbfa572b2a9ad5b}
+      \strng{authornamehash}{cdcaa5e3d7d378b79dbfa572b2a9ad5b}
+      \strng{authorfullhash}{cdcaa5e3d7d378b79dbfa572b2a9ad5b}
+      \strng{authorfullhashraw}{cdcaa5e3d7d378b79dbfa572b2a9ad5b}
+      \field{extraname}{1}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{StarPU Handbook for StarPU 1.4.12}}
+      \field{year}{2025}
+      \verb{urlraw}
+      \verb https://files.inria.fr/starpu/doc/starpu.pdf
+      \endverb
+      \verb{url}
+      \verb https://files.inria.fr/starpu/doc/starpu.pdf
+      \endverb
+    \endentry
+    \entry{augonnet2010starpu_gtc}{misc}{}{}
+      \name{author}{3}{}{%
+        {{hash=736f79b70cf6488db7dfa8e71456f718}{%
+           family={Augonnet},
+           familyi={A\bibinitperiod},
+           given={Cédric},
+           giveni={C\bibinitperiod}}}%
+        {{hash=2a6cddc12d90996f2d082705aab80d36}{%
+           family={Thibault},
+           familyi={T\bibinitperiod},
+           given={Samuel},
+           giveni={S\bibinitperiod}}}%
+        {{hash=4acb86ced09c0de0a698930a3ac8ed1a}{%
+           family={Namyst},
+           familyi={N\bibinitperiod},
+           given={Raymond},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{8120a2e1b6d377765d7999ff0e64b0c3}
+      \strng{fullhash}{8120a2e1b6d377765d7999ff0e64b0c3}
+      \strng{fullhashraw}{8120a2e1b6d377765d7999ff0e64b0c3}
+      \strng{bibnamehash}{8120a2e1b6d377765d7999ff0e64b0c3}
+      \strng{authorbibnamehash}{8120a2e1b6d377765d7999ff0e64b0c3}
+      \strng{authornamehash}{8120a2e1b6d377765d7999ff0e64b0c3}
+      \strng{authorfullhash}{8120a2e1b6d377765d7999ff0e64b0c3}
+      \strng{authorfullhashraw}{8120a2e1b6d377765d7999ff0e64b0c3}
+      \field{extraname}{1}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{Presentation at NVIDIA GPU Technology Conference (GTC 2010), San Jose, USA}
+      \field{title}{{StarPU: A Runtime System for Scheduling Tasks, or How to Get Portable Performance on Accelerator-Based Platforms Without the Agonizing Pain}}
+      \field{year}{2010}
+      \verb{urlraw}
+      \verb https://www.nvidia.com/content/GTC-2010/pdfs/2160_GTC2010.pdf
+      \endverb
+      \verb{url}
+      \verb https://www.nvidia.com/content/GTC-2010/pdfs/2160_GTC2010.pdf
+      \endverb
+    \endentry
+    \entry{augonnet:inria-00467677}{report}{}{}
+      \name{author}{3}{}{%
+        {{hash=736f79b70cf6488db7dfa8e71456f718}{%
+           family={Augonnet},
+           familyi={A\bibinitperiod},
+           given={Cédric},
+           giveni={C\bibinitperiod}}}%
+        {{hash=2a6cddc12d90996f2d082705aab80d36}{%
+           family={Thibault},
+           familyi={T\bibinitperiod},
+           given={Samuel},
+           giveni={S\bibinitperiod}}}%
+        {{hash=4acb86ced09c0de0a698930a3ac8ed1a}{%
+           family={Namyst},
+           familyi={N\bibinitperiod},
+           given={Raymond},
+           giveni={R\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {INRIA}%
+      }
+      \strng{namehash}{8120a2e1b6d377765d7999ff0e64b0c3}
+      \strng{fullhash}{8120a2e1b6d377765d7999ff0e64b0c3}
+      \strng{fullhashraw}{8120a2e1b6d377765d7999ff0e64b0c3}
+      \strng{bibnamehash}{8120a2e1b6d377765d7999ff0e64b0c3}
+      \strng{authorbibnamehash}{8120a2e1b6d377765d7999ff0e64b0c3}
+      \strng{authornamehash}{8120a2e1b6d377765d7999ff0e64b0c3}
+      \strng{authorfullhash}{8120a2e1b6d377765d7999ff0e64b0c3}
+      \strng{authorfullhashraw}{8120a2e1b6d377765d7999ff0e64b0c3}
+      \field{extraname}{2}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{3}
+      \field{number}{RR-7240}
+      \field{title}{{StarPU: a Runtime System for Scheduling Tasks over Accelerator-Based Multicore Machines}}
+      \field{type}{Research Report}
+      \field{year}{2010}
+      \field{pages}{33}
+      \range{pages}{1}
+      \verb{file}
+      \verb https://inria.hal.science/inria-00467677v1/file/RR-7240.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://inria.hal.science/inria-00467677
+      \endverb
+      \verb{url}
+      \verb https://inria.hal.science/inria-00467677
+      \endverb
+    \endentry
+    \entry{augonnet2010data}{inproceedings}{}{}
+      \name{author}{4}{}{%
+        {{hash=736f79b70cf6488db7dfa8e71456f718}{%
+           family={Augonnet},
+           familyi={A\bibinitperiod},
+           given={Cédric},
+           giveni={C\bibinitperiod}}}%
+        {{hash=deb5941c95301d51ad1d53f586ea2124}{%
+           family={Clet-Ortega},
+           familyi={C\bibinithyphendelim O\bibinitperiod},
+           given={Jérôme},
+           giveni={J\bibinitperiod}}}%
+        {{hash=2a6cddc12d90996f2d082705aab80d36}{%
+           family={Thibault},
+           familyi={T\bibinitperiod},
+           given={Samuel},
+           giveni={S\bibinitperiod}}}%
+        {{hash=4acb86ced09c0de0a698930a3ac8ed1a}{%
+           family={Namyst},
+           familyi={N\bibinitperiod},
+           given={Raymond},
+           giveni={R\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{b8f74ceca10299b898b8f8bc125acf89}
+      \strng{fullhash}{22463fc7af062c5ffda2da9f6a8cfdd6}
+      \strng{fullhashraw}{22463fc7af062c5ffda2da9f6a8cfdd6}
+      \strng{bibnamehash}{b8f74ceca10299b898b8f8bc125acf89}
+      \strng{authorbibnamehash}{b8f74ceca10299b898b8f8bc125acf89}
+      \strng{authornamehash}{b8f74ceca10299b898b8f8bc125acf89}
+      \strng{authorfullhash}{22463fc7af062c5ffda2da9f6a8cfdd6}
+      \strng{authorfullhashraw}{22463fc7af062c5ffda2da9f6a8cfdd6}
+      \field{extraname}{2}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2010 IEEE 16th international conference on parallel and distributed systems}
+      \field{title}{Data-aware task scheduling on multi-accelerator based platforms}
+      \field{year}{2010}
+      \field{pages}{291\bibrangedash 298}
+      \range{pages}{8}
+    \endentry
+    \entry{starpu_dev_manual}{manual}{}{}
+      \name{author}{1}{}{%
+        {{hash=cdcaa5e3d7d378b79dbfa572b2a9ad5b}{%
+           family={{StarPU Development Team}},
+           familyi={S\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {INRIA}%
+      }
+      \strng{namehash}{cdcaa5e3d7d378b79dbfa572b2a9ad5b}
+      \strng{fullhash}{cdcaa5e3d7d378b79dbfa572b2a9ad5b}
+      \strng{fullhashraw}{cdcaa5e3d7d378b79dbfa572b2a9ad5b}
+      \strng{bibnamehash}{cdcaa5e3d7d378b79dbfa572b2a9ad5b}
+      \strng{authorbibnamehash}{cdcaa5e3d7d378b79dbfa572b2a9ad5b}
+      \strng{authornamehash}{cdcaa5e3d7d378b79dbfa572b2a9ad5b}
+      \strng{authorfullhash}{cdcaa5e3d7d378b79dbfa572b2a9ad5b}
+      \strng{authorfullhashraw}{cdcaa5e3d7d378b79dbfa572b2a9ad5b}
+      \field{extraname}{2}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{StarPU Developer Documentation}
+      \field{year}{2026}
+      \verb{urlraw}
+      \verb https://files.inria.fr/starpu/doc/starpu_dev.pdf
+      \endverb
+      \verb{url}
+      \verb https://files.inria.fr/starpu/doc/starpu_dev.pdf
+      \endverb
+    \endentry
+    \entry{starpu_website}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=cdcaa5e3d7d378b79dbfa572b2a9ad5b}{%
+           family={{StarPU Development Team}},
+           familyi={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{cdcaa5e3d7d378b79dbfa572b2a9ad5b}
+      \strng{fullhash}{cdcaa5e3d7d378b79dbfa572b2a9ad5b}
+      \strng{fullhashraw}{cdcaa5e3d7d378b79dbfa572b2a9ad5b}
+      \strng{bibnamehash}{cdcaa5e3d7d378b79dbfa572b2a9ad5b}
+      \strng{authorbibnamehash}{cdcaa5e3d7d378b79dbfa572b2a9ad5b}
+      \strng{authornamehash}{cdcaa5e3d7d378b79dbfa572b2a9ad5b}
+      \strng{authorfullhash}{cdcaa5e3d7d378b79dbfa572b2a9ad5b}
+      \strng{authorfullhashraw}{cdcaa5e3d7d378b79dbfa572b2a9ad5b}
+      \field{extraname}{3}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{StarPU: A Unified Runtime System for Heterogeneous Multicore Architectures}
+      \field{year}{2026}
+      \verb{urlraw}
+      \verb https://starpu.gitlabpages.inria.fr/
+      \endverb
+      \verb{url}
+      \verb https://starpu.gitlabpages.inria.fr/
+      \endverb
+    \endentry
+    \entry{aiken_cs315b_lec13}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=7b4be770da7d4fe41717b6d75f1fa596}{%
+           family={Aiken},
+           familyi={A\bibinitperiod},
+           given={Alex},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{7b4be770da7d4fe41717b6d75f1fa596}
+      \strng{fullhash}{7b4be770da7d4fe41717b6d75f1fa596}
+      \strng{fullhashraw}{7b4be770da7d4fe41717b6d75f1fa596}
+      \strng{bibnamehash}{7b4be770da7d4fe41717b6d75f1fa596}
+      \strng{authorbibnamehash}{7b4be770da7d4fe41717b6d75f1fa596}
+      \strng{authornamehash}{7b4be770da7d4fe41717b6d75f1fa596}
+      \strng{authorfullhash}{7b4be770da7d4fe41717b6d75f1fa596}
+      \strng{authorfullhashraw}{7b4be770da7d4fe41717b6d75f1fa596}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{Lecture slides, Stanford University, CS315B: Parallel Computing}
+      \field{title}{{StarPU -- CS315B Lecture 13}}
+      \verb{urlraw}
+      \verb https://web.stanford.edu/class/cs315b/lectures/lecture13.pdf
+      \endverb
+      \verb{url}
+      \verb https://web.stanford.edu/class/cs315b/lectures/lecture13.pdf
+      \endverb
+    \endentry
+    \entry{qin2012cachecoherence}{inproceedings}{}{}
+      \name{author}{2}{}{%
+        {{hash=dc8a3c0d5df83c67ca3a895f7a406378}{%
+           family={Qin},
+           familyi={Q\bibinitperiod},
+           given={Xiaoke},
+           giveni={X\bibinitperiod}}}%
+        {{hash=2d85f505261a3e6c8cbd4ce693142bf3}{%
+           family={Mishra},
+           familyi={M\bibinitperiod},
+           given={Prabhat},
+           giveni={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{f4e254443181ebf280c599aa498ed864}
+      \strng{fullhash}{f4e254443181ebf280c599aa498ed864}
+      \strng{fullhashraw}{f4e254443181ebf280c599aa498ed864}
+      \strng{bibnamehash}{f4e254443181ebf280c599aa498ed864}
+      \strng{authorbibnamehash}{f4e254443181ebf280c599aa498ed864}
+      \strng{authornamehash}{f4e254443181ebf280c599aa498ed864}
+      \strng{authorfullhash}{f4e254443181ebf280c599aa498ed864}
+      \strng{authorfullhashraw}{f4e254443181ebf280c599aa498ed864}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the Design, Automation and Test in Europe Conference (DATE)}
+      \field{title}{{Automated Generation of Directed Tests for Transition Coverage in Cache Coherence Protocols}}
+      \field{year}{2012}
+      \verb{urlraw}
+      \verb https://www.cise.ufl.edu/research/cad/Publications/date12.pdf
+      \endverb
+      \verb{url}
+      \verb https://www.cise.ufl.edu/research/cad/Publications/date12.pdf
+      \endverb
+    \endentry
+    \entry{redis_cachecoherence}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=e111446745a1825b862f8727ae63bce4}{%
+           family={{Redis}},
+           familyi={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{e111446745a1825b862f8727ae63bce4}
+      \strng{fullhash}{e111446745a1825b862f8727ae63bce4}
+      \strng{fullhashraw}{e111446745a1825b862f8727ae63bce4}
+      \strng{bibnamehash}{e111446745a1825b862f8727ae63bce4}
+      \strng{authorbibnamehash}{e111446745a1825b862f8727ae63bce4}
+      \strng{authornamehash}{e111446745a1825b862f8727ae63bce4}
+      \strng{authorfullhash}{e111446745a1825b862f8727ae63bce4}
+      \strng{authorfullhashraw}{e111446745a1825b862f8727ae63bce4}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{Understanding Cache Coherence in Systems}}
+      \verb{urlraw}
+      \verb https://redis.io/glossary/cache-coherence/
+      \endverb
+      \verb{url}
+      \verb https://redis.io/glossary/cache-coherence/
+      \endverb
+    \endentry
+    \entry{augonnet2010starpu_saahpc}{misc}{}{}
+      \name{author}{4}{}{%
+        {{hash=736f79b70cf6488db7dfa8e71456f718}{%
+           family={Augonnet},
+           familyi={A\bibinitperiod},
+           given={Cédric},
+           giveni={C\bibinitperiod}}}%
+        {{hash=301412a2bd543a51857df803efd6d225}{%
+           family={Furmento},
+           familyi={F\bibinitperiod},
+           given={Nathalie},
+           giveni={N\bibinitperiod}}}%
+        {{hash=2a6cddc12d90996f2d082705aab80d36}{%
+           family={Thibault},
+           familyi={T\bibinitperiod},
+           given={Samuel},
+           giveni={S\bibinitperiod}}}%
+        {{hash=4acb86ced09c0de0a698930a3ac8ed1a}{%
+           family={Namyst},
+           familyi={N\bibinitperiod},
+           given={Raymond},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{b8f74ceca10299b898b8f8bc125acf89}
+      \strng{fullhash}{3e48ca3931d78225b06d853cd6967471}
+      \strng{fullhashraw}{3e48ca3931d78225b06d853cd6967471}
+      \strng{bibnamehash}{b8f74ceca10299b898b8f8bc125acf89}
+      \strng{authorbibnamehash}{b8f74ceca10299b898b8f8bc125acf89}
+      \strng{authornamehash}{b8f74ceca10299b898b8f8bc125acf89}
+      \strng{authorfullhash}{3e48ca3931d78225b06d853cd6967471}
+      \strng{authorfullhashraw}{3e48ca3931d78225b06d853cd6967471}
+      \field{extraname}{3}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{Tutorial at Symposium on Application Accelerators in High-Performance Computing (SAAHPC 2010), Knoxville, USA}
+      \field{title}{{Getting Started with StarPU}}
+      \field{year}{2010}
+      \verb{urlraw}
+      \verb https://starpu.gitlabpages.inria.fr/tutorials/2010-07-SAAHPC/saahpc.pdf
+      \endverb
+      \verb{url}
+      \verb https://starpu.gitlabpages.inria.fr/tutorials/2010-07-SAAHPC/saahpc.pdf
+      \endverb
+    \endentry
+    \entry{ibm_torcpy}{software}{}{}
+      \name{author}{1}{}{%
+        {{hash=cbf44511d041dc6d1dd73cc0c033122c}{%
+           family={{IBM}},
+           familyi={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{cbf44511d041dc6d1dd73cc0c033122c}
+      \strng{fullhash}{cbf44511d041dc6d1dd73cc0c033122c}
+      \strng{fullhashraw}{cbf44511d041dc6d1dd73cc0c033122c}
+      \strng{bibnamehash}{cbf44511d041dc6d1dd73cc0c033122c}
+      \strng{authorbibnamehash}{cbf44511d041dc6d1dd73cc0c033122c}
+      \strng{authornamehash}{cbf44511d041dc6d1dd73cc0c033122c}
+      \strng{authorfullhash}{cbf44511d041dc6d1dd73cc0c033122c}
+      \strng{authorfullhashraw}{cbf44511d041dc6d1dd73cc0c033122c}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{GitHub Repository}
+      \field{title}{{torc\_py: A Platform-Agnostic Adaptive Load Balancing Library for Task Parallelism}}
+      \verb{urlraw}
+      \verb https://github.com/ibm/torc_py
+      \endverb
+      \verb{url}
+      \verb https://github.com/ibm/torc_py
+      \endverb
+    \endentry
+    \entry{HansenGECCO2014}{inproceedings}{}{}
+      \name{author}{1}{}{%
+        {{hash=71bc70e7c119a2151bf105823920cf83}{%
+           family={Hansen},
+           familyi={H\bibinitperiod},
+           given={Nikolaus},
+           giveni={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{71bc70e7c119a2151bf105823920cf83}
+      \strng{fullhash}{71bc70e7c119a2151bf105823920cf83}
+      \strng{fullhashraw}{71bc70e7c119a2151bf105823920cf83}
+      \strng{bibnamehash}{71bc70e7c119a2151bf105823920cf83}
+      \strng{authorbibnamehash}{71bc70e7c119a2151bf105823920cf83}
+      \strng{authornamehash}{71bc70e7c119a2151bf105823920cf83}
+      \strng{authorfullhash}{71bc70e7c119a2151bf105823920cf83}
+      \strng{authorfullhashraw}{71bc70e7c119a2151bf105823920cf83}
+      \field{extraname}{1}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of GECCO 2014 (Tutorial)}
+      \field{title}{Tutorial: Evolution Strategies and {CMA-ES} (Covariance Matrix Adaptation)}
+      \field{year}{2014}
+      \verb{urlraw}
+      \verb http://www.cmap.polytechnique.fr/~nikolaus.hansen/gecco2014-CMA-ES-tutorial.pdf
+      \endverb
+      \verb{url}
+      \verb http://www.cmap.polytechnique.fr/~nikolaus.hansen/gecco2014-CMA-ES-tutorial.pdf
+      \endverb
+    \endentry
+    \entry{Hansen2016}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=71bc70e7c119a2151bf105823920cf83}{%
+           family={Hansen},
+           familyi={H\bibinitperiod},
+           given={Nikolaus},
+           giveni={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{71bc70e7c119a2151bf105823920cf83}
+      \strng{fullhash}{71bc70e7c119a2151bf105823920cf83}
+      \strng{fullhashraw}{71bc70e7c119a2151bf105823920cf83}
+      \strng{bibnamehash}{71bc70e7c119a2151bf105823920cf83}
+      \strng{authorbibnamehash}{71bc70e7c119a2151bf105823920cf83}
+      \strng{authornamehash}{71bc70e7c119a2151bf105823920cf83}
+      \strng{authorfullhash}{71bc70e7c119a2151bf105823920cf83}
+      \strng{authorfullhashraw}{71bc70e7c119a2151bf105823920cf83}
+      \field{extraname}{2}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprinttype}{arXiv}
+      \field{title}{The {CMA} Evolution Strategy: A Tutorial}
+      \field{year}{2016}
+      \verb{eprint}
+      \verb 1604.00772
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/1604.00772
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/1604.00772
+      \endverb
+    \endentry
+    \entry{HansenCopenhagen}{report}{}{}
+      \name{author}{1}{}{%
+        {{hash=71bc70e7c119a2151bf105823920cf83}{%
+           family={Hansen},
+           familyi={H\bibinitperiod},
+           given={Nikolaus},
+           giveni={N\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {CMAP, École Polytechnique}%
+      }
+      \strng{namehash}{71bc70e7c119a2151bf105823920cf83}
+      \strng{fullhash}{71bc70e7c119a2151bf105823920cf83}
+      \strng{fullhashraw}{71bc70e7c119a2151bf105823920cf83}
+      \strng{bibnamehash}{71bc70e7c119a2151bf105823920cf83}
+      \strng{authorbibnamehash}{71bc70e7c119a2151bf105823920cf83}
+      \strng{authornamehash}{71bc70e7c119a2151bf105823920cf83}
+      \strng{authorfullhash}{71bc70e7c119a2151bf105823920cf83}
+      \strng{authorfullhashraw}{71bc70e7c119a2151bf105823920cf83}
+      \field{extraname}{3}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Covariance Matrix Adaptation Evolution Strategy ({CMA-ES})}
+      \field{type}{techreport}
+      \verb{urlraw}
+      \verb http://www.cmap.polytechnique.fr/~nikolaus.hansen/copenhagen-cma-es.pdf
+      \endverb
+      \verb{url}
+      \verb http://www.cmap.polytechnique.fr/~nikolaus.hansen/copenhagen-cma-es.pdf
+      \endverb
+    \endentry
+    \entry{WikiCMAES}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=b6aea1a416c89509a7df1cbb69249cb6}{%
+           family={{Wikipedia contributors}},
+           familyi={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{fullhash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{fullhashraw}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{bibnamehash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{authorbibnamehash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{authornamehash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{authorfullhash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{authorfullhashraw}{b6aea1a416c89509a7df1cbb69249cb6}
+      \field{extraname}{1}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{CMA-ES}}
+      \field{year}{2025}
+      \verb{urlraw}
+      \verb https://en.wikipedia.org/wiki/CMA-ES
+      \endverb
+      \verb{url}
+      \verb https://en.wikipedia.org/wiki/CMA-ES
+      \endverb
+    \endentry
+    \entry{HansenPDF2016}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=71bc70e7c119a2151bf105823920cf83}{%
+           family={Hansen},
+           familyi={H\bibinitperiod},
+           given={Nikolaus},
+           giveni={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{71bc70e7c119a2151bf105823920cf83}
+      \strng{fullhash}{71bc70e7c119a2151bf105823920cf83}
+      \strng{fullhashraw}{71bc70e7c119a2151bf105823920cf83}
+      \strng{bibnamehash}{71bc70e7c119a2151bf105823920cf83}
+      \strng{authorbibnamehash}{71bc70e7c119a2151bf105823920cf83}
+      \strng{authornamehash}{71bc70e7c119a2151bf105823920cf83}
+      \strng{authorfullhash}{71bc70e7c119a2151bf105823920cf83}
+      \strng{authorfullhashraw}{71bc70e7c119a2151bf105823920cf83}
+      \field{extraname}{4}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{The {CMA} Evolution Strategy: A Tutorial}
+      \field{year}{2016}
+      \verb{urlraw}
+      \verb https://arxiv.org/pdf/1604.00772
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/pdf/1604.00772
+      \endverb
+    \endentry
+    \entry{appcode}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=b0f6a856ff7799c58873ba85d9733475}{%
+           family={Tsavos},
+           familyi={T\bibinitperiod},
+           given={George},
+           giveni={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{b0f6a856ff7799c58873ba85d9733475}
+      \strng{fullhash}{b0f6a856ff7799c58873ba85d9733475}
+      \strng{fullhashraw}{b0f6a856ff7799c58873ba85d9733475}
+      \strng{bibnamehash}{b0f6a856ff7799c58873ba85d9733475}
+      \strng{authorbibnamehash}{b0f6a856ff7799c58873ba85d9733475}
+      \strng{authornamehash}{b0f6a856ff7799c58873ba85d9733475}
+      \strng{authorfullhash}{b0f6a856ff7799c58873ba85d9733475}
+      \strng{authorfullhashraw}{b0f6a856ff7799c58873ba85d9733475}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Unpublished software, University of Patras diploma thesis}
+      \field{title}{Benchmark Application Source Code (\texttt{app00}--\texttt{app02}, StarPU / torcpy implementations)}
+      \field{year}{2026}
+      \verb{urlraw}
+      \verb https://github.com/GeorgeTsav/Comparative-Analysis-and-Experimental-Evaluation-of-Task-Based-Parallel-Programming-Systems
+      \endverb
+      \verb{url}
+      \verb https://github.com/GeorgeTsav/Comparative-Analysis-and-Experimental-Evaluation-of-Task-Based-Parallel-Programming-Systems
+      \endverb
+    \endentry
+    \entry{WikiGabor}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=b6aea1a416c89509a7df1cbb69249cb6}{%
+           family={{Wikipedia contributors}},
+           familyi={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{fullhash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{fullhashraw}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{bibnamehash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{authorbibnamehash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{authornamehash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{authorfullhash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{authorfullhashraw}{b6aea1a416c89509a7df1cbb69249cb6}
+      \field{extraname}{2}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Gabor filter}
+      \field{year}{2025}
+      \verb{urlraw}
+      \verb https://en.wikipedia.org/wiki/Gabor_filter
+      \endverb
+      \verb{url}
+      \verb https://en.wikipedia.org/wiki/Gabor_filter
+      \endverb
+    \endentry
+    \entry{GaborMDPI}{article}{}{}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Electronics}
+      \field{number}{7}
+      \field{title}{Design of a {Gabor} Filter-Based Image Denoising Hardware Model}
+      \field{volume}{11}
+      \field{year}{2022}
+      \field{pages}{1063}
+      \range{pages}{1}
+      \verb{urlraw}
+      \verb https://www.mdpi.com/2079-9292/11/7/1063
+      \endverb
+      \verb{url}
+      \verb https://www.mdpi.com/2079-9292/11/7/1063
+      \endverb
+    \endentry
+    \entry{Baeldung}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=d58b26d9f7600672080ebf3851115e45}{%
+           family={{Baeldung}},
+           familyi={B\bibinitperiod}}}%
+      }
+      \strng{namehash}{d58b26d9f7600672080ebf3851115e45}
+      \strng{fullhash}{d58b26d9f7600672080ebf3851115e45}
+      \strng{fullhashraw}{d58b26d9f7600672080ebf3851115e45}
+      \strng{bibnamehash}{d58b26d9f7600672080ebf3851115e45}
+      \strng{authorbibnamehash}{d58b26d9f7600672080ebf3851115e45}
+      \strng{authornamehash}{d58b26d9f7600672080ebf3851115e45}
+      \strng{authorfullhash}{d58b26d9f7600672080ebf3851115e45}
+      \strng{authorfullhashraw}{d58b26d9f7600672080ebf3851115e45}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{How to Use {Gabor} Filters to Generate Features for Machine Learning}
+      \field{year}{2024}
+      \verb{urlraw}
+      \verb https://www.baeldung.com/cs/ml-gabor-filters
+      \endverb
+      \verb{url}
+      \verb https://www.baeldung.com/cs/ml-gabor-filters
+      \endverb
+    \endentry
+    \entry{GoddardMC}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=e1333a91e605a64be09f8a9ded2a6b36}{%
+           family={Goddard},
+           familyi={G\bibinitperiod},
+           given={Mark},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{e1333a91e605a64be09f8a9ded2a6b36}
+      \strng{fullhash}{e1333a91e605a64be09f8a9ded2a6b36}
+      \strng{fullhashraw}{e1333a91e605a64be09f8a9ded2a6b36}
+      \strng{bibnamehash}{e1333a91e605a64be09f8a9ded2a6b36}
+      \strng{authorbibnamehash}{e1333a91e605a64be09f8a9ded2a6b36}
+      \strng{authornamehash}{e1333a91e605a64be09f8a9ded2a6b36}
+      \strng{authorfullhash}{e1333a91e605a64be09f8a9ded2a6b36}
+      \strng{authorfullhashraw}{e1333a91e605a64be09f8a9ded2a6b36}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Monte-{C}arlo Option Pricing --- Correlated Random Sequences}
+      \field{year}{2024}
+      \verb{urlraw}
+      \verb http://www.goddardconsulting.ca/option-pricing-monte-carlo-basket.html
+      \endverb
+      \verb{url}
+      \verb http://www.goddardconsulting.ca/option-pricing-monte-carlo-basket.html
+      \endverb
+    \endentry
+    \entry{GilesMC}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=d88c4457088e4172d40ac265ff830068}{%
+           family={Giles},
+           familyi={G\bibinitperiod},
+           given={Mike\bibnamedelima B.},
+           giveni={M\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+      }
+      \strng{namehash}{d88c4457088e4172d40ac265ff830068}
+      \strng{fullhash}{d88c4457088e4172d40ac265ff830068}
+      \strng{fullhashraw}{d88c4457088e4172d40ac265ff830068}
+      \strng{bibnamehash}{d88c4457088e4172d40ac265ff830068}
+      \strng{authorbibnamehash}{d88c4457088e4172d40ac265ff830068}
+      \strng{authornamehash}{d88c4457088e4172d40ac265ff830068}
+      \strng{authorfullhash}{d88c4457088e4172d40ac265ff830068}
+      \strng{authorfullhashraw}{d88c4457088e4172d40ac265ff830068}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Monte {C}arlo Methods: {G}eometric {B}rownian Motion, Correlated {B}rownian Motions}
+      \field{year}{2013}
+      \verb{urlraw}
+      \verb https://people.maths.ox.ac.uk/gilesm/mc/nanjing/giles_lecs-2x2.pdf
+      \endverb
+      \verb{url}
+      \verb https://people.maths.ox.ac.uk/gilesm/mc/nanjing/giles_lecs-2x2.pdf
+      \endverb
+    \endentry
+    \entry{AtlantisMC}{inproceedings}{}{}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Atlantis Press}
+      \field{title}{A {Monte Carlo} Simulation Scheme for Basket Options with Barriers}
+      \field{year}{2016}
+      \verb{urlraw}
+      \verb https://www.atlantis-press.com/article/125971590.pdf
+      \endverb
+      \verb{url}
+      \verb https://www.atlantis-press.com/article/125971590.pdf
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

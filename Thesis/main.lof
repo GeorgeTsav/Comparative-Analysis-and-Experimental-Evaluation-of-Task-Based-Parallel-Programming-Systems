@@ -1,0 +1,12 @@
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces \xpg@aux {}{greek}\ignorespaces Βήματα παραλληλοποιήσης ενός αλγορίθμου με εργασίες. (Πηγή: \blx@tocontentsinit {0}\cite {papadakis2012})}}{6}{figure.caption.4}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces \xpg@aux {}{greek}\ignorespaces Αρχιτεκτονική Ομοιόμορφης Πρόσβασης Μνήμης (UMA) ή Συμμετρικής Πολυεπεξεργασίας (SMP). (Πηγή: \blx@tocontentsinit {0}\cite {denneman2016numa})}}{8}{figure.caption.5}%
+\contentsline {figure}{\numberline {2.3}{\ignorespaces \xpg@aux {}{greek}\ignorespaces Αρχιτεκτονική Μη Ομοιόμορφης Πρόσβασης Μνήμης (NUMA). (Πηγή: \blx@tocontentsinit {0}\cite {denneman2016numa})}}{8}{figure.caption.6}%
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {7.1}{\ignorespaces \xpg@aux {}{greek}\ignorespaces Αποτελέσματα Πειραμάτων - Standard (NUMA-oblivious) τρόπος εκτέλεσης.}}{63}{figure.caption.20}%
+\contentsline {figure}{\numberline {7.2}{\ignorespaces \xpg@aux {}{greek}\ignorespaces Παράμετρος Παραλληλικής Αποδοτικότητας (Parallel Efficiency) για κάθε εφαρμογή και για κάθε αριθμό νήματων εργασίας.}}{64}{figure.caption.21}%

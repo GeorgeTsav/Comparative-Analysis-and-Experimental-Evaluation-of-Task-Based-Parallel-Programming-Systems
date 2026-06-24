@@ -38,6 +38,8 @@ except ImportError:
 
 
 def source_locations(k):
+    """Returns the first k fixed source point locations in domain [0,1]^2.
+    Used as centers for Gaussian basis functions in PDE RHS."""
     pts = np.array([
         [0.20, 0.20],
         [0.20, 0.80],
@@ -52,11 +54,15 @@ def source_locations(k):
 
 
 def sensor_locations(m, rng):
+    """Generates m random sensor measurement locations uniformly in [0.05, 0.95]^2.
+    These are observation points where solution values are sampled."""
     return rng.uniform(0.05, 0.95, size=(m, 2))
 
 
 @njit(nogil=True)
 def build_rhs_numba(theta, src_xy, src_sig, nx, ny):
+    """Builds RHS of Poisson equation as sum of weighted Gaussian basis functions.
+    Evaluates: f(x,y) = sum_k theta_k * exp(-(||p-src_k||^2)/(2*sig^2))"""
     f = np.zeros((ny, nx), dtype=np.float64)
     sig2 = src_sig * src_sig
     inv_x = 1.0 / (nx - 1)
@@ -81,6 +87,8 @@ def build_rhs_numba(theta, src_xy, src_sig, nx, ny):
 
 @njit(nogil=True)
 def solve_poisson_numba(theta, src_xy, src_sig, nx, ny, max_iter, tol, use_tol):
+    """Solves Laplace equation -Delta(u) = f using Jacobi iteration on regular grid.
+    Returns: (solution array, number of iterations performed)"""
     hx = 1.0 / (nx - 1)
     hy = 1.0 / (ny - 1)
     hx2 = hx * hx
@@ -121,6 +129,8 @@ def solve_poisson_numba(theta, src_xy, src_sig, nx, ny, max_iter, tol, use_tol):
 
 @njit(nogil=True)
 def sample_sensors_numba(u, sens_xy, nx, ny):
+    """Samples solution values u at sensor locations via nearest-neighbor interpolation.
+    Returns: 1D array of solution values at each sensor location."""
     vals = np.zeros((sens_xy.shape[0],), dtype=np.float64)
     x_scale = nx - 1
     y_scale = ny - 1
@@ -149,6 +159,7 @@ def sample_sensors_numba(u, sens_xy, nx, ny):
 
 @njit(nogil=True)
 def eval_candidate_numba(theta, src_xy, src_sig, sens_xy, nx, ny, max_iter, tol, use_tol, target_y):
+    """Fitness function for CMA-ES: solves PDE, samples sensors, returns MSE + L2 regularization."""
     u, _ = solve_poisson_numba(theta, src_xy, src_sig, nx, ny, max_iter, tol, use_tol)
     y = sample_sensors_numba(u, sens_xy, nx, ny)
 
@@ -167,11 +178,13 @@ def eval_candidate_numba(theta, src_xy, src_sig, sens_xy, nx, ny, max_iter, tol,
 
 
 def build_rhs(theta, pde):
+    """Wrapper for build_rhs_numba: unpacks PDE config dict."""
     theta = np.ascontiguousarray(theta, dtype=np.float64)
     return build_rhs_numba(theta, pde["src_xy"], pde["src_sig"], pde["nx"], pde["ny"])
 
 
 def solve_poisson_from_theta(theta, pde):
+    """Wrapper for solve_poisson_numba: unpacks PDE config and returns (solution, iterations)."""
     theta = np.ascontiguousarray(theta, dtype=np.float64)
     return solve_poisson_numba(
         theta,
@@ -186,10 +199,12 @@ def solve_poisson_from_theta(theta, pde):
 
 
 def sample_sensors(u, pde):
+    """Wrapper for sample_sensors_numba: unpacks PDE config for sensor coordinates."""
     return sample_sensors_numba(u, pde["sens_xy"], pde["nx"], pde["ny"])
 
 
 def eval_candidate(theta, pde, target_y):
+    """Wrapper for eval_candidate_numba: called by StarPU task submission for fitness evaluation."""
     theta = np.ascontiguousarray(theta, dtype=np.float64)
     target_y = np.ascontiguousarray(target_y, dtype=np.float64)
     return float(
@@ -209,10 +224,13 @@ def eval_candidate(theta, pde, target_y):
 
 
 def rmse(a, b):
+    """Computes root mean square error between two arrays."""
     return float(np.sqrt(np.mean((a - b) ** 2)))
 
 
 async def main():
+    """Main async driver for CMA-ES + PDE inverse problem using StarPU.
+    Uses async task submission with starpu.task_submit() for distributed evaluation."""
     parser = argparse.ArgumentParser(description="CMA-ES PDE StarPU")
     parser.add_argument("--nx", type=int, default=128)
     parser.add_argument("--ny", type=int, default=128)

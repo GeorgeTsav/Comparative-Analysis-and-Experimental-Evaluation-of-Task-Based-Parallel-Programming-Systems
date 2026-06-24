@@ -1,0 +1,130 @@
+\ProvidesPackage{upatras-thesis}
+
+% Remove lipsum package when you start writing your own thesis
+% \usepackage{lipsum}
+\usepackage{datetime}
+\usepackage{wrapfig}
+\usepackage{enumerate}
+\usepackage{float}
+\usepackage{graphicx}
+\usepackage{caption}
+\captionsetup{labelfont=bf}
+\usepackage[acronym]{glossaries}
+\usepackage{glossaries-polyglossia}
+\usepackage[nottoc]{tocbibind}
+\usepackage{tocloft}
+\usepackage{siunitx}
+\usepackage{subcaption}
+\usepackage{geometry}
+\usepackage{fancyhdr}
+% \usepackage{cite}
+\usepackage{subfiles}
+\usepackage{amsmath}
+\usepackage{array,tabularx}
+\usepackage{chngcntr}
+\usepackage{afterpage}
+\usepackage[normalem]{ulem}
+\usepackage{polyglossia}
+\usepackage{fontspec}
+\usepackage{setspace} % Added for one-half line spacing style
+\usepackage{hyperref}
+\usepackage[
+    backend=biber,
+    style=numeric,
+    sorting=none,
+]{biblatex}
+\appto{\bibsetup}{\sloppy}
+\usepackage{microtype}
+\usepackage{perpage}
+\MakePerPage{footnote}
+\usepackage{xurl}
+\usepackage{tabularx}
+\usepackage{xltabular}
+\usepackage{multirow}
+\usepackage{minted}
+\usepackage{amssymb}
+
+\setlength{\parindent}{2em}
+\onehalfspacing % Activates the 1.5 line spacing style seen in the PDF
+
+\geometry{
+	a4paper,
+	left=30mm,
+	right=30mm,
+	top=30mm,
+	bottom=30mm,
+  headheight=30pt
+}
+
+% PDF language settings
+\setmainlanguage{greek}
+\setotherlanguage[variant=british]{english}
+\setmainfont{Times New Roman}
+\newfontfamily\greekfont{Times New Roman}
+\newfontfamily\greekfonttt{DejaVu Sans Mono}
+\newfontfamily\englishfont{Times New Roman}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=black,
+  filecolor=black,
+  urlcolor=blue,
+  citecolor=black,
+}
+
+%*******************************%
+%					FANCY HDR							%
+%*******************************%
+\pagestyle{fancy}
+\newcommand{\creator}{Georgios Tsavos}
+\renewcommand{\chaptermark}[1]{\markboth{\thechapter.\ #1}{}}
+\renewcommand{\sectionmark}[1]{\markright{\thesection.\ #1}{}}
+
+\fancyhf{}
+\fancyhead[L]{\slshape\parbox[t]{0.45\textwidth}{\leftmark}}
+\fancyhead[R]{\slshape\parbox[t]{0.45\textwidth}{\raggedleft\rightmark}}
+\fancyfoot[C]{\thepage} % Clean bottom-center page numbering matching the PDF
+
+\newtheorem{theorem}{Θεώρημα}[section]
+
+\newdateformat{monthyeardate}{%
+  \monthname[\THEMONTH], \THEYEAR}
+
+\graphicspath{{images/}}
+
+% Table of contents formatting with dots
+\renewcommand{\cftchapleader}{\cftdotfill{\cftdotsep}}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\renewcommand{\cftsubsecleader}{\cftdotfill{\cftdotsep}}
+
+\newcommand{\clearemptydoublepage}{\clearpage}
+
+\newenvironment{conditions}
+  {\par\vspace{\abovedisplayskip}\noindent\begin{tabular}{>{$}l<{$} @{${}={}$} l}}
+  {\end{tabular}\par\vspace{\belowdisplayskip}}
+
+%*******************************%
+%					CHAPTER FORMAT				%
+%*******************************%
+\makeatletter
+
+\def\@makechapterhead#1{%
+  \vspace*{20\p@}%
+  {\parindent \z@ \raggedright \normalfont
+    \ifnum \c@secnumdepth >\m@ne
+        \Large\bfseries \textgreek{Κεφάλαιο} \thechapter\par\nobreak
+        \vskip 10\p@
+    \fi
+    \interlinepenalty\@M
+    \Huge \bfseries #1\par\nobreak
+    \vskip 30\p@
+  }}
+
+\def\@makeschapterhead#1{%
+  \vspace*{40\p@}%
+  {\parindent \z@ \raggedright \normalfont
+    \interlinepenalty\@M
+    \Huge \bfseries #1\par\nobreak
+    \vskip 30\p@
+  }}
+\makeatother

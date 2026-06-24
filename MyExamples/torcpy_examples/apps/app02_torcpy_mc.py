@@ -23,6 +23,8 @@ import torcpy as torc
 
 
 def make_spd_corr(n, alpha, rng):
+    """Creates random symmetric positive definite correlation matrix.
+    Blends identity (uncorrelated) with random correlation."""
     a = rng.standard_normal((n, n))
     g = a @ a.T
     d = np.sqrt(np.diag(g))
@@ -33,6 +35,8 @@ def make_spd_corr(n, alpha, rng):
 
 
 def mc_batch(payload):
+    """Task wrapper for torcpy.map(): unpacks and runs Monte Carlo batch simulation.
+    Returns: (sum of payoffs, sum of squared payoffs, path count) for stats aggregation."""
     n_paths, seed, cfg, lmat = payload
 
     rng = np.random.default_rng(seed)
@@ -74,8 +78,9 @@ def mc_batch(payload):
 
 
 def main():
+    """Main driver: distributes Monte Carlo batches via torcpy.map() for parallel pricing."""
     parser = argparse.ArgumentParser(description="Heavy Monte Carlo torcpy")
-    parser.add_argument("--paths", type=int, default=200000)
+    parser.add_argument("--paths", type=int, default=3200000)
     parser.add_argument("--batch", type=int, default=50000)
     parser.add_argument("--steps", type=int, default=128)
     parser.add_argument("--assets", type=int, default=16)
@@ -130,8 +135,9 @@ def main():
     print("Framework: torcpy (app02_mc)")
     print(
         f"Payoff mean={mean_payoff:.6g}  stdErr={stderr:.3g}  "
-        f"Elapsed time={elapsed:.3f}s  throughput={n / elapsed:.3g} paths/s"
+        f"throughput={n / elapsed:.3g} paths/s"
     )
+    print(f"Elapsed time={elapsed:.3f}s")
     print("=" * 60)
 
 

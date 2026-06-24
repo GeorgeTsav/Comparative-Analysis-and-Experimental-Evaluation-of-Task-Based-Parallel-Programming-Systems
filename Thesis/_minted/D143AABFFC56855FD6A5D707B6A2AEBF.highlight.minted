@@ -1,0 +1,14 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+    \PYG{k+kn}{import}\PYG{+w}{ }\PYG{n+nn}{time}
+    \PYG{k+kn}{import}\PYG{+w}{ }\PYG{n+nn}{os}
+    \PYG{k+kn}{import}\PYG{+w}{ }\PYG{n+nn}{torcpy}\PYG{+w}{ }\PYG{k}{as}\PYG{+w}{ }\PYG{n+nn}{torc}
+
+    \PYG{k}{def}\PYG{+w}{ }\PYG{n+nf}{busy\PYGZus{}work}\PYG{p}{(}\PYG{n}{seconds}\PYG{p}{):}
+        \PYG{c+c1}{\PYGZsh{} CPU\PYGZhy{}bound busy loop to generate measurable load}
+        \PYG{n}{t0} \PYG{o}{=} \PYG{n}{time}\PYG{o}{.}\PYG{n}{time}\PYG{p}{()}
+        \PYG{n}{x} \PYG{o}{=} \PYG{l+m+mi}{1}
+        \PYG{k}{while} \PYG{n}{time}\PYG{o}{.}\PYG{n}{time}\PYG{p}{()} \PYG{o}{\PYGZhy{}} \PYG{n}{t0} \PYG{o}{\PYGZlt{}} \PYG{n}{seconds}\PYG{p}{:}
+            \PYG{c+c1}{\PYGZsh{} cheap integer ops to keep CPU busy}
+            \PYG{n}{x} \PYG{o}{=} \PYG{p}{((}\PYG{n}{x} \PYG{o}{\PYGZlt{}\PYGZlt{}} \PYG{l+m+mi}{1}\PYG{p}{)} \PYG{o}{\PYGZca{}} \PYG{p}{(}\PYG{n}{x} \PYG{o}{\PYGZgt{}\PYGZgt{}} \PYG{l+m+mi}{3}\PYG{p}{))} \PYG{o}{\PYGZam{}} \PYG{l+m+mh}{0xFFFFFFFF}
+        \PYG{k}{return} \PYG{n}{x}
+\end{MintedVerbatim}

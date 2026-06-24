@@ -1,0 +1,272 @@
+%!TEX root = ../main.tex
+
+\chapter{Η Διεπαφή StarPUPy}
+
+\section{Τι είναι το StarPUPy}
+
+Το \textbf{StarPUPy} είναι μια διεπαφή προγραμματισμού στην γλώσσα υψηλού επιπέδου \textbf{Python} και μεταφέρει τις δυνατότητες του StarPU σε ένα φιλικό προς τον χρήστη περιβάλλον. Στόχος του είναι να επιτρέψει στους προγραμματιστές να εκμεταλλευτούν τις δυνατότητες του StarPU σε συνδαυασμό με την ευκολία, την απλότητα και το πλούσιο οικοσύστημα της Python.
+
+Ως επί το πλείστον, λειτουργεί ως ένα wrapper γύρω από τις βασικές λειτουργίες του StarPU στην χαμηλού επιπέδου γλώσσα προγραμματισμού \textbf{C}, επιτρέποντας στους επιστήμονες δεδομένων που χρησιμοποιούν αποκλειστικά Python να αξιοποιήσουν τη δύναμη του ετερογενούς χρονοπρογραμματισμού του C backend, διευκολύνοντας την ενσωμάτωση με βιβλιοθήκες όπως το \texttt{NumPy} και το \texttt{SciPy}, οι οποίες κυριαρχούν στην έρευνα \cite{starpu2025handbook}.
+
+\section{Ασύγχρονη Υποβολή Εργασιών και Διαχείριση Αντικειμένων Future}
+
+Η υποβολή εργασιών στο StarPUPy βασίζεται στη χρήση της συνάρτησης task\_submit\linebreak(options)(func, *args, **kwargs). Η κλίση αυτής της συνάρτησης δεν εκτελείται άμεσα, αλλά επιστρέφει ένα αντικείμενο Future της βιβλιοθήκης \texttt{asyncio} της Python. Τα αντικέιμενα Future αποτελούν awaitable οντότητες που αντιπροσωπεύουν την μελλοντική ολοκλήρωση μιας ασύγχρονης εργασίας. Αυτό επιτρέπει στους προγραμματιστές να υποβάλλουν εργασίες και να περιμένουν τα αποτλέσσσματα από αυτές χωρίς να μπλοκάρατε το βασικό νήμα (main thread) εκτέλεσης \cite{starpu2025handbook}.
+
+Στον Πίνακα \ref{tab:starpu_task_submit} παρουσιάζονται τα βασικά στοιχεία της συνάρτησης task\_submit και των παραμέτρων της \cite{starpu2025handbook}:
+
+\begin{table}[H]
+    \centering
+    \begin{tabularx}{\textwidth}{|p{2.2cm}|p{2.2cm}|p{2.2cm}|X|}
+        \hline
+        \textbf{Επιλογή (Option) } & 
+        \textbf{Τύπος Δεδομένων } & 
+        \textbf{Προεπιλεγμένη Τιμή Χρήσης} & 
+        \textbf{Λειτουργική Επίδραση }\\
+        \hline
+        name &
+        string &
+        None &
+        Ορισμός αναγνωριστικού ονόματος της εργασίας για χρήση σε εργαλεία αποσφαλμάτωσης.\\
+        \hline
+        synchronous & 
+        unsigned & 
+        0 & 
+        Εάν οριστεί σε 1, η υποβολή μπλοκάρει την εκτέλεση μέχρι την ολοκλήρωση της εργασίας.\\
+        \hline
+        priority & 
+        int & 
+        0 &
+        Καθορίζει το επίπεδο προτεραιότητας της εργασίας εντός του εύρους τιμών των sched\_get\_min\_pri- \linebreak ority() και sched\_get\_max\_pri- \linebreak ority().\\
+        \hline
+        color & 
+        unsigned & 
+        None &
+        Ορισμός χρώματος της εργασίας για την οπτικοποίηση του γραφήματος εξαρτήσεων (DAG) στο εργαλείο dag.dot.\\
+        \hline
+        flops & 
+        double & 
+        None &
+        Δηλώνει το υπολογιστικό μέγεθος σε πράξεις κινητής υποδιαστολής για τη δημιουργία καμπυλών απόδοσης.\\
+        \hline
+        perfmodel & 
+        string & 
+        None &
+        Καθορίζει το όνομα του μοντέλου επίδοσης για την ιστορική βαθμονομημένη χρονοδρομολόγηση.\\
+        \hline
+    \end{tabularx}
+    \caption{Επιλογές για την συνάρτηση task\_submit του StarPUPy}
+    \label{tab:starpu_task_submit}
+\end{table}
+
+Η Python 3.8+ υποστηρίζει την εκτέλεση με την παράμετρο \texttt{-m asyncio}, η οποία επιτρέπει την άμεση χρήση της εντολής await στο διαδραστικό περιβάλλον (REPL \footnote{Το \textbf{REPL (Read-Eval-Print Loop)} είναι ένα διαδραστικό περιβάλλον προγραμματισμού όπου εισάγετε μια εντολή (Read), ο υπολογιστής την εκτελεί άμεσα (Eval) και εμφανίζει το αποτέλεσμα (Print), επαναλαμβάνοντας τη διαδικασία (Loop) για την επόμενη εντολή.}). Επιπλέον, παρέχεται ο διακοσμητής \texttt{@starpu.delayed}, ο οποίος μετατρέπει μια τυπική συνάρτηση σε ασύγχρονη εργασία StarPU, δεχόμενος τις ίδιες παραμέτρους χρονοδρομολόγησης \cite{starpu2025handbook}. 
+
+\section{Διαχείριση Μνήμης και Πρωτόκολλο Buffer}
+
+Ένα από τα σημαντικότερα χαρακτηριστικά του StarPUPy είναι η ενσωμάτωση του 
+πρωτοκόλλου buffer (buffer protocol) της Python. Το πρωτόκολλο αυτό επιτρέπει στο 
+StarPUPy να αποκτά άμεση πρόσβαση στα ακατέργαστα byte arrays αντικειμένων, όπως οι 
+πίνακες \texttt{NumPy}, χωρίς την ανάγκη αντιγραφής ή σειριοποίησης.
+
+Το σύστημα διατήρησης της συνοχής μνήμης του StarPU απαιτεί τη δήλωση του τρόπου 
+πρόσβασης σε κάθε μεταβλητή. Αυτό επιτυγχάνεται με τη χρήση του διακοσμητή 
+\texttt{@starpu.access}: 
+
+\begin{itemize}
+    \item \textbf{R (Read)}: Ανάγνωση δεδομένων (προεπιλογή).
+    \item \textbf{W (Write)}: Αποκλειστική εγγραφή δεδομένων.
+    \item \textbf{RW (Read-Write)}: Ανάγνωση και τροποποίηση των δεδομένων.
+\end{itemize}
+
+Όταν ένα αντικείμενο υποβάλλεται σε μια εργασία με δικαιώματα εγγραφής (W ή RW), η 
+εφαρμογή Python δεν μπορεί να προσπελάσει τις τιμές του άμεσα, καθώς αυτές ενδέχεται 
+να βρίσκονται σε μια διακριτή μνήμη PU. Για την προσπέλαση εκτός των εργασιών StarPU, 
+χρησιμοποιείται το σχήμα Acquire/Release. Εάν η εφαρμογή επιχειρήσει να καταχωρίσει το ίδιο μεταβαλλόμενο (mutable) αντικείμενο Python περισσότερες από μία φορές στο σύστημα διαχείρισης δεδομένων, το StarPUPy εγείρει μια ρητή εξαίρεση ασφαλείας, "\emph{starpupy.error: Should not register the same mutable python object once more.}" \cite{starpu2025handbook}. 
+
+Επιπλέον, οι πίνακες \texttt{NumPy} πολλών διαστάσεων μπορούν να υποστούν κατάτμηση σε Segment Chunks για παράλληλη επεξεργασία μέσω της μεθόδου Handle::partition(nchil-\linebreak dren, dim, chunks\_list). Η φυσική διεύθυνση μνήμης και το μέγεθος σε byte για κάθε υπο-πίνακα υπολογίζονται αυτόματα από το StarPUPy.Μετά την ολοκλήρωση των παράλληλων υπολογισμών στα sub-handles, η κλήση της Handle::unpartition(handle\_list, nchildren) ενσωματώνει τα αποτελέσματα στον αρχικό πίνακα, διασφαλίζοντας τη συνοχή των δεδομένων στην κύρια μνήμη RAM \cite{starpu2025handbook}.
+
+Τέλος, το StarPUPy υποστηρίζει την χρήση data handles όπως και το StarPU C API, επιτρέποντας την εγγραφή σε δεδομένα που βρίσκονται σε διακριτή μνήμη PU. Αυτό επιτυγχάνεται με τη χρήση της κλάσης \texttt{Handle} \footnote{Η κλάση \textbf{Handle} είναι μέρος του module \texttt{starpu}.} και την δημιουργία ενός αντικειμένου πάνω στα επιθυμητά δεδομένα. Μετά την εγγραφή, το αντικείμενο μπορεί να χρησιμοποιηθεί σε εργασίες StarPU με τα κατάλληλα δικαιώματα πρόσβασης \cite{starpu2025handbook}.
+
+\section{Παραλληλία και Αντιμετώπιση του GIL}
+
+Η επίτευξη πραγματικής παραλληλίας σε περιβάλλον Python περιορίζεται παραδοσιακά 
+από το \textbf{Global Interpreter Lock (GIL)}, το οποίο επιβάλλει τη σειριακή εκτέλεση του πηγαίου κώδικα Python. Το StarPUPy αντιμετωπίζει αυτή την πρόκληση μέσω διάφορων 
+στρατηγικών \cite{starpu2025handbook}:
+
+\begin{itemize}
+    \item \textbf{Αποδέσμευση GIL μέσω C-APIs:} Κατά την κλήση εξωτερικών βιβλιοθηκών (π.χ. πράξεις γραμμικής άλγεβρας του \texttt{NumPy} που βασίζονται σε βιβλιοθήκες BLAS), το GIL απελευθερώνεται αυτόματα. Αυτό επιτρέπει στους εργάτες CPU του StarPU να εκτελούν τις εργασίες ταυτόχρονα.
+    \item \textbf{Multi-interpreter (Python 3.12+):} Η νεότερη αρχιτεκτονική της Python επιτρέπει την ύπαρξη ενός ανεξάρτητου GIL ανά διερμηνέα (PEP 0684). Το StarPUPy υποστηρίζει πλήρως αυτή τη λειτουργία μέσω της μεταβλητής STARPUPY\_OWN\_GIL=1, αν και ορισμένες λειτουργίες, όπως τα asyncio futures, παρουσιάζουν περιορισμούς συμβατότητας στην τρέχουσα έκδοση.
+    \item \textbf{MPI - Master-Slave:} Σε περιβάλλοντα με πολλαπλούς κόμβους, το StarPUPy μπορεί να χρησιμοποιήσει το \textbf{Message Passing Interface (MPI)}, που είναι υποστηριζόμενο από το backend στην γλώσσα C, για την επικοινωνία μεταξύ διεργασιών. Σε αυτό το σενάριο, ο κύριος κόμβος (master) διαχειρίζεται την υποβολή εργασιών και τη συλλογή αποτελεσμάτων, ενώ οι δούλοι (slaves) εκτελούν τις εργασίες ανεξάρτητα, παρακάμπτοντας το GIL.
+\end{itemize}
+
+Αν και οι τελευταίες δύο στρατηγικές είναι υποσχόμενες δεν υποστηρίζονται και δεν τεκμηριώνονται πλήρως στην τρέχουσα έκδοση του StarPUPy, και η υποστήριξη για αυτές τις λειτουργίες αναμένεται να βελτιωθεί σε μελλοντικές εκδόσεις.
+
+\section{Παράδειγμα Χρήσης του StarPUPy}
+
+Στην παρακάτω ενότητα παρουσιάζεται ένα απλό παράδειγμα χρήσης του StarPUPy, το οποίο καλύπτει την υποβολή εργασιών και την γενική φιλοσοφία της διεπαφής με βάση ότι έχουμε αναφέρει μέχρι τώρα.
+
+Στο παράδειγμα αυτό δημιουργούνται και υποβάλλονται 8 CPU-bound εργασίες (busy loop) μέσω του StarPUPy. Η εκτέλεση των εργασιών μπορεί να παρακολουθηθεί σε πραγματικό χρόνο με την χρήση του εργαλείου \texttt{htop} σε linux σύστημα, το οποίο εμφανίζει τα νήματα/διεργασίες και τη χρήση της CPU.
+
+Θεωρούμε ότι το StarPUPy έχει εγκατασταθεί σωστά και είναι διαθέσιμο στο περιβάλλον Python. Οδηγίες γι' αυτό μπορείτε να βρείτε εδώ \cite{starpu2025handbook}. 
+
+Αρχικά πρέπει να εισάγουμε το module \texttt{starpu} μαζί με τις απαραίτητες βιβλιοθήκες και να ορίσουμε μια συνάρτηση που θα εκτελεί την CPU-bound εργασία. Παρακάτω φαίνεται το απόσπασμα κώδικα που περιγράφει την διαδικασία αυτή:
+
+\begin{minted}[fontsize=\small, frame=lines]{python}
+    import time
+    import asyncio
+    import os
+    from starpu import starpu
+
+    def busy_work(seconds):
+    # CPU-bound busy loop to generate measurable load
+    t0 = time.time()
+    x = 1
+    while time.time() - t0 < seconds:
+        # cheap integer ops to keep CPU busy
+        x = ((x << 1) ^ (x >> 3)) & 0xFFFFFFFF
+    return x
+\end{minted}
+
+Για την δημιουργία και υποβολή των εργασιών (tasks), που το καθένα θα εκτελεί την παραπάνω συνάρτηση busy\_work(), χρησιμοποιούμε μια ασύγχρονη συνάρτηση, ας την πούμε main(), η οποία πρώτα αρχικοποιεί το StarPUPy περιβάλλον καλώντας την συνάρτηση \texttt{starpu.init()}. Στην συνέχεια μέσα σε ένα βρόχο for δημιουργούνται και υποβάλλονται 8 εργασίες, οι οποίες εκτελούν την συνάρτηση busy\_work() για 8 δευτερόλεπτα η κάθε μία. Αυτό γίνεται με την επανειλημμένη χρήση της συνάρτησης \texttt{starpu.task\_submit()}. Τα αντικείμενα Future που επιστρέφονται από την υποβολή των εργασιών αποθηκεύονται σε μια λίστα futures. Παρακάτω φαίνεται το απόσπασμα κώδικα που περιγράφει την διαδικασία αυτή:
+
+\begin{minted}[fontsize=\small, frame=lines]{python}
+    async def main():
+        try:
+            starpu.init()
+        except Exception as e:
+            print(f"StarPU initialization error: {e}")
+            return
+
+        print(f"PID: {os.getpid()}, ntasks=8, sec=8.0")
+        print("Start submitting tasks...")
+
+        t0 = time.time()
+        futures = []
+        for i in range(8):
+            fut = starpu.task_submit()(busy_work, 8.0)
+            futures.append(fut)
+\end{minted}
+
+Στην συνέχεια, αφού έχουν υποβληθεί όλες οι εργασίες, η main() συνάρτηση περιμένει την ολοκλήρωση τους και συλλέγει τα αποτελέσματα από τα αντικείμενα Future. Αυτό γίνεται με την χρήση ενός δεύτερου βρόχου for, όπου για κάθε αντικείμενο Future καλείται η εντολή \texttt{await fut}, η οποία μπλοκάρει την εκτέλεση μέχρι να ολοκληρωθεί η αντίστοιχη εργασία. Τα αποτελέσματα αποθηκεύονται σε μια λίστα results. Μετά την ολοκλήρωση όλων των εργασιών, εμφανίζονται στην οθόνη ο χρόνος εκτέλεσης και τερματίζεται το περιβάλλον StarPUPy με την κλήση της συνάρτησης \texttt{starpu.shutdown()}. Παρακάτω φαίνεται το απόσπασμα κώδικα που περιγράφει την διαδικασία αυτή:
+
+\begin{minted}[fontsize=\small, frame=lines]{python}
+        # Wait for completion and collect results (force materialization)
+        results = []
+        for fut in futures:
+            res = await fut
+            results.append(res)
+
+        t1 = time.time()
+        elapsed = t1 - t0
+
+        print("=" * 60)
+        print("Framework: StarPU Python (Monitor dummy workload)")
+        print(f"Submitted tasks: 8")
+        print(f"Work per task (s): 8.0")
+        print(f"Elapsed time: {elapsed:.4f} seconds")
+        print("=" * 60)
+
+        starpu.shutdown()
+\end{minted}
+
+Τέλος για την εκτέλεση της main() συνάρτησης χρησιμοποιούμε την εντολή \texttt{asyncio\linebreak.run(main())}, η οποία εκκινεί το ασύγχρονο περιβάλλον και περιμένει την ολοκλήρωση της main() συνάρτησης. Παρακάτω φαίνεται το απόσπασμα κώδικα που περιγράφει την διαδικασία αυτή:
+
+\begin{minted}[fontsize=\small, frame=lines]{python}
+    if __name__ == '__main__':
+        try:
+            asyncio.run(main())
+        except Exception as e:
+            print(f"Error: {e}")
+\end{minted}
+
+\subsection{Αποτελέσματα Εκτέλεσης}
+
+Αν τρέξουμε το παράδειγμα που μόλις περιγράφηκε, με την παρακάτω εντολή τουλάχιστον 8 διαθέσιμους πυρήνες CPU, θα παρατηρήσουμε ότι οι εργασίες εκτελούνται παράλληλα και ο συνολικός χρόνος εκτέλεσης θα είναι περίπου 8 δευτερόλεπτα, αντί για 64 δευτερόλεπτα που θα ήταν η περίπτωση αν οι εργασίες εκτελούνταν σειριακά.
+
+Για να εκτελέσουμε το παράδειγμα, μπορούμε να χρησιμοποιήσουμε την εντολή:
+
+\begin{minted}[fontsize=\small, frame=lines]{bash}
+    python3 ex_monitor_starpupy.py
+\end{minted}
+
+Η έξοδος θα εμφανίσει το PID της διεργασίας, τον αριθμό των εργασιών που υποβλήθηκαν, τον χρόνο εκτέλεσης κάθε εργασίας και τον συνολικό χρόνο εκτέλεσης. Παρακάτω φαίνεται ένα παράδειγμα εξόδου:
+
+\begin{minted}[fontsize=\small, frame=lines]{text}
+    PID: 173923, ntasks=8, sec=8.0
+    Start submitting tasks...
+    ============================================================
+    Framework: StarPU Python (Monitor dummy workload)
+    Submitted tasks: 8
+    Work per task (s): 8.0
+    Elapsed time: 8.2067 seconds
+    ============================================================
+\end{minted}
+
+\subsection{Ολοκληρωμένος Κώδικας Παραδείγματος}
+
+Παρακάτω παρουσιάζεται ο ολοκληρωμένος κώδικας του παραδείγματος χρήσης του StarPUPy, ο οποίος περιλαμβάνει όλα τα προηγούμενα αποσπάσματα κώδικα:
+
+\begin{minted}[fontsize=\footnotesize, frame=lines]{python}
+    """
+    Monitor example for StarPU Python
+    - Submits multiple CPU-bound dummy tasks (busy loop) via StarPU
+    - Use `htop` while it runs to observe threads/processes and CPU usage
+    """
+
+    import time
+    import asyncio
+    import os
+    from starpu import starpu
+
+
+    def busy_work(seconds):
+        # CPU-bound busy loop to generate measurable load
+        t0 = time.time()
+        x = 1
+        while time.time() - t0 < seconds:
+            # cheap integer ops to keep CPU busy
+            x = ((x << 1) ^ (x >> 3)) & 0xFFFFFFFF
+        return x
+
+
+    async def main():
+        try:
+            starpu.init()
+        except Exception as e:
+            print(f"StarPU initialization error: {e}")
+            return
+
+        print(f"PID: {os.getpid()}, ntasks=8, sec=8.0")
+        print("Start submitting tasks...")
+
+
+        t0 = time.time()
+        futures = []
+        for i in range(8):
+            fut = starpu.task_submit()(busy_work, 8.0)
+            futures.append(fut)
+
+        # Wait for completion and collect results (force materialization)
+        results = []
+        for fut in futures:
+            res = await fut
+            results.append(res)
+
+        t1 = time.time()
+        elapsed = t1 - t0
+
+        print("=" * 60)
+        print("Framework: StarPU Python (Monitor dummy workload)")
+        print(f"Submitted tasks: 8")
+        print(f"Work per task (s): 8.0")
+        print(f"Elapsed time: {elapsed:.4f} seconds")
+        print("=" * 60)
+
+        starpu.shutdown()
+
+
+    if __name__ == '__main__':
+        try:
+            asyncio.run(main())
+        except Exception as e:
+            print(f"Error: {e}")
+\end{minted}

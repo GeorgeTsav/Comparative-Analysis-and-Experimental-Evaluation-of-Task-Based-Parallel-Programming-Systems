@@ -35,17 +35,18 @@ def make_spd_corr(n, alpha, rng):
     return c
 
 
-def mc_batch(n_paths, seed, cfg, lmat):
+def mc_batch(n_paths, seed, cfg_arr, lmat):
     """Monte Carlo simulation of correlated asset basket with barrier option.
     Returns: (sum of payoffs, sum of squared payoffs, path count) for statistics aggregation."""
     rng = np.random.default_rng(seed)
 
-    n_assets = cfg["n_assets"]
-    n_steps = cfg["n_steps"]
-    dt = cfg["dt"]
-    r = cfg["r"]
-    sigma = cfg["sigma"]
-    barrier = cfg["barrier"]
+    # Unpack the numpy array into scalars
+    n_steps  = int(cfg_arr[0])
+    n_assets = int(cfg_arr[1])
+    dt       = float(cfg_arr[2])
+    r        = float(cfg_arr[3])
+    sigma    = float(cfg_arr[4])
+    barrier  = float(cfg_arr[5])
 
     s = np.ones((n_assets, n_paths), dtype=np.float64)
     alive = np.ones((n_paths,), dtype=bool)
@@ -79,7 +80,7 @@ def mc_batch(n_paths, seed, cfg, lmat):
 async def main():
     """Main async driver: distributes Monte Carlo batches to StarPU for parallel option pricing."""
     parser = argparse.ArgumentParser(description="Heavy Monte Carlo StarPU")
-    parser.add_argument("--paths", type=int, default=3200000)
+    parser.add_argument("--paths", type=int, default=200000)
     parser.add_argument("--batch", type=int, default=50000)
     parser.add_argument("--steps", type=int, default=128)
     parser.add_argument("--assets", type=int, default=16)
@@ -101,6 +102,16 @@ async def main():
         "barrier": 0.60,
     }
 
+    # Flatten the dictionary into a float64 numpy array for StarPU handles
+    cfg_arr = np.array([
+        cfg["n_steps"], 
+        cfg["n_assets"], 
+        cfg["dt"], 
+        cfg["r"], 
+        cfg["sigma"], 
+        cfg["barrier"]
+    ], dtype=np.float64)
+
     rng = np.random.default_rng(args.seed)
     c = make_spd_corr(cfg["n_assets"], 0.15, rng)
     lmat = np.linalg.cholesky(c)
@@ -118,7 +129,8 @@ async def main():
     for k in range(n_tasks):
         n_this = min(args.batch, args.paths - k * args.batch)
         seed = args.seed + k + 1
-        futures.append(starpu.task_submit()(mc_batch, n_this, seed, cfg, lmat))
+        # Pass cfg_arr instead of cfg
+        futures.append(starpu.task_submit()(mc_batch, n_this, seed, cfg_arr, lmat))
 
     out = [await fut for fut in futures]
 
