@@ -1,22 +1,22 @@
 [0] Config.pm:328> INFO - This is Biber 2.21
 [0] Config.pm:331> INFO - Logfile is 'main.blg'
-[249] biber-MSWIN64:342> INFO - === 
-[345] Biber.pm:421> INFO - Reading 'main.bcf'
-[512] Biber.pm:1002> INFO - Found 34 citekeys in bib section 0
-[529] Biber.pm:4487> INFO - Processing section 0
-[550] Biber.pm:4678> INFO - Looking for bibtex file 'library/bibliography.bib' for section 0
-[612] bibtex.pm:1713> INFO - LaTeX decoding ...
-[658] bibtex.pm:1519> INFO - Found BibTeX data source 'library/bibliography.bib'
-[960] UCollate.pm:68> INFO - Overriding locale 'el-GR' defaults 'variable = shifted' with 'variable = non-ignorable'
-[960] UCollate.pm:68> INFO - Overriding locale 'el-GR' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[960] Biber.pm:4307> INFO - Sorting list 'none/global//global/global/global' of type 'entry' with template 'none' and locale 'el-GR'
-[960] Biber.pm:4313> INFO - No sort tailoring available for locale 'el-GR'
-[1025] bbl.pm:676> INFO - Writing 'main.bbl' with encoding 'UTF-8'
-[1045] bbl.pm:779> INFO - Output to main.bbl
-[1045] Biber.pm:132> WARN - BibTeX subsystem: C:\Users\georg\AppData\Local\Temp\biber_tmp_QWqj\f4d088b3f9f145b5c3058da33afd57d4_8960.utf8, line 9, warning: 122 characters of junk seen at toplevel
-[1045] Biber.pm:132> WARN - BibTeX subsystem: C:\Users\georg\AppData\Local\Temp\biber_tmp_QWqj\f4d088b3f9f145b5c3058da33afd57d4_8960.utf8, line 30, warning: 122 characters of junk seen at toplevel
-[1046] Biber.pm:132> WARN - BibTeX subsystem: C:\Users\georg\AppData\Local\Temp\biber_tmp_QWqj\f4d088b3f9f145b5c3058da33afd57d4_8960.utf8, line 127, warning: 126 characters of junk seen at toplevel
-[1046] Biber.pm:132> WARN - BibTeX subsystem: C:\Users\georg\AppData\Local\Temp\biber_tmp_QWqj\f4d088b3f9f145b5c3058da33afd57d4_8960.utf8, line 166, warning: undefined macro "Sept"
-[1046] Biber.pm:132> WARN - BibTeX subsystem: C:\Users\georg\AppData\Local\Temp\biber_tmp_QWqj\f4d088b3f9f145b5c3058da33afd57d4_8960.utf8, line 212, warning: 201 characters of junk seen at toplevel
-[1046] Biber.pm:132> WARN - BibTeX subsystem: C:\Users\georg\AppData\Local\Temp\biber_tmp_QWqj\f4d088b3f9f145b5c3058da33afd57d4_8960.utf8, line 302, warning: 130 characters of junk seen at toplevel
-[1046] Biber.pm:134> INFO - WARNINGS: 6
+[134] biber-MSWIN64:342> INFO - === 
+[180] Biber.pm:421> INFO - Reading 'main.bcf'
+[355] Biber.pm:1002> INFO - Found 34 citekeys in bib section 0
+[372] Biber.pm:4487> INFO - Processing section 0
+[385] Biber.pm:4678> INFO - Looking for bibtex file 'library/bibliography.bib' for section 0
+[442] bibtex.pm:1713> INFO - LaTeX decoding ...
+[491] bibtex.pm:1519> INFO - Found BibTeX data source 'library/bibliography.bib'
+[728] UCollate.pm:68> INFO - Overriding locale 'el-GR' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[728] UCollate.pm:68> INFO - Overriding locale 'el-GR' defaults 'variable = shifted' with 'variable = non-ignorable'
+[728] Biber.pm:4307> INFO - Sorting list 'none/global//global/global/global' of type 'entry' with template 'none' and locale 'el-GR'
+[728] Biber.pm:4313> INFO - No sort tailoring available for locale 'el-GR'
+[756] bbl.pm:676> INFO - Writing 'main.bbl' with encoding 'UTF-8'
+[777] bbl.pm:779> INFO - Output to main.bbl
+[777] Biber.pm:132> WARN - BibTeX subsystem: C:\Users\georg\AppData\Local\Temp\biber_tmp_ED0B\f4d088b3f9f145b5c3058da33afd57d4_17188.utf8, line 9, warning: 122 characters of junk seen at toplevel
+[777] Biber.pm:132> WARN - BibTeX subsystem: C:\Users\georg\AppData\Local\Temp\biber_tmp_ED0B\f4d088b3f9f145b5c3058da33afd57d4_17188.utf8, line 30, warning: 122 characters of junk seen at toplevel
+[777] Biber.pm:132> WARN - BibTeX subsystem: C:\Users\georg\AppData\Local\Temp\biber_tmp_ED0B\f4d088b3f9f145b5c3058da33afd57d4_17188.utf8, line 127, warning: 126 characters of junk seen at toplevel
+[778] Biber.pm:132> WARN - BibTeX subsystem: C:\Users\georg\AppData\Local\Temp\biber_tmp_ED0B\f4d088b3f9f145b5c3058da33afd57d4_17188.utf8, line 166, warning: undefined macro "Sept"
+[778] Biber.pm:132> WARN - BibTeX subsystem: C:\Users\georg\AppData\Local\Temp\biber_tmp_ED0B\f4d088b3f9f145b5c3058da33afd57d4_17188.utf8, line 212, warning: 201 characters of junk seen at toplevel
+[778] Biber.pm:132> WARN - BibTeX subsystem: C:\Users\georg\AppData\Local\Temp\biber_tmp_ED0B\f4d088b3f9f145b5c3058da33afd57d4_17188.utf8, line 302, warning: 130 characters of junk seen at toplevel
+[778] Biber.pm:134> INFO - WARNINGS: 6
