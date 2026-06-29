@@ -2359,4 +2359,222 @@
       <bcf:constraint type="data" datatype="issn">
         <bcf:field>issn</bcf:field>
       </bcf:constraint>
-      <bcf:cons
+      <bcf:constraint type="data" datatype="ismn">
+        <bcf:field>ismn</bcf:field>
+      </bcf:constraint>
+      <bcf:constraint type="data" datatype="pattern" pattern="(?:sf|sm|sn|pf|pm|pn|pp)">
+        <bcf:field>gender</bcf:field>
+      </bcf:constraint>
+    </bcf:constraints>
+  </bcf:datamodel>
+  <!-- CITATION DATA -->
+  <!-- SECTION 0 -->
+  <bcf:bibdata section="0">
+    <bcf:datasource type="file" datatype="bibtex" glob="false">library/bibliography.bib</bcf:datasource>
+  </bcf:bibdata>
+  <bcf:section number="0">
+    <bcf:citekey order="4" intorder="1">papadakis2012</bcf:citekey>
+    <bcf:citekey order="5" intorder="1">papadakis2012</bcf:citekey>
+    <bcf:citekey order="6" intorder="1">papadakis2012</bcf:citekey>
+    <bcf:citekey order="7" intorder="1">papadakis2012</bcf:citekey>
+    <bcf:citekey order="8" intorder="1">hadjidoukas2020torcpy</bcf:citekey>
+    <bcf:citekey order="8" intorder="2">augonnet2009starpu</bcf:citekey>
+    <bcf:citekey order="9" intorder="1">numa</bcf:citekey>
+    <bcf:citekey order="10" intorder="1">denneman2016numa</bcf:citekey>
+    <bcf:citekey order="11" intorder="1">denneman2016numa</bcf:citekey>
+    <bcf:citekey order="12" intorder="1">denneman2016numa</bcf:citekey>
+    <bcf:citekey order="13" intorder="1">denneman2016numa</bcf:citekey>
+    <bcf:citekey order="13" intorder="2">supermicro_numa</bcf:citekey>
+    <bcf:citekey order="14" intorder="1">denneman2016numa</bcf:citekey>
+    <bcf:citekey order="15" intorder="1">denneman2016numa</bcf:citekey>
+    <bcf:citekey order="16" intorder="1">Deters_2018</bcf:citekey>
+    <bcf:citekey order="17" intorder="1">Deters_2018</bcf:citekey>
+    <bcf:citekey order="18" intorder="1">augonnet2009starpu</bcf:citekey>
+    <bcf:citekey order="19" intorder="1">hadjidoukas2020torcpy</bcf:citekey>
+    <bcf:citekey order="20" intorder="1">rapidfork2023gil</bcf:citekey>
+    <bcf:citekey order="20" intorder="2">gross2023pep703</bcf:citekey>
+    <bcf:citekey order="20" intorder="3">ruys2024deep</bcf:citekey>
+    <bcf:citekey order="21" intorder="1">adewole2026concurrency</bcf:citekey>
+    <bcf:citekey order="22" intorder="1">augonnet2009starpu</bcf:citekey>
+    <bcf:citekey order="22" intorder="2">starpu2025handbook</bcf:citekey>
+    <bcf:citekey order="23" intorder="1">augonnet2010starpu_gtc</bcf:citekey>
+    <bcf:citekey order="24" intorder="1">starpu2025handbook</bcf:citekey>
+    <bcf:citekey order="25" intorder="1">augonnet:inria-00467677</bcf:citekey>
+    <bcf:citekey order="25" intorder="2">augonnet2010data</bcf:citekey>
+    <bcf:citekey order="26" intorder="1">starpu_dev_manual</bcf:citekey>
+    <bcf:citekey order="27" intorder="1">starpu2025handbook</bcf:citekey>
+    <bcf:citekey order="27" intorder="2">starpu_dev_manual</bcf:citekey>
+    <bcf:citekey order="27" intorder="3">starpu_website</bcf:citekey>
+    <bcf:citekey order="28" intorder="1">starpu2025handbook</bcf:citekey>
+    <bcf:citekey order="28" intorder="2">starpu_dev_manual</bcf:citekey>
+    <bcf:citekey order="28" intorder="3">starpu_website</bcf:citekey>
+    <bcf:citekey order="29" intorder="1">starpu2025handbook</bcf:citekey>
+    <bcf:citekey order="29" intorder="2">starpu_dev_manual</bcf:citekey>
+    <bcf:citekey order="29" intorder="3">starpu_website</bcf:citekey>
+    <bcf:citekey order="30" intorder="1">starpu_dev_manual</bcf:citekey>
+    <bcf:citekey order="30" intorder="2">starpu2025handbook</bcf:citekey>
+    <bcf:citekey order="30" intorder="3">augonnet2010data</bcf:citekey>
+    <bcf:citekey order="31" intorder="1">starpu2025handbook</bcf:citekey>
+    <bcf:citekey order="31" intorder="2">starpu_dev_manual</bcf:citekey>
+    <bcf:citekey order="32" intorder="1">starpu2025handbook</bcf:citekey>
+    <bcf:citekey order="32" intorder="2">starpu_dev_manual</bcf:citekey>
+    <bcf:citekey order="33" intorder="1">starpu2025handbook</bcf:citekey>
+    <bcf:citekey order="33" intorder="2">starpu_dev_manual</bcf:citekey>
+    <bcf:citekey order="34" intorder="1">starpu2025handbook</bcf:citekey>
+    <bcf:citekey order="34" intorder="2">starpu_dev_manual</bcf:citekey>
+    <bcf:citekey order="35" intorder="1">starpu2025handbook</bcf:citekey>
+    <bcf:citekey order="35" intorder="2">starpu_dev_manual</bcf:citekey>
+    <bcf:citekey order="36" intorder="1">starpu2025handbook</bcf:citekey>
+    <bcf:citekey order="36" intorder="2">starpu_dev_manual</bcf:citekey>
+    <bcf:citekey order="37" intorder="1">aiken_cs315b_lec13</bcf:citekey>
+    <bcf:citekey order="37" intorder="2">qin2012cachecoherence</bcf:citekey>
+    <bcf:citekey order="38" intorder="1">starpu_website</bcf:citekey>
+    <bcf:citekey order="38" intorder="2">aiken_cs315b_lec13</bcf:citekey>
+    <bcf:citekey order="38" intorder="3">redis_cachecoherence</bcf:citekey>
+    <bcf:citekey order="39" intorder="1">starpu2025handbook</bcf:citekey>
+    <bcf:citekey order="39" intorder="2">starpu_dev_manual</bcf:citekey>
+    <bcf:citekey order="40" intorder="1">starpu2025handbook</bcf:citekey>
+    <bcf:citekey order="40" intorder="2">starpu_dev_manual</bcf:citekey>
+    <bcf:citekey order="41" intorder="1">starpu2025handbook</bcf:citekey>
+    <bcf:citekey order="41" intorder="2">starpu_dev_manual</bcf:citekey>
+    <bcf:citekey order="42" intorder="1">starpu2025handbook</bcf:citekey>
+    <bcf:citekey order="42" intorder="2">starpu_dev_manual</bcf:citekey>
+    <bcf:citekey order="43" intorder="1">starpu2025handbook</bcf:citekey>
+    <bcf:citekey order="43" intorder="2">starpu_dev_manual</bcf:citekey>
+    <bcf:citekey order="43" intorder="3">augonnet2010starpu_saahpc</bcf:citekey>
+    <bcf:citekey order="44" intorder="1">starpu2025handbook</bcf:citekey>
+    <bcf:citekey order="44" intorder="2">augonnet2010data</bcf:citekey>
+    <bcf:citekey order="45" intorder="1">augonnet2009starpu</bcf:citekey>
+    <bcf:citekey order="45" intorder="2">starpu2025handbook</bcf:citekey>
+    <bcf:citekey order="45" intorder="3">starpu_website</bcf:citekey>
+    <bcf:citekey order="46" intorder="1">starpu2025handbook</bcf:citekey>
+    <bcf:citekey order="46" intorder="2">augonnet:inria-00467677</bcf:citekey>
+    <bcf:citekey order="46" intorder="3">starpu_website</bcf:citekey>
+    <bcf:citekey order="47" intorder="1">starpu2025handbook</bcf:citekey>
+    <bcf:citekey order="48" intorder="1">starpu_dev_manual</bcf:citekey>
+    <bcf:citekey order="49" intorder="1">starpu_dev_manual</bcf:citekey>
+    <bcf:citekey order="50" intorder="1">starpu_dev_manual</bcf:citekey>
+    <bcf:citekey order="51" intorder="1">starpu_dev_manual</bcf:citekey>
+    <bcf:citekey order="52" intorder="1">starpu_dev_manual</bcf:citekey>
+    <bcf:citekey order="53" intorder="1">starpu2025handbook</bcf:citekey>
+    <bcf:citekey order="53" intorder="2">starpu_dev_manual</bcf:citekey>
+    <bcf:citekey order="54" intorder="1">starpu2025handbook</bcf:citekey>
+    <bcf:citekey order="55" intorder="1">starpu2025handbook</bcf:citekey>
+    <bcf:citekey order="56" intorder="1">starpu2025handbook</bcf:citekey>
+    <bcf:citekey order="57" intorder="1">starpu2025handbook</bcf:citekey>
+    <bcf:citekey order="58" intorder="1">starpu2025handbook</bcf:citekey>
+    <bcf:citekey order="59" intorder="1">starpu2025handbook</bcf:citekey>
+    <bcf:citekey order="60" intorder="1">starpu2025handbook</bcf:citekey>
+    <bcf:citekey order="61" intorder="1">starpu2025handbook</bcf:citekey>
+    <bcf:citekey order="62" intorder="1">starpu2025handbook</bcf:citekey>
+    <bcf:citekey order="63" intorder="1">starpu2025handbook</bcf:citekey>
+    <bcf:citekey order="64" intorder="1">starpu2025handbook</bcf:citekey>
+    <bcf:citekey order="65" intorder="1">starpu2025handbook</bcf:citekey>
+    <bcf:citekey order="66" intorder="1">starpu2025handbook</bcf:citekey>
+    <bcf:citekey order="67" intorder="1">starpu2025handbook</bcf:citekey>
+    <bcf:citekey order="68" intorder="1">starpu2025handbook</bcf:citekey>
+    <bcf:citekey order="69" intorder="1">hadjidoukas2020torcpy</bcf:citekey>
+    <bcf:citekey order="70" intorder="1">hadjidoukas2020torcpy</bcf:citekey>
+    <bcf:citekey order="71" intorder="1">hadjidoukas2020torcpy</bcf:citekey>
+    <bcf:citekey order="72" intorder="1">hadjidoukas2020torcpy</bcf:citekey>
+    <bcf:citekey order="73" intorder="1">hadjidoukas2020torcpy</bcf:citekey>
+    <bcf:citekey order="74" intorder="1">hadjidoukas2020torcpy</bcf:citekey>
+    <bcf:citekey order="75" intorder="1">hadjidoukas2020torcpy</bcf:citekey>
+    <bcf:citekey order="76" intorder="1">hadjidoukas2020torcpy</bcf:citekey>
+    <bcf:citekey order="77" intorder="1">hadjidoukas2020torcpy</bcf:citekey>
+    <bcf:citekey order="78" intorder="1">hadjidoukas2020torcpy</bcf:citekey>
+    <bcf:citekey order="79" intorder="1">hadjidoukas2020torcpy</bcf:citekey>
+    <bcf:citekey order="80" intorder="1">hadjidoukas2020torcpy</bcf:citekey>
+    <bcf:citekey order="81" intorder="1">hadjidoukas2020torcpy</bcf:citekey>
+    <bcf:citekey order="82" intorder="1">hadjidoukas2020torcpy</bcf:citekey>
+    <bcf:citekey order="83" intorder="1">hadjidoukas2020torcpy</bcf:citekey>
+    <bcf:citekey order="84" intorder="1">hadjidoukas2020torcpy</bcf:citekey>
+    <bcf:citekey order="85" intorder="1">hadjidoukas2020torcpy</bcf:citekey>
+    <bcf:citekey order="86" intorder="1">hadjidoukas2020torcpy</bcf:citekey>
+    <bcf:citekey order="87" intorder="1">ibm_torcpy</bcf:citekey>
+    <bcf:citekey order="88" intorder="1">ibm_torcpy</bcf:citekey>
+    <bcf:citekey order="89" intorder="1">HansenGECCO2014</bcf:citekey>
+    <bcf:citekey order="89" intorder="2">Hansen2016</bcf:citekey>
+    <bcf:citekey order="89" intorder="3">HansenCopenhagen</bcf:citekey>
+    <bcf:citekey order="89" intorder="4">WikiCMAES</bcf:citekey>
+    <bcf:citekey order="90" intorder="1">HansenGECCO2014</bcf:citekey>
+    <bcf:citekey order="90" intorder="2">WikiCMAES</bcf:citekey>
+    <bcf:citekey order="91" intorder="1">HansenPDF2016</bcf:citekey>
+    <bcf:citekey order="91" intorder="2">HansenGECCO2014</bcf:citekey>
+    <bcf:citekey order="92" intorder="1">HansenGECCO2014</bcf:citekey>
+    <bcf:citekey order="93" intorder="1">HansenGECCO2014</bcf:citekey>
+    <bcf:citekey order="93" intorder="2">WikiCMAES</bcf:citekey>
+    <bcf:citekey order="94" intorder="1">appcode</bcf:citekey>
+    <bcf:citekey order="95" intorder="1">appcode</bcf:citekey>
+    <bcf:citekey order="96" intorder="1">appcode</bcf:citekey>
+    <bcf:citekey order="97" intorder="1">appcode</bcf:citekey>
+    <bcf:citekey order="98" intorder="1">appcode</bcf:citekey>
+    <bcf:citekey order="99" intorder="1">WikiGabor</bcf:citekey>
+    <bcf:citekey order="99" intorder="2">GaborMDPI</bcf:citekey>
+    <bcf:citekey order="100" intorder="1">WikiGabor</bcf:citekey>
+    <bcf:citekey order="100" intorder="2">Baeldung</bcf:citekey>
+    <bcf:citekey order="101" intorder="1">Baeldung</bcf:citekey>
+    <bcf:citekey order="102" intorder="1">appcode</bcf:citekey>
+    <bcf:citekey order="102" intorder="2">WikiGabor</bcf:citekey>
+    <bcf:citekey order="102" intorder="3">GaborMDPI</bcf:citekey>
+    <bcf:citekey order="103" intorder="1">GaborMDPI</bcf:citekey>
+    <bcf:citekey order="103" intorder="2">appcode</bcf:citekey>
+    <bcf:citekey order="104" intorder="1">appcode</bcf:citekey>
+    <bcf:citekey order="104" intorder="2">WikiGabor</bcf:citekey>
+    <bcf:citekey order="105" intorder="1">appcode</bcf:citekey>
+    <bcf:citekey order="106" intorder="1">appcode</bcf:citekey>
+    <bcf:citekey order="107" intorder="1">appcode</bcf:citekey>
+    <bcf:citekey order="108" intorder="1">appcode</bcf:citekey>
+    <bcf:citekey order="109" intorder="1">appcode</bcf:citekey>
+    <bcf:citekey order="110" intorder="1">GoddardMC</bcf:citekey>
+    <bcf:citekey order="110" intorder="2">GilesMC</bcf:citekey>
+    <bcf:citekey order="111" intorder="1">GilesMC</bcf:citekey>
+    <bcf:citekey order="112" intorder="1">GilesMC</bcf:citekey>
+    <bcf:citekey order="113" intorder="1">appcode</bcf:citekey>
+    <bcf:citekey order="114" intorder="1">GoddardMC</bcf:citekey>
+    <bcf:citekey order="114" intorder="2">GilesMC</bcf:citekey>
+    <bcf:citekey order="114" intorder="3">appcode</bcf:citekey>
+    <bcf:citekey order="115" intorder="1">GoddardMC</bcf:citekey>
+    <bcf:citekey order="115" intorder="2">GilesMC</bcf:citekey>
+    <bcf:citekey order="115" intorder="3">appcode</bcf:citekey>
+    <bcf:citekey order="116" intorder="1">appcode</bcf:citekey>
+    <bcf:citekey order="117" intorder="1">appcode</bcf:citekey>
+    <bcf:citekey order="118" intorder="1">appcode</bcf:citekey>
+    <bcf:citekey order="119" intorder="1">AtlantisMC</bcf:citekey>
+    <bcf:citekey order="119" intorder="2">appcode</bcf:citekey>
+    <bcf:citekey order="120" intorder="1">AtlantisMC</bcf:citekey>
+    <bcf:citekey order="121" intorder="1">appcode</bcf:citekey>
+    <bcf:citekey order="122" intorder="1">appcode</bcf:citekey>
+    <bcf:citekey order="123" intorder="1">appcode</bcf:citekey>
+    <bcf:citekey order="124" intorder="1">appcode</bcf:citekey>
+    <bcf:citekey order="125" intorder="1">appcode</bcf:citekey>
+    <bcf:citekey order="126" intorder="1">appcode</bcf:citekey>
+    <bcf:citekey order="127" intorder="1">starpu2025handbook</bcf:citekey>
+    <bcf:citekey order="127" intorder="2">starpu_dev_manual</bcf:citekey>
+    <bcf:citekey order="127" intorder="3">ibm_torcpy</bcf:citekey>
+    <bcf:citekey order="128" intorder="1">appcode</bcf:citekey>
+    <bcf:citekey order="129" intorder="1">appcode</bcf:citekey>
+    <bcf:citekey order="130" intorder="1">appcode</bcf:citekey>
+    <bcf:citekey order="131" intorder="1">appcode</bcf:citekey>
+  </bcf:section>
+  <!-- SORTING TEMPLATES -->
+  <bcf:sortingtemplate name="none">
+    <bcf:sort order="1">
+      <bcf:sortitem order="1">citeorder</bcf:sortitem>
+    </bcf:sort>
+    <bcf:sort order="2">
+      <bcf:sortitem order="1">intciteorder</bcf:sortitem>
+    </bcf:sort>
+  </bcf:sortingtemplate>
+  <!-- DATALISTS -->
+  <bcf:datalist section="0"
+                name="none/global//global/global/global"
+                type="entry"
+                sortingtemplatename="none"
+                sortingnamekeytemplatename="global"
+                labelprefix=""
+                uniquenametemplatename="global"
+                labelalphanametemplatename="global"
+                namehashtemplatename="global">
+  </bcf:datalist>
+</bcf:controlfile>
