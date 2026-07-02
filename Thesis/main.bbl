@@ -46,8 +46,8 @@
       \strng{authornamehash}{f66eea1329f78c5c3342ffd336200f91}
       \strng{authorfullhash}{f66eea1329f78c5c3342ffd336200f91}
       \strng{authorfullhashraw}{f66eea1329f78c5c3342ffd336200f91}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{edition}{1}
@@ -99,8 +99,8 @@
       \strng{authornamehash}{6c176e0d4167fa5cf25d9e4d98b7ff12}
       \strng{authorfullhash}{6164f9dd975a765d5b3675ab45aa71ad}
       \strng{authorfullhashraw}{6164f9dd975a765d5b3675ab45aa71ad}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{SoftwareX}
@@ -145,8 +145,8 @@
       \strng{authorfullhash}{8632844a4577bc666687a3056a23320e}
       \strng{authorfullhashraw}{8632844a4577bc666687a3056a23320e}
       \field{extraname}{1}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{European Conference on Parallel Processing}
@@ -169,8 +169,8 @@
       \strng{authornamehash}{9c677286866aad38f8e9b660f5411814}
       \strng{authorfullhash}{9c677286866aad38f8e9b660f5411814}
       \strng{authorfullhashraw}{9c677286866aad38f8e9b660f5411814}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{NUMA (Non-Uniform Memory Access)}
@@ -198,8 +198,8 @@
       \strng{authornamehash}{36eabb5c035231b7c5b083af4fde21ca}
       \strng{authorfullhash}{36eabb5c035231b7c5b083af4fde21ca}
       \strng{authorfullhashraw}{36eabb5c035231b7c5b083af4fde21ca}
-      \field{sortinit}{7}
-      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{{NUMA Deep Dive Part 1: From UMA to NUMA}}
@@ -305,8 +305,8 @@
       \strng{authornamehash}{b310f0e1884abadf6b04639753d16c79}
       \strng{authorfullhash}{b310f0e1884abadf6b04639753d16c79}
       \strng{authorfullhashraw}{b310f0e1884abadf6b04639753d16c79}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{{Breaking Down Python Concurrency: The Global Interpreter Lock (GIL) and Its Effect on Multi-threading}}
@@ -337,8 +337,8 @@
       \strng{authornamehash}{4ba5062e5919c814aceec188d54c01f2}
       \strng{authorfullhash}{4ba5062e5919c814aceec188d54c01f2}
       \strng{authorfullhashraw}{4ba5062e5919c814aceec188d54c01f2}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{number}{703}
@@ -418,8 +418,8 @@
       \strng{authornamehash}{c945e9b09a236663b2ee717c362c4a24}
       \strng{authorfullhash}{4737a5f3786c1ebf7edc89c346c64ed5}
       \strng{authorfullhashraw}{4737a5f3786c1ebf7edc89c346c64ed5}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{2024 IEEE International Parallel and Distributed Processing Symposium Workshops (IPDPSW)}
@@ -464,8 +464,8 @@
       \strng{authornamehash}{56cbbe964d26c18a2a60a229f410dda9}
       \strng{authorfullhash}{c5ab054e84fd41853f37c3691a79f5af}
       \strng{authorfullhashraw}{c5ab054e84fd41853f37c3691a79f5af}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{2278-0181}
@@ -499,8 +499,8 @@
       \strng{authorfullhash}{cdcaa5e3d7d378b79dbfa572b2a9ad5b}
       \strng{authorfullhashraw}{cdcaa5e3d7d378b79dbfa572b2a9ad5b}
       \field{extraname}{1}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{{StarPU Handbook for StarPU 1.4.12}}
@@ -1014,8 +1014,8 @@
       \strng{authorfullhash}{71bc70e7c119a2151bf105823920cf83}
       \strng{authorfullhashraw}{71bc70e7c119a2151bf105823920cf83}
       \field{extraname}{4}
-      \field{sortinit}{8}
-      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{The {CMA} Evolution Strategy: A Tutorial}
@@ -1117,8 +1117,8 @@
       \strng{authornamehash}{d58b26d9f7600672080ebf3851115e45}
       \strng{authorfullhash}{d58b26d9f7600672080ebf3851115e45}
       \strng{authorfullhashraw}{d58b26d9f7600672080ebf3851115e45}
-      \field{sortinit}{9}
-      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{How to Use {Gabor} Filters to Generate Features for Machine Learning}
