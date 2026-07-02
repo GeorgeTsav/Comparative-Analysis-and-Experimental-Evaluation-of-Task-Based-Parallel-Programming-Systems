@@ -85,7 +85,7 @@
 \contentsline {subsubsection}{Image Processing - Gabor Filters (app01)}{63}{section*.24}%
 \contentsline {subsubsection}{Monte Carlo (app02)}{64}{section*.25}%
 \contentsline {subsection}{\numberline {7.2.2}NUMA-aware εκτέλεση των εφαρμογών}{64}{subsection.7.2.2}%
-\contentsline {subsubsection}{Ανάλυση Αποτελεσμάτων NUMA-aware εκτέλεσης}{66}{section*.28}%
+\contentsline {subsubsection}{Ανάλυση Αποτελεσμάτων NUMA-aware εκτέλεσης}{65}{section*.28}%
 \contentsline {section}{\numberline {7.3}Συμπεράσματα}{67}{section.7.3}%
 \contentsline {section}{\numberline {7.4}Μελλοντική Εργασία}{67}{section.7.4}%
 \contentsline {chapter}{Βιβλιογραφία}{69}{chapter*.29}%
