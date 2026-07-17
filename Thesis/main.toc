@@ -25,7 +25,7 @@
 \contentsline {subsection}{\numberline {3.3.5}Ασύγχρονες Μεταφορές και Προανάγνωση (Prefetching)}{20}{subsection.3.3.5}%
 \contentsline {section}{\numberline {3.4}Χρονοπρογραμματισμός Εργασιών}{20}{section.3.4}%
 \contentsline {subsection}{\numberline {3.4.1}Μοντέλα Απόδοσης Πραγματικού Χρόνου}{20}{subsection.3.4.1}%
-\contentsline {subsection}{\numberline {3.4.2}Πολτικές Χρονοπρογραμματισμού Εργασιών}{21}{subsection.3.4.2}%
+\contentsline {subsection}{\numberline {3.4.2}Πολιτικές Χρονοπρογραμματισμού Εργασιών}{21}{subsection.3.4.2}%
 \contentsline {section}{\numberline {3.5}Κύκλος Εκτέλεσης Εσωτερικών Εργατών}{23}{section.3.5}%
 \contentsline {subsection}{\numberline {3.5.1}Ανάκτηση Εργασιών και Διαχείριση Καταστάσεων}{23}{subsection.3.5.1}%
 \contentsline {subsection}{\numberline {3.5.2}Χαλαρός Συγχρονισμός και Αποφυγή Αδιεξόδων}{24}{subsection.3.5.2}%
@@ -73,7 +73,7 @@
 \contentsline {subsubsection}{Συνθήκες Αποπληρωμής}{50}{section*.18}%
 \contentsline {subsubsection}{Παράλληλη Δομή — Batching και Parallel Reduction}{51}{section*.19}%
 \contentsline {section}{\numberline {6.2}Μεθοδολογία Αξιολόγησης και διεξαγωγής των Πειραμάτων}{52}{section.6.2}%
-\contentsline {subsection}{\numberline {6.2.1}Εξασφάλιση Ισοδυναμίας Εκδόσεων και Δυσκολίες Υλoπoίησης}{52}{subsection.6.2.1}%
+\contentsline {subsection}{\numberline {6.2.1}Εξασφάλιση Ισοδυναμίας Εκδόσεων και Δυσκολίες Υλοποίησης}{52}{subsection.6.2.1}%
 \contentsline {subsection}{\numberline {6.2.2}Πειραματική Διαδικασία}{53}{subsection.6.2.2}%
 \contentsline {chapter}{\numberline {7}Πειραματική Αξιολόγηση και Συμπεράσματα}{57}{chapter.7}%
 \contentsline {section}{\numberline {7.1}Δοκιμές Δυνατοτήτων του StarPUPy και torcpy}{57}{section.7.1}%
