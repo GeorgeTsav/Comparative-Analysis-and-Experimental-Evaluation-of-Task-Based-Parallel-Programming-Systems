@@ -4,7 +4,7 @@
 \contentsline {table}{\numberline {3.1}{\ignorespaces \xpg@aux {}{greek}\ignorespaces Καταστάσεις του πρωτοκόλλου MSI}}{18}{table.caption.7}%
 \contentsline {table}{\numberline {3.2}{\ignorespaces Μοντέλα Απόδοσης στο StarPU}}{21}{table.3.2}%
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {4.1}{\ignorespaces \xpg@aux {}{greek}\ignorespaces Επιλογές για την συνάρτηση task\_submit του StarPUPy}}{28}{table.caption.8}%
+\contentsline {table}{\numberline {4.1}{\ignorespaces \xpg@aux {}{greek}\ignorespaces Επιλογές για τη συνάρτηση task\_submit του StarPUPy}}{28}{table.caption.8}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \contentsline {table}{\numberline {6.1}{\ignorespaces Μεταβλητές περιβάλλοντος για NUMA-aware και Standard εκτέλεση των StarPUPy και torcpy.}}{55}{table.6.1}%
