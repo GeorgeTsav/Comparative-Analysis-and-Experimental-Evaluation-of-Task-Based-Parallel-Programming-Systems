@@ -7,7 +7,7 @@
 
 Για την αντιμετώπιση αυτών των προκλήσεων, μελετώνται και αντιπαραβάλλονται δύο πλατφόρμες με διαφορετική φιλοσοφία: η διεπαφή StarPUPy (η οποία βασίζεται στο σύστημα StarPU, σχεδιασμένο για περιβάλλοντα κοινής μνήμης και ετερογενή συστήματα) και το torcpy (ένα Python-native σύστημα που αξιοποιεί το κατανεμημένο πρότυπο MPI). Η αξιολόγηση πραγματοποιείται μέσω τριών αντιπροσωπευτικών επιστημονικών εφαρμογών: στοχαστική βελτιστοποίηση CMA-ES, ανάλυση υφής εικόνας με φίλτρα Gabor, και προσομοίωση Monte Carlo για αποτίμηση χρηματοοικονομικών παραγώγων.
 
-Τα πειραματικά αποτελέσματα σε υπολογιστικό σύστημα 64 πυρήνων δείχνουν ότι το StarPUPy υπερέχει σημαντικά σε εφαρμογές που περιορίζονται από τον συγχρονισμό (sync-bound), χάρη στην αποδοτική διαχείριση ελαφριών νημάτων. Αντίθετα, το torcpy προσφέρει εξαιρετική κλιμάκωση και απόδοση σε εφαρμογές που περιορίζονται από τη μνήμη (memory-bound), καθώς η αρχιτεκτονική διεργασιών MPI που διαθέτει παρακάμπτει επιτυχώς το GIL και μειώνει τον ανταγωνισμό πόρων. Και τα δύο συστήματα παρουσιάζουν ικανοποιητική συμπεριφορά σε εφαρμογές αυστηρά υπολογιστικού φόρτου (compute-bound). Τέλος, η εκτέλεση με επίγνωση της τοπολογίας (NUMA-aware) έδειξε οριακές μόνο βελτιώσεις στα συγκεκριμένα πειραματικά σενάρια.
+Τα πειραματικά αποτελέσματα σε υπολογιστικό σύστημα 64 πυρήνων δείχνουν ότι το StarPUPy παρουσίασε καλύτερη απόδοση στην εφαρμογή CMA-ES, ενώ το torcpy παρουσίασε καλύτερη κλιμάκωση στην εφαρμογή επεξεργασίας εικόνας με φίλτρα Gabor. Στην εφαρμογή Monte Carlo τα δύο συστήματα εμφάνισαν συγκρίσιμη συμπεριφορά. Τέλος, η εκτέλεση με επίγνωση της τοπολογίας (NUMA-aware) έδειξε οριακές μόνο βελτιώσεις στα συγκεκριμένα πειραματικά σενάρια.
 
 \vfill
 \noindent \textbf{Λέξεις-κλειδιά:} \keywordsgr
@@ -23,7 +23,7 @@ This diploma thesis focuses on the comparative analysis and experimental evaluat
 
 To address these challenges, two platforms with fundamentally different design philosophies are investigated: StarPUPy (a Python interface for StarPU, built for shared memory and heterogeneous systems) and torcpy (a Python-native system built upon the distributed MPI standard). The evaluation is conducted using three representative scientific applications: stochastic optimization using CMA-ES, image texture analysis using Gabor Filters, and a Monte Carlo simulation for financial derivative pricing.
 
-Experimental results on a 64-core computational system demonstrate that StarPUPy excels in synchronization-bound applications due to its highly efficient lightweight thread management. Conversely, torcpy provides exceptional scalability and performance in memory-bound applications, as its MPI-process architecture successfully bypasses the GIL and significantly reduces memory contention. Both systems perform adequately well in strictly compute-bound applications. Finally, NUMA-aware execution configurations yielded only marginal improvements across these specific experimental scenarios.
+Experimental results on a 64-core computing system show that StarPUPy achieved better performance in the CMA-ES application, while torcpy demonstrated better scalability in the Gabor filter-based image processing application. In the Monte Carlo application, the two systems exhibited comparable behavior. Finally, NUMA-aware execution showed only marginal improvements in these specific experimental scenarios.
 
 \vfill
 \noindent \textbf{Keywords:} \keywordsen
