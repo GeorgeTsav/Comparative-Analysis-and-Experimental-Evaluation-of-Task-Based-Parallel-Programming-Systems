@@ -14,7 +14,7 @@
 
 \subsubsection{Αλγοριθμικό Πλαίσιο CMA-ES}
 
-Ο αλγόριθμος CMA-ES (Covariance Matrix Adaptation Evolution Strategy) ανήκει στην κατηγορία των εξελικτικών στρατηγικών (Evolution Strategies) και αποτελεί μέθοδο βελτιστοποίησης χωρίς παραγώγους, κατάλληλη για μη-κυρτά, μη-λεία και θορυβώδη τοπία βελτιστοποίησης όπου οι κλασικές μέθοδοι gradient-based αδυνατούν. Σε κάθε γενιά $g$ παράγεται πληθυσμός $\lambda$ υποψήφιων λύσεων μέσω δειγματοληψίας από πολυμεταβλητή κανονική κατανομή \cite{HansenGECCO2014,Hansen2016,HansenCopenhagen,WikiCMAES}:
+Ο αλγόριθμος CMA-ES (Covariance Matrix Adaptation Evolution Strategy) ανήκει στην κατηγορία των εξελικτικών στρατηγικών (Evolution Strategies) και αποτελεί μέθοδο βελτιστοποίησης χωρίς παραγώγους, κατάλληλη για μη--κυρτά, μη--λεία και θορυβώδη τοπία βελτιστοποίησης όπου οι κλασικές μέθοδοι gradient-based αδυνατούν. Σε κάθε γενιά $g$ παράγεται πληθυσμός $\lambda$ υποψήφιων λύσεων μέσω δειγματοληψίας από πολυμεταβλητή κανονική κατανομή \cite{HansenGECCO2014,Hansen2016,HansenCopenhagen,WikiCMAES}:
 
 \begin{equation}
   \mathbf{x}_i^{(g+1)} = \mathbf{m}^{(g)} + \sigma^{(g)}\,\mathbf{y}_i,
@@ -59,7 +59,7 @@
   \item Υπολογισμός της τιμής καταλληλότητας (fitness) ως MSE μεταξύ της δειγματοληφθείσας και της λύσης αναφοράς.
 \end{enumerate}
 
-Κάθε ένας από τους $\lambda$ παραπάνω υπολογισμούς αποτελεί \textbf{μία ανεξάρτητη εργασία (task)}, καθώς δεν υπάρχει καμία εξάρτηση δεδομένων μεταξύ των ατόμων της ίδιας γενιάς \cite{appcode}.
+Καθένας από τους $\lambda$ παραπάνω υπολογισμούς αποτελεί \textbf{μία ανεξάρτητη εργασία (task)}, καθώς δεν υπάρχει καμία εξάρτηση δεδομένων μεταξύ των ατόμων της ίδιας γενιάς \cite{appcode}.
 
 Στην υλοποίηση με \textbf{StarPU}, κάθε εργασία υποβάλλεται ασύγχρονα μέσω \texttt{starpu.t-\linebreak ask\_submit()(eval\_candidate, $\boldsymbol{\theta}_i$, pde, target\_y)}, και ο χρονοδρομολογητής αναθέτει κάθε εργασία δυναμικά στους διαθέσιμους επεξεργαστές. Στην υλοποίηση με \textbf{torcpy}, οι $\lambda$ εργασίες υποβάλλονται ομαδικά μέσω \texttt{torc.map(eval\_candida-\linebreak te, payloads)}, όπου \texttt{payloads} είναι λίστα πλειάδων $(\boldsymbol{\theta}_i, \texttt{pde}, \texttt{target\_y})$ \cite{appcode}.
 

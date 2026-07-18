@@ -1,3 +1,0 @@
-\begin{MintedVerbatim}[commandchars=\\\{\}]
-\PYG{+w}{    }mpirun\PYG{+w}{ }\PYGZhy{}n\PYG{+w}{ }\PYG{l+m}{8}\PYG{+w}{ }python3\PYG{+w}{ }ex\PYGZus{}monitor\PYGZus{}torcpy.py
-\end{MintedVerbatim}
